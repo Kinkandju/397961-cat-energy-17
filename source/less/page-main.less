@@ -1,5 +1,5 @@
 .page-main__container {
-  margin-bottom: 197px;
+  margin: 0 0 197px 0;
 
   .size(320px; 305px);
 
@@ -9,15 +9,28 @@
 }
 
 .page-main__title {
-  .offset(0; 0);
-  padding-top: 30px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  color: @white;
+
+  margin: 0;
+  padding: 30px 0 0 0;
 }
 
 .page-main__addition {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+
   position: relative;
 
-  .offset(0; 0);
-  margin-top: 22px;
+  margin: 22px 0 0 0;
+  padding: 0;
 }
 
 .page-main__addition::after {
@@ -25,7 +38,8 @@
 
   content: "";
 
-  .coordinate(40px; 20px);
+  top: 40px;
+  left: 20px;
 
   .size(280px; 271px);
 
@@ -34,9 +48,15 @@
 }
 
 .page-main__button {
-  margin-top: 302px;
-  margin-left: 20px;
-  margin-right: 20px;
+  font-family: @font--oswald;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+
+  margin: 302px 20px 0 20px;
   padding: 12px 73px;
 
   border: none;

@@ -1,4 +1,4 @@
-@font: "Oswald", "Arial", sans-serif;
+@font--oswald: "Oswald", "Arial", sans-serif;
 @font--arial: "Arial", sans-serif;
 
 @black: rgba(0, 0, 0, 1);
@@ -11,25 +11,16 @@
 
 @border: 1px solid @bordergrey;
 
-.offset(@margin; @padding) {
-  margin: @margin;
-  padding: @padding;
-}
-
 .size(@width; @height) {
   width: @width;
   height: @height;
 }
 
-.coordinate(@top; @left) {
-  top: @top;
-  left: @left;
-}
-
 body {
-  font-family: @font;
+  margin: 0 auto;
+  padding: 0;
 
-  .offset(0 auto; 0);
+  font-family: @font--oswald;
 
   width: 320px;
 
@@ -45,14 +36,6 @@ a {
 //   height: auto;
 // }
 
-p {
-  .offset(0; 0);
-}
-
-ul {
-  .offset(0; 0);
-}
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -60,7 +43,8 @@ input[type="radio"].visually-hidden {
 
   .size(1px; 1px);
 
-  .offset(-1px; 0);
+  margin: -1px;
+  padding: 0;
 
   border: 0;
 
