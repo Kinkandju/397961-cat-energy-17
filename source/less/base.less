@@ -1,0 +1,56 @@
+@font--oswald: "Oswald", "Arial", sans-serif;
+@font--arial: "Arial", sans-serif;
+
+@black: rgba(0, 0, 0, 1);
+@white: rgba(255, 255, 255, 1);
+@green: rgba(104, 183, 56, 1);
+@lightgrey: rgba(242, 242, 242, 1);
+@bordergrey: rgba(205, 205, 205, 1);
+@grey: rgba(68, 68, 68, 1);
+@lightblack: rgba(17, 17, 17, 1);
+
+@border: 1px solid @bordergrey;
+
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: @font--oswald;
+
+  width: 320px;
+
+  border: @border;
+}
+
+a {
+  text-decoration: none;
+}
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+// }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  .size(1px; 1px);
+
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
