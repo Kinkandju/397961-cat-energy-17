@@ -1,0 +1,71 @@
+.example {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: @lightgrey;
+}
+
+.example__title {
+  .offset(0; 0);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.example__description {
+  padding-right: 10px;
+  margin-bottom: 25px;
+}
+
+.example__table {
+  margin-bottom: 20px;
+}
+
+.example__table tr {
+  position: relative;
+
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin-right: 20px;
+}
+
+.example__table tr:nth-child(2n) {
+  margin-right: 0;
+}
+
+.example__value:first-child {
+  .size(124px; 56px);
+
+  border: @border;
+}
+
+.example__field {
+  position: absolute;
+
+  .coordinate(50px; 35px);
+
+  .size(54px; 19px);
+
+  background-color: @lightgrey;
+}
+
+.example__price {
+  margin-bottom: 40px;
+}
+
+.example__image {
+  position: relative;
+
+  left: -20px;
+
+  margin-bottom: 35px;
+}
+
+.example__toggle {
+  margin-bottom: 35px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
