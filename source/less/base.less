@@ -17,18 +17,28 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
+
+  min-width: 320px;
 
   font-family: @font--oswald;
 
-  width: 320px;
-
-  border: @border;
+  background-color: @white;
 }
 
 a {
   text-decoration: none;
+}
+
+.layout-container {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  width: 280px;
+
+  border-left: @border;
+  border-right: @border;
 }
 
 // img {
