@@ -1,8 +1,18 @@
 .form__fieldset {
   margin: 0 0 30px 0;
-  padding: 0;
+  padding: 30px 0 0 0;
 
   border: none;
+}
+
+.form-main__form input[type="text"],
+.form__fieldset input[type="number"],
+.form__fieldset input[type="email"],
+.form__fieldset input[type="tel"] {
+  padding: 10px 16px;
+  margin: 0 0 14px 0;
+
+  border: @border;
 }
 
 .form__description {
@@ -21,7 +31,20 @@
   text-align: left;
   color: @lightblack;
 
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.form__fieldset--id .form__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .form__label {
@@ -63,11 +86,6 @@
   color: @grey;
 }
 
-.form__radio,
-.form__checkbox {
-  display: block;
-}
-
 .form__button {
   font-family: @font--oswald;
   font-size: 16px;
@@ -94,4 +112,16 @@
   line-height: 16px;
   text-align: center;
   color: @grey;
+}
+.form__fieldset--radio {
+  border-top: @border;
+  border-bottom: @border;
+}
+
+.form__fieldset--radio .form__item {
+  margin: 0 0 20px 0;
+}
+
+.form__fieldset--other .form__item {
+  margin: 0 0 20px 0;
 }
