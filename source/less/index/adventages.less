@@ -5,10 +5,39 @@
   list-style: none;
 }
 
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
 .advantages__item {
   margin: 0 0 20px 0;
 
   background-color: @lightgrey;
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item {
+    margin: 0 80px 20px 0;
+
+    width: 570px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 .advantages__title {
@@ -25,6 +54,15 @@
   padding: 35px 0 30px 92px;
 }
 
+@media (min-width: @tablet-width) {
+  .advantages__title {
+    font-size: 36px;
+    line-height: 37px;
+
+    padding: 80px 0 20px 50px;
+  }
+}
+
 .advantages__title::before {
   position: absolute;
 
@@ -37,6 +75,15 @@
 
   background-color: @green;
   border-radius: 50%;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__title::before {
+    top: 90px;
+    left: 450px;
+
+    .size(200px; 200px);
+  }
 }
 
 .advantages__item--slim .advantages__title::after {
@@ -53,6 +100,15 @@
   background-repeat: no-repeat;
 }
 
+@media (min-width: @tablet-width) {
+  .advantages__item--slim .advantages__title::after {
+    top: 80px;
+    left: 480px;
+
+    .size(141px; 194px);
+  }
+}
+
 .advantages__item--pro .advantages__title::after {
   position: absolute;
 
@@ -67,6 +123,15 @@
   background-repeat: no-repeat;
 }
 
+@media (min-width: @tablet-width) {
+  .advantages__item--pro .advantages__title::after {
+    top: 135px;
+    left: 410px;
+
+    .size(268px; 113px);
+  }
+}
+
 .advantages__description {
   font-family: @font--arial;
   font-size: 14px;
@@ -79,6 +144,23 @@
   padding: 0 0 20px 0;
 
   border-bottom: @border;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__description {
+    font-size: 16px;
+    line-height: 24px;
+
+    padding: 0 270px 80px 30px;
+
+    border-bottom: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__description {
+    padding: 0 50px;
+  }
 }
 
 .advantages__button {
@@ -98,6 +180,13 @@
   background-color: @lightgrey;
 }
 
+@media (min-width: @tablet-width) {
+  .advantages__button {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .advantages__button::after {
   position: absolute;
 
@@ -109,4 +198,11 @@
   .size(25px; 12px);
 
   background-image: url("../img/icon-right-arrow-long.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__button::after {
+    top: 25px;
+    left: 120px;
+  }
 }

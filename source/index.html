@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Главная страница «Cat Energy»</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -12,24 +13,26 @@
   <header class="page-header">
     <div class="page-header__layout-container">
       <div class="page-header__container">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип здорового питания для котов «Cat Energy»">
+        <a class="page-header__logo" href="index.html">
+            <img class="page-header__logo-image--mobile" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип здорового питания для котов «Cat Energy»">
+            <img class="page-header__logo-image--tablet" src="img/logo-tablet.svg" width="174" height="59" alt="Логотип здорового питания для котов «Cat Energy»">
+            <img class="page-header__logo-image--desktop" src="img/logo-desktop.svg" width="203" height="60" alt="Логотип здорового питания для котов «Cat Energy»">
         </a>
-          <button class="page-header__toggle" type="button" alt="Открыть меню"></button>
+        <button class="page-header__toggle" type="button" alt="Открыть меню"></button>
       </div>
-      <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Обзор программы</a>
-          </li>
-        </ul>
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Обзор программы</a>
+            </li>
+          </ul>
       </nav>
     </div>
   </header>
@@ -37,7 +40,7 @@
   <main class="page-main">
     <div class="page-main__container">
       <div class="layout-container">
-        <h1 class="page-main__title">Функциональное питание для котов</h1>
+        <h1 class="page-main__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
         <p class="page-main__addition">Занялся собой? Займись котом!</p>
         <button class="page-main__button" type="button">Подобрать программу</button>
       </div>
@@ -69,21 +72,25 @@
         <h2 class="how-it-work__title">Как это работает</h2>
         <ul class="how-it-work__list">
           <li class="how-it-work__item">
+            <span class="how-it-work__icon"></span>
             <p>
               Функциональное питание содержит только полезные питательные вещества.
             </p>
           </li>
           <li class="how-it-work__item">
+            <span class="how-it-work__icon"></span>
             <p>
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </p>
           </li>
           <li class="how-it-work__item">
+            <span class="how-it-work__icon"></span>
             <p>
               Замените один-два приема обычной еды на наше функциональное питание.
             </p>
           </li>
           <li class="how-it-work__item">
+            <span class="how-it-work__icon"></span>
             <p>
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
             </p>
@@ -153,7 +160,7 @@
         <img class="page-footer__image-logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Cat Energy»">
       </a>
 
-    <section class="social">
+      <section class="social">
         <ul class="social__list">
           <li class="social__item">
             <a href="#">
@@ -171,9 +178,9 @@
             </a>
           </li>
         </ul>
-    </section>
+      </section>
 
-    <section class="copyright">
+      <section class="copyright">
         <span class="copyright__htmlacademy">HTML Academy</span>
         <img class="copyright__image" src="img/htmlacademy(27x34).svg" width="37" height="41" alt="Логотип HTML Academy">
       </section>

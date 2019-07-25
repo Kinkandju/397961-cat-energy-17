@@ -1,0 +1,158 @@
+.page-header {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    // margin-top: -85px;
+  }
+}
+
+.page-header__layout-container {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__layout-container {
+    display: flex;
+
+    margin: 0 auto 50px auto;
+    padding: 0 30px;
+
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__layout-container {
+    position: relative;
+    // top: 85px;
+
+    justify-content: space-between;
+
+    margin: 0 auto;
+    padding: 0 40px;
+
+    width: 1300px;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 11px 0 15px 0;
+
+  width: 280px;
+
+  background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__container {
+    padding: 25px 0 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__container {
+    margin: 0;
+    padding: 25px 0 0 0;
+  }
+}
+
+.page-header__logo .page-header__logo-image--mobile {
+  display: block;
+}
+
+.page-header__logo .page-header__logo-image--tablet,
+.page-header__logo .page-header__logo-image--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo .page-header__logo-image--mobile,
+  .page-header__logo .page-header__logo-image--desktop {
+    display: none;
+  }
+
+  .page-header__logo .page-header__logo-image--tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo .page-header__logo-image--mobile,
+  .page-header__logo .page-header__logo-image--tablet {
+    display: none;
+  }
+
+  .page-header__logo .page-header__logo-image--desktop {
+    display: block;
+  }
+}
+
+.page-header__toggle {
+  position: relative;
+  right: 0;
+
+  display: block;
+  .size(25px; 19px);
+
+  background-color: @white;
+  border: none;
+
+  cursor: pointer;
+}
+
+.page-header__toggle::before {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  content: "";
+
+  .size(25px; 2px);
+
+  background-color: @black;
+  box-shadow: 0 9px 0 0 @black, 0 17px 0 0 @black;
+}
+
+// .page-header__toggle {
+//   &::before,
+//   &::after {
+//     position: absolute;
+//
+//     top: 9px;
+//     left: 0;
+//
+//     content: "";
+//
+//     width: 25px;
+//     height: 2px;
+//
+//     background-color: @black;
+//   }
+//
+//   &::before {
+//     transform: rotate(45deg);
+//     box-shadow: none;
+//   }
+//
+//   &::after {
+//     transform: rotate(-45deg);
+//   }
+// }
+
+@media (min-width: @tablet-width) {
+  .page-header__toggle {
+    display: none;
+  }
+}
