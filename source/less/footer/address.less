@@ -16,6 +16,12 @@
   color: @lightblack;
 }
 
+@media (min-width: @tablet-width) {
+  .address__invitation {
+    font-size: 20px;
+  }
+}
+
 .address__address {
   font-family: @font--arial;
   font-size: 14px;
@@ -26,6 +32,13 @@
   color: @grey;
 
   margin: 0 0 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .address__address {
+    font-size: 16px;
+    text-align: right;
+  }
 }
 
 .address__map {

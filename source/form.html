@@ -47,41 +47,43 @@
           Заполните анкету и мы подберем
           программу питания для вашего кота
         </p>
-        <fieldset class="form__fieldset form__fieldset--id">
-          <legend class="form__legend visually-hidden">Идентификация кота</legend>
-          <ul class="form__list">
-            <li class="form__item">
-              <label class="form__label" for="cat-name">Имя:*</label>
-              <input class="form__id" type="text" id="cat-name" placeholder="Барсик">
-            </li>
-            <li class="form__item">
-              <label class="form__label" for="cat-wt">Вес(кг):*</label>
-              <input class="form__id" type="number" id="cat-wt" placeholder="7">
-            </li>
-            <li class="form__item">
-              <label class="form__label" for="cat-age">Возраст(лет):</label>
-              <input class="form__id" type="number" id="cat-age" placeholder="7">
-            </li>
-          </ul>
-        </fieldset>
+        <div class="form__container">
+          <fieldset class="form__fieldset form__fieldset--id">
+            <legend class="form__legend visually-hidden">Идентификация кота</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__label" for="cat-name">Имя:*</label>
+                <input class="form__id" type="text" id="cat-name" placeholder="Барсик">
+              </li>
+              <li class="form__item">
+                <label class="form__label" for="cat-wt">Вес(кг):*</label>
+                <input class="form__id" type="number" id="cat-wt" placeholder="7">
+              </li>
+              <li class="form__item">
+                <label class="form__label" for="cat-age">Возраст(лет):</label>
+                <input class="form__id" type="number" id="cat-age" placeholder="7">
+              </li>
+            </ul>
+          </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--radio">
-          <legend class="form__legend visually-hidden">Существующая проблема</legend>
-          <ul class="form__list">
-            <li class="form__item">
-              <input class="form__radio" type="radio" name="cat-radio" value="cat-radio-slim" id="cat-slim">
-              <label class="form__label" for="cat-slim">Похудение</label>
-            </li>
-            <li class="form__item">
-              <input class="form__radio" type="radio" name="cat-radio" value="cat-radio-mass" id="cat-mass">
-              <label class="form__label" for="cat-mass">Набор массы</label>
-            </li>
-            <li class="form__item">
-              <input class="form__radio" type="radio" name="cat-radio" value="cat-radio-unknown" id="cat-unknown">
-              <label class="form__label" for="cat-unknown">Не знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="form__fieldset form__fieldset--radio">
+            <legend class="form__legend visually-hidden">Существующая проблема</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <input class="form__radio" type="radio" name="cat-radio" value="cat-radio-slim" id="cat-slim">
+                <label class="form__label" for="cat-slim">Похудение</label>
+              </li>
+              <li class="form__item">
+                <input class="form__radio" type="radio" name="cat-radio" value="cat-radio-mass" id="cat-mass">
+                <label class="form__label" for="cat-mass">Набор массы</label>
+              </li>
+              <li class="form__item">
+                <input class="form__radio" type="radio" name="cat-radio" value="cat-radio-unknown" id="cat-unknown">
+                <label class="form__label" for="cat-unknown">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
         <fieldset class="form__fieldset form__fieldset--communication">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
@@ -99,7 +101,7 @@
 
         <fieldset class="form__fieldset form__fieldset--comment">
           <legend class="form__legend">Комментарий</legend>
-          <textarea class="form__comment" name="name" rows="8" cols="36" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="form__comment" name="name" rows="8" cols="35" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--other">
