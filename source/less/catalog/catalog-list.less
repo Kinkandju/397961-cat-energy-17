@@ -8,6 +8,14 @@
   .catalog-list__list {
     display: flex;
     flex-wrap: wrap;
+
+    margin: 0 -30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list__list {
+    margin: 0 -40px;
   }
 }
 
@@ -18,8 +26,13 @@
 @media (min-width: @tablet-width) {
   .catalog-list__container {
     width: 100%;
+    min-width: 244px;
+  }
+}
 
-    margin: 0 auto 30px auto;
+@media (min-width: @desktop-width) {
+  .catalog-list__container {
+    min-width: 169px;
   }
 }
 
@@ -85,6 +98,8 @@
 }
 
 .catalog-list__item {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -98,26 +113,22 @@
   .catalog-list__item {
     flex-direction: column;
 
-    margin: 0 60px 140px 0;
+    margin: 0 30px 140px 30px;
     padding: 40px;
 
     background-color: @lightgrey;
     border-top: none;
   }
-
-  .catalog-list__item:nth-child(2n) {
-    margin-right: 0;
-  }
 }
 
 @media (min-width: @desktop-width) {
-  .catalog-list__item,
-  .catalog-list__item:nth-child(2n) {
-    margin-right: 80px;
+  .catalog-list__item {
+    margin: 0 40px 140px 40px;
+    padding: 38px;
   }
 
-  .catalog-list__item:nth-child(4n) {
-    margin-right: 0;
+  .catalog-list__item--all {
+    margin: 0 38px 140px 38px;
   }
 }
 
@@ -129,7 +140,9 @@
   text-transform: uppercase;
   color: @white;
 
-  padding: 10px 109px;
+  padding: 10px 15px;
+
+  width: 100%;
 
   border: none;
   background-color: @green;
@@ -139,13 +152,7 @@
 
 @media (min-width: @tablet-width) {
   .catalog-list__button {
-    padding: 10px 90px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .catalog-list__button {
-    padding: 10px 50px;
+    width: auto;
   }
 }
 
@@ -166,6 +173,7 @@
   padding-top: 80px;
 
   width: 100%;
+  min-width: 169px;
 }
 
 .catalog-list__show-all {
@@ -227,7 +235,7 @@
   text-transform: uppercase;
   color: @grey;
 
-  padding: 10px 94px;
+  padding: 10px 15px;
 
   background-color: @lightgrey;
 }
@@ -245,7 +253,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .catalog-list__image--mobile {
+  .catalog-list__item__image {
     margin: 0 auto;
   }
 }

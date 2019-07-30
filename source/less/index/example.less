@@ -26,6 +26,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example::after {
+    background-image: linear-gradient(to right, #f2f2f2 70%, #eaeaea 30%);
+  }
+}
+
 .example__title {
   font-size: 36px;
   font-weight: 400;
@@ -76,6 +82,10 @@
 
 .example__table {
   margin: 0 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
@@ -92,9 +102,9 @@
   flex-wrap: wrap;
 }
 
-.example__table tr:nth-child(2n) {
-  margin: 0 20px 0 0;
-}
+// .example__table tr:nth-child(2n) {
+//   margin: 0 20px 0 0;
+// }
 
 .example__value:nth-child(1) {
   font-size: 24px;
@@ -114,7 +124,7 @@
     font-size: 30px;
     line-height: 37px;
 
-    margin-right: 40px;
+    // margin-right: 40px;
 
     .size(162px; 72px);
   }
