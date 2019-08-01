@@ -54,7 +54,37 @@
 }
 
 .address__map {
+  width: 100%;
+
   border-left: @border;
   border-right: @border;
   background-color: @lightgrey;
+}
+
+.address__map img {
+  width: 320px;
+  height: 400px;
+}
+
+@media (min-width: @tablet-width) {
+  .address__map {
+    margin: 0 auto;
+
+    width: 764px;
+  }
+
+  .address__map img {
+    width: 764px;
+    height: auto;
+
+    background-image: url("../img/bg-map-tablet@1x.png");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .address__map {
+    width: 1440px;
+
+    background-image: url("../img/bg-map-desktop@1x.png");
+  }
 }

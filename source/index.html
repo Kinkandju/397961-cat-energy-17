@@ -44,6 +44,11 @@
       <div class="layout-container">
         <h1 class="page-main__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
         <p class="page-main__addition">Занялся собой? Займись котом!</p>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img class="page-main__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Продукт «Cat Energy»">
+        </picture>
         <button class="page-main__button" type="button">Подобрать программу</button>
       </div>
     </div>
@@ -133,9 +138,20 @@
           </p>
         </div>
         <div class="example__compare">
-          <picture>
-            <img class="example__image" src="img/before-mobile@1x.png" width="311" height="232" alt="Вид кота до использования здорового питания">
-          </picture>
+          <div class="example__compare--before">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+              <img class="example__image" src="img/before-mobile@1x.png" width="311" height="232" alt="Вид кота до использования здорового питания">
+            </picture>
+          </div>
+          <div class="example__compare--after">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+              <img class="example__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Вид кота до использования здорового питания">
+            </picture>
+          </div>
           <div class="example__toggle-line">
             <button class="example__toggle" type="button">Было</button>
             <span class="example__switch"></span>
@@ -162,7 +178,11 @@
           </address>
         </div>
       </div>
-      <img class="address__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+        <img class="address__map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+      </picture>
     </section>
 
 
