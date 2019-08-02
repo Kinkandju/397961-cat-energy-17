@@ -25,6 +25,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .address__invitation {
+    line-height: 25px;
+  }
+}
+
 .address__address {
   font-family: @font--arial;
   font-size: 14px;
@@ -53,11 +59,17 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .address__address {
+    text-align: left;
+  }
+}
+
 .address__map {
   width: 100%;
 
-  border-left: @border;
-  border-right: @border;
+  // border-left: @border;
+  // border-right: @border;
   background-color: @lightgrey;
 }
 

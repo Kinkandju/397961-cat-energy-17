@@ -4,6 +4,13 @@
 
   width: 100%;
   background-color: @lightgrey;
+  background-image: linear-gradient(to top, #f2f2f2 85.7%, #ffffff 85.7%);
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    background-image: linear-gradient(to top, #f2f2f2 72%, #ffffff 72%);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -30,6 +37,18 @@
     padding: 60px 40px;
 
     width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__container {
+    position: absolute;
+
+    transform: translateY(90%);
+
+    padding: 68px 90px 58px 75px;
+
+    max-width: 405px;
   }
 }
 

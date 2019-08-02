@@ -1,37 +1,37 @@
+// Основной блок с примерами
 .example {
   background-color: @lightgrey;
 }
 
-// @media (min-width: @tablet-width) {
-//   .example {
-//     position: relative;
-//
-//     background-color: transparent;
-//   }
+@media (min-width: @tablet-width) {
+  .example {
+    background-image: linear-gradient(to top, #f2f2f2 44%, #ffffff 44%);
+  }
+}
 
-//   .example::after {
-//     position: absolute;
-//
-//     z-index: -1;
-//
-//     left: 0;
-//     right: 0;
-//     bottom: -100px;
-//
-//     content: "";
-//
-//     height: 462px;
-//
-//     background-image: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
-//   }
-// }
+@media (min-width: @desktop-width) {
+  .example {
+    background-image: linear-gradient(to top, #f2f2f2 77%, #ffffff 77%);
+  }
+}
 
-// @media (min-width: @desktop-width) {
-//   .example::after {
-//     background-image: linear-gradient(to right, #f2f2f2 70%, #eaeaea 30%);
-//   }
-// }
+@media (min-width: @desktop-width) {
+  .example .layout-container {
+    display: flex;
 
+    height: 600px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__group {
+    padding-right: 100px;
+
+    width: 40%;
+  }
+}
+
+// Заголовок блока
 .example__title {
   font-size: 36px;
   font-weight: 400;
@@ -51,6 +51,13 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__title {
+    padding: 10px 0 60px 0;
+  }
+}
+
+// Описание примера
 .example__description {
   font-family: @font--arial;
   font-size: 14px;
@@ -72,26 +79,38 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__description {
+    margin-top: 80px;
+  }
+}
+
+// Блок с информационными данными
 @media (min-width: @tablet-width) {
   .example__container {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    margin-bottom: 50px;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__container {
+    flex-wrap: wrap;
+
+    margin-top: 70px;
+  }
+}
+
+// Таблица
 .example__table {
   margin: 0 0 30px 0;
   display: flex;
   justify-content: space-between;
 
   width: 100%;
-}
-
-@media (min-width: @tablet-width) {
-  .example__container {
-    margin-bottom: 50px;
-  }
 }
 
 .example__table tr {
@@ -124,6 +143,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__value {
+    margin-right: 40px;
+  }
+}
+
 .example__field {
   font-family: @font--arial;
   font-size: 12px;
@@ -148,6 +173,7 @@
   }
 }
 
+// Цена предложения
 .example__price {
   font-size: 14px;
   font-weight: 400;
@@ -166,11 +192,19 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__price {
+    margin: 25px 0 0 0;
+  }
+
+  .example__price span {
+    margin-right: 60px;
+  }
+}
+
 // Изображение до и после
 .example__image {
   position: relative;
-
-  // left: -20px;
 
   margin: 0 0 35px 0;
 
@@ -228,14 +262,8 @@
   .example__compare {
     position: relative;
 
-    // left: 50%;
-    // top: 50%;
-
     width: 690px;
-    height: 592px;
-
-    // transform: translate3d(-50%, -50%, 0);
-    // overflow: hidden;
+    height: 650px;
   }
 
   .example__compare--after {
@@ -257,7 +285,6 @@
     background-size: cover;
     background-position: center;
 
-    pointer-events: none;
     overflow: hidden;
   }
 }
@@ -272,22 +299,31 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .example__compare {
+    position: relative;
+
+    top: -50px;
+    left: 20px;
+  }
+}
+
 // Панель переключения
 .example__toggle-line {
   display: flex;
   justify-content: center;
   align-items: baseline;
 
-  padding-top: 10px;
-  padding-bottom: 35px;
+  padding-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
   .example__toggle-line {
     position: absolute;
 
-    bottom: 0;
+    padding: 10px 0 65px 0;
 
+    bottom: 0;
     left: 50%;
 
     transform: translate3d(-50%, 0, 0);
@@ -316,6 +352,10 @@
 @media (min-width: @tablet-width) {
   .example__toggle {
     font-size: 20px;
+
+    padding: 5px 0;
+
+    border-bottom: 1px dotted #d9d9d9;
   }
 }
 
