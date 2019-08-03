@@ -11,7 +11,7 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    background-image: linear-gradient(to top, #f2f2f2 77%, #ffffff 77%);
+    background-image: linear-gradient(to top, #f2f2f2 79.9%, #ffffff 79.9%);
   }
 }
 
@@ -238,22 +238,6 @@
   }
 }
 
-// @media (min-width: @desktop-width) {
-//   .example__compare--before .example__image img {
-//     width: 690px;
-//     height: auto;
-//
-//     background-image: url("../img/before-desktop@1x.png");
-//   }
-//
-//   .example__compare--after .example__image img {
-//     width: 690px;
-//     height: auto;
-//
-//     background-image: url("../img/after-desktop@1x.png");
-//   }
-// }
-
 .example__compare--after {
   display: none;
 }
@@ -295,6 +279,7 @@
 
 @media (min-width: @tablet-width) {
   .example__image {
+    max-width: none;
     height: 517px;
   }
 
