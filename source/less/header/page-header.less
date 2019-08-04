@@ -1,0 +1,142 @@
+.page-header {
+  margin: 0 auto;
+  padding: 0;
+
+  background-color: @white;
+}
+
+.page-header__layout-container {
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__layout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 30px 60px 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__layout-container {
+    position: relative;
+
+    z-index: 1;
+
+    margin: 0 auto;
+    padding: 50px 40px 60px 40px;
+
+    width: 1220px;
+
+    background-color: transparent;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 11px 0 15px 0;
+
+  background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__container {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.page-header__logo {
+  height: 39px;
+
+  text-align: left;
+}
+
+.page-header__logo img {
+  width: 191px;
+  height: 39px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-header__logo img {
+    width: 174px;
+    height: auto;
+
+    background-image: url("../img/logo-tablet.svg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo img {
+    width: 202px;
+
+    background-image: url("../img/logo-desktop.svg");
+  }
+}
+
+.page-header__toggle {
+  position: relative;
+  right: 0;
+
+  display: block;
+  .size(25px; 19px);
+
+  background-color: @white;
+  border: none;
+
+  cursor: pointer;
+}
+
+.page-header__toggle::before {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  content: "";
+
+  .size(25px; 2px);
+
+  background-color: @black;
+  box-shadow: 0 9px 0 0 @black, 0 17px 0 0 @black;
+}
+
+// .page-header__toggle {
+//   &::before,
+//   &::after {
+//     position: absolute;
+//
+//     top: 9px;
+//     left: 0;
+//
+//     content: "";
+//
+//     width: 25px;
+//     height: 2px;
+//
+//     background-color: @black;
+//   }
+//
+//   &::before {
+//     transform: rotate(45deg);
+//     box-shadow: none;
+//   }
+//
+//   &::after {
+//     transform: rotate(-45deg);
+//   }
+// }
+
+@media (min-width: @tablet-width) {
+  .page-header__toggle {
+    display: none;
+  }
+}

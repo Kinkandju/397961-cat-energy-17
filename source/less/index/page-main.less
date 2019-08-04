@@ -1,0 +1,250 @@
+// Основной блок заголовка главной страницы (мобильная версия)
+.page-main__container {
+  position: relative;
+
+  margin: 0  auto 20px auto;
+  padding-top: 30px;
+
+  .size(320px; 442px);
+
+  background-color: transparent;
+}
+
+.page-main__container::after {
+  position: absolute;
+  z-index: -1;
+
+  content: "";
+
+  top: 0;
+
+  .size(320px; 305px);
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-color: @green;
+}
+
+// Основной блок заголовка главной страницы (планшетная версия)
+@media (min-width: @tablet-width) {
+  .page-main__container {
+    margin: 0 auto;
+    padding: 0;
+
+    width: 100%;
+    height: 825px;
+
+    // background-color: transparent;
+    // background-image: none;
+  }
+
+  .page-main__container::after {
+    display: none;
+  }
+
+  .page-main__group {
+    position: relative;
+
+    display: block;
+
+    padding-left: 60px;
+
+    .size(648px; 825px);
+  }
+}
+
+// Основной блок заголовка главной страницы (десктопная версия)
+@media (min-width: @desktop-width) {
+  .page-main__container {
+    height: 696px;
+
+    margin-bottom: 80px;
+  }
+
+  .page-main__container::after {
+    display: block;
+
+    width: 50%;
+    height: 696px;
+
+    z-index: 0;
+
+    top: 0;
+    right: 0;
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .page-main__group {
+    padding-left: 80px;
+
+    width: 1140px;
+    height: 465px;
+
+    top: 200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__container--desktop {
+    margin-top: -175px;
+  }
+}
+
+// Заголовок блока главной страницы
+.page-main__title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  color: @white;
+
+  margin: 0 0 22px 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__title {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+    color: @lightblack;
+
+    padding: 0 0 30px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__title {
+    margin: 0 0 30px 0;
+    // padding: 170px 0 0 0;
+    padding: 0;
+
+    width: 45%;
+  }
+}
+
+.page-main__addition {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+
+  position: relative;
+
+  display: block;
+
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__addition {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    color: @lightblack;
+
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__addition {
+    width: 45%;
+  }
+}
+
+// Изображение товара
+.page-main__image {
+  display: block;
+
+  width: 100%;
+
+  text-align: left;
+}
+
+.page-main__image img {
+  width: 280px;
+  height: 271px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__image {
+    position: absolute;
+
+    margin: 0 auto;
+
+    z-index: -1;
+
+    bottom: 0;
+    right: 0;
+  }
+
+  .page-main__image img {
+    width: 709px;
+    height: auto;
+
+    background-image: url("../img/index-can-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__image {
+    z-index: 1;
+
+    left: 59.6%;
+    bottom: 5%;
+    transform: translateX(-50%);
+
+    width: 552px;
+
+    background-image: url("../img/index-can-desktop@1x.png");
+  }
+}
+
+// Кнопка
+.page-main__button {
+  font-family: @font--oswald;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+
+  margin: 0;
+  padding: 10px 15px;
+
+  width: 100%;
+
+  border: none;
+  background-color: @green;
+
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__button {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin: 33px 0 0 0;
+    padding: 15px 25px;
+
+    width: 42%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__button {
+    width: 21.5%;
+  }
+}
