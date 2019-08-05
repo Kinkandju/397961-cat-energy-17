@@ -110,6 +110,7 @@
   }
 }
 
+// Подпись для поле ввода
 .form__label {
   font-size: 16px;
   font-weight: 400;
@@ -133,6 +134,7 @@
   padding: 10px 15px 10px 45px;
 }
 
+// Стилизация радиокнопок и чекбоксов
 .form__radio + label::before {
   position: absolute;
 
@@ -293,6 +295,7 @@
   }
 }
 
+// Кнопка
 .form__button {
   font-family: @font--oswald;
   font-size: 16px;
@@ -345,6 +348,8 @@
 }
 
 .form__fieldset--radio {
+  padding: 15px 0;
+
   border-top: @border;
   border-bottom: @border;
 }
@@ -366,10 +371,10 @@
   }
 }
 
-.form__fieldset--radio .form__item,
-.form__fieldset--other .form__item {
-  margin: 0 0 20px 0;
-}
+// .form__fieldset--radio .form__item,
+// .form__fieldset--other .form__item {
+//   margin: 0 0 20px 0;
+// }
 
 @media (min-width: @desktop-width) {
   .form__fieldset--radio .form__item:nth-child(3) {
