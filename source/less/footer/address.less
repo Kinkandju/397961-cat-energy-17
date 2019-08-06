@@ -1,6 +1,22 @@
 .address {
   margin: 0 auto;
 
+  background-color: @lightgrey;
+}
+
+.address .layout-container {
+  position: relative;
+
+  z-index: 1;
+
+  background-color: @lightgrey;
+}
+
+.address--index .layout-container {
+  background-color: @white;
+}
+
+.address--index .page-footer__container {
   background-color: @white;
 }
 
@@ -66,10 +82,10 @@
 }
 
 .address__map {
-  width: 100%;
+  margin-top: -38px;
 
-  // border-left: @border;
-  // border-right: @border;
+  height: 400px;
+
   background-color: @lightgrey;
 }
 

@@ -5,7 +5,7 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    background-image: linear-gradient(to top, #f2f2f2 44%, #ffffff 44%);
+    background-image: linear-gradient(to top, #f2f2f2 42.7%, #ffffff 42.7%);
   }
 }
 
@@ -14,6 +14,10 @@
     background-image: linear-gradient(to top, #f2f2f2 79.9%, #ffffff 79.9%);
   }
 }
+
+// .example .layout-container {
+//   width: auto;
+// }
 
 @media (min-width: @desktop-width) {
   .example .layout-container {
@@ -40,7 +44,7 @@
   color: @lightblack;
 
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 0 23px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -67,7 +71,7 @@
   color: @lightblack;
 
   margin: 0 0 25px 0;
-  padding: 0;
+  padding: 0 10px 0 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -76,6 +80,7 @@
     line-height: 24px;
 
     margin-bottom: 50px;
+    padding: 0;
   }
 }
 
@@ -106,9 +111,9 @@
 
 // Таблица
 .example__table {
-  margin: 0 0 30px 0;
+  margin: 0 0 35px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   width: 100%;
 }
@@ -121,7 +126,7 @@
   flex-wrap: wrap;
 }
 
-.example__value:nth-child(1) {
+.example__value {
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -129,9 +134,16 @@
   text-transform: uppercase;
   color: @lightblack;
 
-  .size(124px; 56px);
+  padding: 15px 15px;
+
+  min-width: 90px;
 
   border: @border;
+  border-radius: 5px;
+}
+
+.example__value:nth-child(1) {
+  margin-right: auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -159,10 +171,12 @@
 
   position: absolute;
 
-  top: 50px;
-  left: 35px;
+  top: 42px;
+  left: 16px;
 
-  .size(54px; 19px);
+  padding: 5px;
+
+  max-width: 80px;
 
   background-color: @lightgrey;
 }
@@ -182,7 +196,7 @@
   text-transform: uppercase;
   color: @lightblack;
 
-  margin: 0 0 40px 0;
+  margin: 0 0 35px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -204,15 +218,15 @@
 
 // Изображение до и после
 .example__image {
-  position: relative;
+  display: block;
 
-  margin: 0 0 35px 0;
+  margin: 0 0 60px 0;
 
   width: 100%;
 }
 
 .example__image img {
-  width: 320px;
+  max-width: 320px;
   height: 240px;
 }
 
@@ -284,6 +298,9 @@
   }
 
   .example__compare--after {
+    display: flex;
+    flex-direction: row-reverse;
+
     width: 345px;
   }
 }
@@ -348,9 +365,21 @@
   }
 }
 
+.example__toggle-line {
+  margin-left: 10px;
+}
+
 @media (min-width: @tablet-width) {
   .example__toggle-line {
     align-items: baseline;
+
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__toggle-line {
+    margin-left: -17px;
   }
 }
 
@@ -363,13 +392,13 @@
 
   align-self: center;
 
-  margin: 0 15px;
+  margin: 0 15px 0 18px;
 
   .size(84px; 14px);
 
   background-color: @white;
   border: @border;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 @media (min-width: @tablet-width) {
