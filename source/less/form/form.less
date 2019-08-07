@@ -16,6 +16,15 @@
   border: @border;
 }
 
+@media (min-width: @tablet-width) {
+  .form-main__form input[type="text"],
+  .form__fieldset input[type="number"],
+  .form__fieldset input[type="email"],
+  .form__fieldset input[type="tel"] {
+    padding: 16px 20px 16px 20px;
+  }
+}
+
 .form__fieldset input[type="email"],
 .form__fieldset input[type="tel"] {
   padding-right: 45px;
@@ -38,7 +47,8 @@
     font-size: 20px;
     line-height: 30px;
 
-    margin-right: 50%;
+    margin: 0 0 44px 0;
+    max-width: 330px;
   }
 }
 
@@ -71,6 +81,12 @@
   .form__legend {
     font-size: 36px;
     line-height: 36px;
+
+    margin: 0 0 77px 0;
+  }
+
+  .form__legend--other {
+    margin: 0 0 57px 0;
   }
 }
 
@@ -86,6 +102,12 @@
 .form__fieldset--id {
   margin: 0 0 7px 0;
   padding: 24px 0 0 0;
+}
+
+@media (min-width: @tablet-width) {
+  .form__fieldset--id {
+    margin: 0 0 49px 0;
+  }
 }
 
 .form__fieldset--id .form__item,
@@ -116,7 +138,28 @@
   }
 }
 
-// Подпись для поле ввода
+@media (min-width: @tablet-width) {
+  .form__fieldset--other .form__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form__fieldset--other .form__item {
+    width: 42.4%;
+
+    margin-right: 20px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__fieldset--other .form__item {
+    width: 25%;
+  }
+}
+
+// Подпись для поля ввода
 .form__label {
   font-size: 16px;
   font-weight: 400;
@@ -134,8 +177,23 @@
   margin-right: 18px;
 }
 
+@media (min-width: @tablet-width) {
+  .form__label {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-right: 21px;
+  }
+}
+
 .form__label--id {
   margin-right: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__label--id {
+    margin-right: 18px;
+  }
 }
 
 .form__fieldset--radio .form__label,
@@ -144,12 +202,37 @@
   padding: 10px 15px 10px 45px;
 }
 
+@media (min-width: @tablet-width) {
+  .form__fieldset--radio .form__label {
+    margin: 0 0 13px 0;
+    padding: 10px 15px 10px 63px;
+  }
+}
+
 .form__fieldset--other .form__label {
   margin: -1px 0 4px 0;
 }
 
+@media (min-width: @tablet-width) {
+  .form__fieldset--other .form__label {
+    margin: 0;
+    padding: 10px 15px 10px 60px;
+  }
+}
+
 .form__fieldset--communication .form__label {
   margin-right: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__fieldset--communication .form__label {
+    margin-right: 15px;
+  }
+
+  .form__fieldset--communication .form__label--email {
+    width: 100%;
+    max-width: 67px;
+  }
 }
 
 // Стилизация радиокнопок и чекбоксов
@@ -187,6 +270,24 @@
   margin-top: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .form__radio + label::before {
+    top: 50%;
+    left: 3px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__radio:checked + label::after {
+    top: 50%;
+    left: 15px;
+
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .form__checkbox + label::before {
   content: "";
 
@@ -221,9 +322,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__label {
-    font-size: 20px;
-    line-height: 20px;
+  .form__checkbox + label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__checkbox:checked + label::after {
+    left: 16px;
   }
 }
 
@@ -284,6 +389,15 @@
   border: @border;
 }
 
+@media (min-width: @tablet-width) {
+  .form__comment {
+    padding: 14px 19px;
+
+    max-width: 592px;
+    min-height: 144px;
+  }
+}
+
 .form__comment::-webkit-input-placeholder {
   font-family: @font--oswald;
   font-size: 16px;
@@ -306,6 +420,12 @@
   margin: 0 0 12px 0;
 }
 
+@media (min-width: @tablet-width) {
+  .form__fieldset--communication {
+    margin: 0 0 44px 0;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .form__fieldset--communication .form__list {
     display: flex;
@@ -322,9 +442,21 @@
   margin: 0 0 29px 0;
 }
 
+@media (min-width: @tablet-width) {
+  .form__fieldset--comment {
+    margin: 0 0 64px 0;
+  }
+}
+
 // Форма дополнительных товаров
 .form__fieldset--other {
   margin: 0 0 28px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .form__fieldset--other {
+    margin: 0 0 22px 0;
+  }
 }
 
 // Кнопка
@@ -350,7 +482,8 @@
   .form__button {
     font-size: 20px;
 
-    padding: 15px 65px;
+    margin: 0 0 71px 0;
+    padding: 16px 65px;
   }
 }
 
@@ -378,7 +511,7 @@
     display: inline-block;
     vertical-align: middle;
 
-    margin-left: 60px;
+    margin: 0 0 13px 59px;
   }
 }
 
@@ -393,7 +526,8 @@
 
 @media (min-width: @tablet-width) {
   .form__fieldset--radio {
-    padding: 25px;
+    margin: 0 0 76px 0;
+    padding: 25px 25px 10px 25px;
 
     border: @border;
   }
@@ -401,39 +535,12 @@
 
 @media (min-width: @desktop-width) {
   .form__fieldset--radio {
-    // margin-left: 40px;
-    //
-    // width: 520px;
     width: 42.5%;
   }
 }
 
-// .form__fieldset--radio .form__item,
-// .form__fieldset--other .form__item {
-//   margin: 0 0 20px 0;
-// }
-
 @media (min-width: @desktop-width) {
   .form__fieldset--radio .form__item:nth-child(3) {
     margin-bottom: 0;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--other .form__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .form__fieldset--other .form__item {
-    width: 50%;
-
-    margin-bottom: 50px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--other .form__item {
-    width: 25%;
   }
 }

@@ -5,12 +5,22 @@
   border-top: @border;
 }
 
+.site-list__item a {
+  margin: 0;
+  padding: 0;
+
+  color: @black;
+}
+
 @media (min-width: @tablet-width) {
   .site-list__item {
     margin: 0;
-    padding: 10px 18px;
 
     border: none;
+  }
+
+  .site-list__item a {
+    padding: 10px 18px 7px 18px;
   }
 }
 
@@ -30,13 +40,6 @@
 
     border: none;
   }
-}
-
-.site-list__item a {
-  margin: 0;
-  padding: 0;
-
-  color: @black;
 }
 
 // @media (min-width: @desktop-width) {

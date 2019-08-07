@@ -21,8 +21,8 @@
     font-size: 36px;
     line-height: 36px;
 
-    margin-top: -70px;
-    padding-bottom: 70px;
+    margin-top: -75px;
+    padding: 0 38px 58px 38px;
   }
 }
 
@@ -61,9 +61,14 @@
     align-items: baseline;
     justify-content: space-between;
 
-    padding: 25px 35px;
+    padding: 30px 35px 27px 38px;
 
     border: @border;
+    border-bottom: none;
+  }
+
+  .additional-product__item:last-child {
+    margin: 0 0 69px 0;
   }
 }
 
@@ -94,6 +99,10 @@
   .additional-product__title {
     font-size: 20px;
     line-height: 20px;
+
+    position: relative;
+
+    top: -6px;
 
     margin: 0;
     padding: 0;
@@ -129,6 +138,16 @@
   .additional-product__table {
     font-size: 16px;
     line-height: 20px;
+
+    width: 50%;
+  }
+
+  .additional-product__value {
+    text-align: right;
+  }
+
+  .additional-product__field {
+    width: 30%;
   }
 }
 
@@ -155,9 +174,17 @@
   background-color: @green;
 }
 
+@media (min-width: @tablet-width) {
+  .additional-product__button {
+    margin: 4px 0 0 0;
+  }
+}
+
 
 @media (min-width: @desktop-width) {
   .additional-product__button {
+    margin: 0;
+
     width: 50%;
   }
 }

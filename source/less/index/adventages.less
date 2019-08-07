@@ -29,7 +29,11 @@
 @media (min-width: @tablet-width) {
   .advantages__item {
     margin-bottom: 30px;
-    padding: 80px 315px 60px 50px;
+    padding: 76px 315px 60px 51px;
+  }
+
+  .advantages__item--slim {
+    padding-right: 285px;
   }
 }
 
@@ -48,6 +52,7 @@
   }
 }
 
+// Заголовок преимуществ
 .advantages__title {
   font-size: 24px;
   font-weight: 400;
@@ -79,6 +84,7 @@
   }
 }
 
+// Зеленые кружочки
 .advantages__title::before {
   position: absolute;
 
@@ -95,8 +101,8 @@
 
 @media (min-width: @tablet-width) {
   .advantages__title::before {
-    top: 25px;
-    left: 390px;
+    top: 16px;
+    left: 395px;
 
     .size(200px; 200px);
   }
@@ -111,6 +117,7 @@
   }
 }
 
+// Кот стройный
 .advantages__item--slim .advantages__title::after {
   position: absolute;
 
@@ -127,8 +134,8 @@
 
 @media (min-width: @tablet-width) {
   .advantages__item--slim .advantages__title::after {
-    top: 15px;
-    left: 420px;
+    top: 4px;
+    left: 425px;
 
     .size(141px; 194px);
   }
@@ -143,6 +150,7 @@
   }
 }
 
+// Кот мускулистый
 .advantages__item--pro .advantages__title::after {
   position: absolute;
 
@@ -159,8 +167,8 @@
 
 @media (min-width: @tablet-width) {
   .advantages__item--pro .advantages__title::after {
-    top: 65px;
-    left: 350px;
+    top: 59px;
+    left: 361px;
 
     .size(268px; 113px);
   }
@@ -175,6 +183,7 @@
   }
 }
 
+// Описание преимуществ
 .advantages__description {
   font-family: @font--arial;
   font-size: 14px;
@@ -194,7 +203,7 @@
     font-size: 16px;
     line-height: 24px;
 
-    margin-bottom: 30px;
+    margin-bottom: 27px;
     padding-bottom: 30px;
 
     border-bottom: none;
@@ -208,6 +217,7 @@
   }
 }
 
+// Кнопка перехода в каталог
 .advantages__button {
   font-size: 16px;
   font-weight: 400;
@@ -231,6 +241,8 @@
   .advantages__button {
     font-size: 20px;
     line-height: 20px;
+
+    padding: 0 49px 0 0;
   }
 }
 

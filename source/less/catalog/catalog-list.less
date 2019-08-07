@@ -118,6 +118,7 @@
   min-height: 67px;
 }
 
+// Плюсик
 .catalog-list__container--show-all::before {
   position: absolute;
 
@@ -152,6 +153,16 @@
   opacity: 0.2;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog-list__container--show-all::before,
+  .catalog-list__container--show-all::after {
+    top: 15.4%;
+    left: 38%;
+
+    width: 61px;
+  }
+}
+
 // Название продукта
 .catalog-list__title {
   font-size: 16px;
@@ -173,7 +184,7 @@
     line-height: 20px;
     text-align: center;
 
-    margin: 30px auto 20px auto;
+    margin: 34px auto 20px auto;
     padding: 0;
 
     width: 100%;
@@ -261,7 +272,7 @@
 }
 
 .catalog-list__item--all .catalog-list__container {
-  padding-top: 80px;
+  padding-top: 92px;
 
   width: 100%;
   min-width: 169px;
@@ -284,7 +295,7 @@
     font-size: 20px;
     line-height: 20px;
 
-    margin: 0 auto 20px auto;
+    margin: 31px auto 25px auto;
     padding: 0;
 
     width: 100%;
@@ -314,9 +325,9 @@
 @media (min-width: @tablet-width) {
   .catalog-list__bonus {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 20px;
 
-    margin: 0 auto 20px auto;
+    margin: 0 auto 53px auto;
     padding: 0;
 
     width: 100%;
