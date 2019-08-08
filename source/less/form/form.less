@@ -54,6 +54,8 @@
 
 @media (min-width: @desktop-width) {
   .form__description {
+    margin: 0 0 66px 0;
+
     width: 30%;
   }
 }
@@ -87,6 +89,12 @@
 
   .form__legend--other {
     margin: 0 0 57px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__legend--other {
+    margin: 0 0 58px 0;
   }
 }
 
@@ -134,7 +142,7 @@
 
   .form__fieldset--id {
     padding: 0;
-    width: 46.7%;
+    width: 46.8%;
   }
 }
 
@@ -148,14 +156,15 @@
   .form__fieldset--other .form__item {
     width: 42.4%;
 
-    margin-right: 20px;
-    margin-bottom: 32px;
+    margin: 0 20px 32px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__fieldset--other .form__item {
-    width: 25%;
+    margin: 0 6px 40px 0;
+
+    width: 240px;
   }
 }
 
@@ -398,6 +407,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .form__comment {
+    max-width: 1180px;
+  }
+}
+
 .form__comment::-webkit-input-placeholder {
   font-family: @font--oswald;
   font-size: 16px;
@@ -448,6 +463,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .form__fieldset--comment {
+    margin: 0 0 66px 0;
+  }
+}
+
 // Форма дополнительных товаров
 .form__fieldset--other {
   margin: 0 0 28px 0;
@@ -456,6 +477,12 @@
 @media (min-width: @tablet-width) {
   .form__fieldset--other {
     margin: 0 0 22px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__fieldset--other {
+    margin: 0 0 21px 0;
   }
 }
 
@@ -470,7 +497,9 @@
   color: @white;
 
   margin: 0 0 20px 0;
-  padding: 10px 78px;
+  padding: 10px 15px;
+
+  width: 100%;
 
   border: none;
   background-color: @green;
@@ -482,14 +511,18 @@
   .form__button {
     font-size: 20px;
 
+    width: 45%;
+
     margin: 0 0 71px 0;
-    padding: 16px 65px;
+    padding: 16px 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__button {
-    padding: 15px 205px;
+    width: 46.6%;
+
+    margin: 0 0 82px 0;
   }
 }
 
@@ -515,6 +548,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .form__text {
+    margin: 0 0 13px 78px;
+  }
+}
+
 // Форма выбора варианта изменения веса кота
 .form__fieldset--radio {
   margin: 0 0 28px 0;
@@ -535,6 +574,8 @@
 
 @media (min-width: @desktop-width) {
   .form__fieldset--radio {
+    margin: 0 0 68px 0;
+
     width: 42.5%;
   }
 }

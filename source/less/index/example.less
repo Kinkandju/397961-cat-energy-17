@@ -11,13 +11,20 @@
 
     border-top: @border;
 
-    background-image: linear-gradient(to top, #f2f2f2 43.8%, #ffffff 43.8%);
+    background-image: linear-gradient(to top, #f2f2f2 43.7%, #ffffff 43.7%);
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    background-image: linear-gradient(to top, #f2f2f2 79.9%, #ffffff 79.9%);
+    margin: 0 0 -16px 0;
+    padding-bottom: 6px;
+
+    top: -16px;
+
+    border: none;
+
+    background-image: linear-gradient(to top, #f2f2f2 76%, #ffffff 76%);
   }
 }
 
@@ -63,7 +70,7 @@
 
 @media (min-width: @desktop-width) {
   .example__title {
-    padding: 10px 0 60px 0;
+    padding: 10px 0 65px 0;
   }
 }
 
@@ -76,7 +83,7 @@
   text-align: left;
   color: @lightblack;
 
-  margin: 0 0 25px 0;
+  margin: 0 0 20px 0;
   padding: 0 10px 0 0;
 }
 
@@ -92,7 +99,8 @@
 
 @media (min-width: @desktop-width) {
   .example__description {
-    margin-top: 80px;
+    margin: 80px 0 50px 0;
+    padding: 0;
   }
 }
 
@@ -111,22 +119,33 @@
   .example__container {
     flex-wrap: wrap;
 
-    margin-top: 70px;
+    margin-top: 68px;
   }
 }
 
 // Таблица
 .example__table {
   margin: 0 0 35px 0;
-  display: flex;
-  justify-content: center;
 
   width: 100%;
+}
+
+.example__table tbody {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: @tablet-width) {
   .example__table {
     max-width: 365px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__table {
+    margin: 0 0 33px 0;
+
+    max-width: 374px;
   }
 }
 
@@ -185,8 +204,8 @@
 
   position: absolute;
 
-  top: 42px;
-  left: 16px;
+  top: 44px;
+  left: 15px;
 
   padding: 5px;
 
@@ -205,6 +224,12 @@
     max-width: 140px;
 
     background-color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__field {
+    background-color: @lightgrey;
   }
 }
 
@@ -256,6 +281,8 @@
     margin: 0 auto;
 
     width: 690px;
+    max-width: none;
+    height: 517px;
   }
 
   .example__compare--before .example__image img {
@@ -286,7 +313,7 @@
     left: 16px;
 
     width: 690px;
-    height: 650px;
+    height: 649px;
   }
 
   .example__compare--before,
@@ -300,7 +327,7 @@
     height: 100%;
 
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, #ffffff 25.9%, #f2f2f2 25.9%);
+    background-image: linear-gradient(to bottom, #ffffff 25.7%, #f2f2f2 25.7%);
     background-color: #f2f2f2;
     background-size: cover;
     background-position: center;
@@ -309,24 +336,13 @@
   }
 
   .example__compare--after {
-    display: block;
-
-    background-image: linear-gradient(to bottom, #ffffff 25.9%, #eaeaea 25.9%);
-    background-color: #eaeaea;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .example__image {
-    max-width: none;
-    height: 517px;
-  }
-
-  .example__compare--after {
     display: flex;
     flex-direction: row-reverse;
 
     width: 352px;
+
+    background-image: linear-gradient(to bottom, #ffffff 25.7%, #eaeaea 25.7%);
+    background-color: #eaeaea;
   }
 }
 
@@ -334,8 +350,23 @@
   .example__compare {
     position: relative;
 
-    top: -50px;
-    left: 20px;
+    top: -45px;
+    left: 6px;
+
+    height: 652px;
+  }
+
+  .example__compare--before,
+  .example__compare--after {
+    background-image: linear-gradient(to bottom, #ffffff 29.1%, #f2f2f2 29.1%);
+  }
+
+  .example__compare--after {
+    right: -34px;
+
+    width: 325px;
+
+    background-image: linear-gradient(to bottom, #ffffff 29.1%, #eaeaea 29.1%);
   }
 }
 
@@ -353,12 +384,22 @@
   .example__toggle-line {
     position: absolute;
 
+    align-items: baseline;
+
+    margin-left: 0;
     padding: 10px 0 25px 0;
 
     bottom: 65px;
     left: 53px;
 
     overflow: hidden;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__toggle-line {
+    right: -18px;
+    bottom: 44px;
   }
 }
 
@@ -387,20 +428,6 @@
     padding: 5px 0;
 
     border-bottom: 1px dotted #d9d9d9;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .example__toggle-line {
-    align-items: baseline;
-
-    margin-left: 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example__toggle-line {
-    margin-left: -17px;
   }
 }
 
