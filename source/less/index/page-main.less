@@ -231,6 +231,16 @@
   background-color: @green;
 
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+    transition: 0.3s;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
