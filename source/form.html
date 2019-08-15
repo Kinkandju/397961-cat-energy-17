@@ -88,7 +88,13 @@
         </div>
 
         <fieldset class="form__fieldset form__fieldset--communication">
-          <legend class="form__legend">Контактные данные (владельца кота)</legend>
+          <legend class="form__legend">
+            <div class="form__legend--container">
+              <div class="form__legend--value">
+                Контактные данные (владельца кота)
+              </div>
+            </div>
+          </legend>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label form__label--email" for="owner-email">E-mail:*</label>
@@ -108,12 +114,24 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--comment">
-          <legend class="form__legend">Комментарий</legend>
+          <legend class="form__legend">
+            <div class="form__legend--container">
+              <div class="form__legend--value">
+                Комментарий
+              </div>
+            </div>
+          </legend>
           <textarea class="form__comment" name="name" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--other">
-          <legend class="form__legend form__legend--other">Дополнительно</legend>
+          <legend class="form__legend form__legend--other">
+            <div class="form__legend--container">
+              <div class="form__legend--value">
+                Дополнительно
+              </div>
+            </div>
+          </legend>
           <ul class="form__list">
             <li class="form__item">
               <input class="form__checkbox visually-hidden" type="checkbox" id="other-sweetener" checked>

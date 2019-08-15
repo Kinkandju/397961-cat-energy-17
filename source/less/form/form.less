@@ -1,3 +1,4 @@
+// Блок содержания формы
 .form__fieldset {
   margin: 0;
   padding: 0;
@@ -116,6 +117,7 @@
   }
 }
 
+// Блок для удобства стилизации
 @media (min-width: @desktop-width) {
   .form__container {
     display: flex;
@@ -133,33 +135,13 @@
   color: @lightblack;
 
   position: relative;
-  z-index: 2;
 
-  display: inline-block;
-  vertical-align: baseline;
-
-  width: auto;
+  width: 100%;
 
   margin: 0 0 34px 0;
   padding: 0 20px 0 0;
 
   background-color: @white;
-}
-
-.form__legend::after {
-  position: absolute;
-  z-index: 1;
-
-  top: 50%;
-
-  content: "";
-
-  width: 100vw;
-  height: 3px;
-
-  margin: 2px 0 0 20px;
-
-  background: #68b738;
 }
 
 @media (min-width: @tablet-width) {
@@ -170,33 +152,6 @@
     margin: 0 0 77px -40px;
     padding: 0 40px 0 40px;
   }
-
-  .form__legend::before {
-    position: absolute;
-
-    top: 50%;
-    right: 0;
-
-    width: 100vw;
-
-    content: "";
-
-    height: 3px;
-
-    margin: 2px 40px 0 0;
-
-    background: #68b738;
-
-    z-index: 1;
-  }
-
-  .form__legend::after {
-    margin: 2px 0 0 40px;
-  }
-
-  .form__legend--other {
-    margin: 0 0 57px -40px;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -204,6 +159,59 @@
     margin: 0 0 58px 0;
   }
 }
+
+// Стилизация линии на фоне заголовков
+.form__legend--container {
+  width: 260px;
+
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .form__legend--container {
+    width: 590px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__legend--container {
+    width: 1180px;
+  }
+}
+
+.form__legend::before {
+  position: absolute;
+
+  top: 55%;
+  left: 0;
+
+  content: "";
+
+  height: 3px;
+  width: 100%;
+
+  background: @green;
+}
+
+.form__legend--value {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  padding: 0 20px;
+  margin-left: -20px;
+
+  background: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .form__legend--value {
+    padding: 0 40px;
+    margin-left: -40px;
+  }
+}
+
 
 // Список формы
 .form__list {
