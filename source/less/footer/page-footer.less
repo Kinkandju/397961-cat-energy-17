@@ -40,11 +40,15 @@
 
 @media (min-width: @desktop-width) {
   .page-footer .layout-container__map {
-    width: 1440px;
-    min-width: 1300px;
+    margin: 0;
 
-    background-size: cover;
-    background-position: center;
+    width: 1440px;
+    max-width: none;
+
+    height: 400px;
+
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
