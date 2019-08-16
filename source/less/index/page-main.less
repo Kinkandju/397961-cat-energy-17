@@ -23,6 +23,14 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: @green;
+  background-position: center;
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .page-main__container::after {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 // Основной блок заголовка главной страницы (планшетная версия)
@@ -56,31 +64,37 @@
   .page-main__container {
     height: 696px;
 
-    margin: 0 0 57px 0;
+    margin-bottom: 80px;
   }
 
   .page-main__container::after {
     display: block;
 
-    .size(49.3%; 698px);
+    width: 50%;
+    height: 696px;
 
     z-index: 0;
 
-    top: -25px;
+    top: 0;
     right: 0;
 
     background-image: url("../img/index-background-desktop@1x.jpg");
-    background-color: @green;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
+    }
   }
 
   .page-main__group {
-    padding: 0 0 0 81px;
+    padding-left: 80px;
+
+    width: 1140px;
+    height: 465px;
 
     top: 200px;
-
-    .size(1140px; 465px);
   }
 }
 
