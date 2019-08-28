@@ -2,33 +2,19 @@
 .page-main__container {
   position: relative;
 
-  margin: 0  auto 33px auto;
-  padding: 27px 0 0 0;
+  margin: 0  auto 22px auto;
 
-  .size(320px; 442px);
-
-  background-color: transparent;
-}
-
-.page-main__container::after {
-  position: absolute;
-  z-index: -1;
-
-  content: "";
-
-  top: 0;
-
-  .size(320px; 305px);
-
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  text-align: center;
+  color: #ffffff;
+  background-color: #5eaa2f;
+  background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-color: @green;
-  background-position: center;
+  background-position: center bottom, center bottom 175px;
 }
 
 @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  .page-main__container::after {
-    background-image: url("../img/index-background-mobile@2x.jpg");
+  .page-main__container {
+    background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@2x.jpg");
     background-size: 320px auto;
   }
 }
@@ -42,10 +28,11 @@
     .size(100%; 805px);
 
     margin-bottom: 5px;
-  }
 
-  .page-main__container::after {
-    display: none;
+    text-align: left;
+
+    background-color: transparent;
+    background-image: none;
   }
 
   .page-main__group {
@@ -68,10 +55,14 @@
   }
 
   .page-main__container::after {
+    position: absolute;
+
     display: block;
 
     width: 50%;
     height: 696px;
+
+    content: "";
 
     z-index: 0;
 
@@ -107,6 +98,12 @@
 }
 
 // Заголовок блока главной страницы
+.page-main__group--text {
+  padding: 27px 0 28px 0;
+
+  min-height: 111px;
+}
+
 .page-main__title {
   font-size: 36px;
   font-weight: 400;
@@ -119,6 +116,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-main__group--text {
+    padding: 0;
+  }
+
   .page-main__title {
     font-size: 60px;
     font-weight: 400;
@@ -152,7 +153,7 @@
 
   display: block;
 
-  margin: 0 0 28px 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -179,9 +180,9 @@
 .page-main__image {
   display: block;
 
-  margin: 0 0 3px 0;
+  margin: 0 auto 3px auto;
 
-  width: 100%;
+  width: 280px;
 
   text-align: left;
 }
@@ -200,6 +201,8 @@
 
     bottom: -4px;
     right: 0;
+
+    width: 100%;
   }
 
   .page-main__image img {
