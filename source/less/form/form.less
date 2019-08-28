@@ -10,10 +10,19 @@
 .form-main__form input[type="text"],
 .form__fieldset input[type="number"],
 .form__fieldset input[type="email"],
-.form__fieldset input[type="tel"],
-.form__fieldset--comment .form__comment {
+.form__fieldset input[type="tel"] {
   margin: 0;
   padding: 13px 16px;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+}
+
+.form__fieldset--comment .form__comment {
+  margin: 0;
+  padding: 14px;
+
+  width: 90%;
+  max-height: 121px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
 }
@@ -52,9 +61,23 @@
   border: 2px solid #ff8282;
 }
 
+.form-main__form input[type="text"]:invalid:not(:focus),
+.form-main__form input[type="number"]:invalid:not(:focus),
+.form-main__form input[type="email"]:invalid:not(:focus),
+.form-main__form input[type="tel"]:invalid:not(:focus) {
+  padding: 13px 16px;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+}
+
 .form__fieldset input[type="email"]:invalid + .form__communication--email,
 .form__fieldset input[type="tel"]:invalid + .form__communication--tel {
   fill: #ff8282;
+}
+
+.form-main__form input[type="email"]:invalid:not(:focus) + .form__communication--email,
+.form-main__form input[type="tel"]:invalid:not(:focus) + .form__communication--tel {
+  fill: @black;
 }
 
 @media (min-width: @tablet-width) {
@@ -80,6 +103,15 @@
     padding: 15px 19px;
     border: 2px solid #ff8282;
   }
+
+  .form-main__form input[type="text"]:invalid:not(:focus),
+  .form-main__form input[type="number"]:invalid:not(:focus),
+  .form-main__form input[type="email"]:invalid:not(:focus),
+  .form-main__form input[type="tel"]:invalid:not(:focus) {
+    padding: 16px 16px;
+
+    border: 1px solid rgba(205, 205, 205, 0.5);
+  }
 }
 
 .form__fieldset input[type="email"],
@@ -104,7 +136,7 @@
     font-size: 20px;
     line-height: 30px;
 
-    margin: 0 0 44px 0;
+    margin: 0 0 67px 0;
     max-width: 330px;
   }
 }
@@ -149,14 +181,18 @@
     font-size: 36px;
     line-height: 36px;
 
-    margin: 0 0 77px -40px;
+    margin: 0 0 75px -40px;
     padding: 0 40px 0 40px;
+  }
+
+  .form__legend--other {
+    margin: 0 0 56px -40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__legend--other {
-    margin: 0 0 58px -40px;
+    margin: 0 0 56px -40px;
   }
 }
 
@@ -164,15 +200,53 @@
 .form__legend::before {
   position: absolute;
 
-  top: 55%;
-  left: 0;
+  top: 14px;
+  right: 0;
 
   content: "";
 
   height: 3px;
-  width: 100%;
+  width: 100vw;
 
   background: @green;
+}
+
+.form__legend::after {
+  position: absolute;
+
+  top: 14px;
+  left: 95%;
+
+  content: "";
+
+  height: 3px;
+  width: 100vw;
+
+  background: @green;
+}
+
+.form__legend--comment::before,
+.form__legend--comment::after,
+.form__legend--other::before,
+.form__legend--other::after {
+  top: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__legend::before,
+  .form__legend--other::before {
+    top: 27px;
+  }
+
+  .form__legend::after,
+  .form__legend--other::before {
+    top: 27px;
+  }
+
+  .form__legend--comment::before,
+  .form__legend--comment::after {
+    top: 28px;
+  }
 }
 
 .form__legend--value {
@@ -181,13 +255,13 @@
   display: inline-block;
   vertical-align: middle;
 
-  padding: 0 20px;
+  padding: 0 21px 0 19px;
   margin-left: -20px;
 
   background: @white;
 }
 
-.form__legend--value:nth-child(1) {
+.form__legend--value-communication {
   max-width: 182px;
 }
 
@@ -197,7 +271,8 @@
     margin-left: -40px;
   }
 
-  .form__legend--value:nth-child(1) {
+  .form__legend--value-communication {
+    width: 512px;
     max-width: 100%;
   }
 }
@@ -212,13 +287,20 @@
 
 // Форма ввода персональных данных кота
 .form__fieldset--id {
-  margin: 0 0 7px 0;
-  padding: 24px 0 0 0;
+  margin: 0 -20px 7px -20px;
+  padding: 24px 20px 0 20px;
 }
 
 @media (min-width: @tablet-width) {
   .form__fieldset--id {
-    margin: 0 0 49px 0;
+    margin: 0 0 50px 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__fieldset--id {
+    margin: 0 0 48px 0;
   }
 }
 
@@ -291,7 +373,7 @@
 
   cursor: pointer;
 
-  margin-right: 18px;
+  margin-right: 15px;
 }
 
 .form__label--email {
@@ -317,8 +399,7 @@
   }
 }
 
-.form__fieldset--radio .form__label,
-.form__fieldset--other .form__label {
+.form__fieldset--radio .form__label {
   margin: 0 0 5px 0;
   padding: 10px 15px 10px 45px;
 }
@@ -330,8 +411,16 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .form__fieldset--radio .form__label {
+    margin: 0 0 13px 0;
+    padding: 8px 15px 12px 63px;
+  }
+}
+
 .form__fieldset--other .form__label {
-  margin: -1px 0 4px 0;
+  margin: -5px 0 5px 0;
+  padding: 12px 15px 12px 45px;
 }
 
 @media (min-width: @tablet-width) {
@@ -361,7 +450,7 @@
   position: absolute;
 
   top: 50%;
-  left: 0;
+  left: -1px;
   transform: translateY(-50%);
 
   content: "";
@@ -388,7 +477,7 @@
   content: "";
 
   top: 50%;
-  left: 10px;
+  left: 9px;
   transform: translateY(-50%);
 
   width: 12px;
@@ -405,13 +494,13 @@
     top: 50%;
     left: 3px;
 
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
 
   .form__radio:checked + label::after {
     top: 50%;
-    left: 15px;
+    left: 14px;
 
     width: 18px;
     height: 18px;
@@ -427,8 +516,8 @@
   top: 50%;
   transform: translateY(-50%);
 
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 
   border: 1px solid #cdcdcd;
 }
@@ -472,9 +561,17 @@
 }
 
 .form__id {
-  margin-left: 5px;
+  padding: 13px 16px;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
 
   width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .form__id {
+    padding: 16px 20px;
+  }
 }
 
 .form__id::-webkit-input-placeholder {
@@ -536,21 +633,16 @@
 }
 
 .form__comment {
-  margin: 0;
-  padding: 14px 13px;
+  // max-height: 121px;
 
-  width: 100%;
-  max-width: 252px;
-  max-height: 120px;
-
-  border: @border;
+  // border: @border;
 }
 
 @media (min-width: @tablet-width) {
-  .form__comment {
+  .form__fieldset--comment .form__comment {
     padding: 14px 19px;
 
-    max-width: 577px;
+    width: 94%;
     min-height: 144px;
   }
 }
@@ -580,16 +672,22 @@
 
 // Форма обратной связи
 .form__fieldset--communication {
-  margin: 0 0 12px 0;
+  margin: 0 -20px 8px -20px;
+  padding: 0 20px;
 }
 
 @media (min-width: @tablet-width) {
   .form__fieldset--communication {
-    margin: 0 0 44px 0;
+    margin: 0 0 39px 0;
+    padding: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form__fieldset--communication {
+    margin: 0 0 41px 0;
+  }
+
   .form__fieldset--communication .form__list {
     display: flex;
     justify-content: space-between;
@@ -602,29 +700,33 @@
 
 // Форма заполнения комментария
 .form__fieldset--comment {
-  margin: 0 0 29px 0;
+  margin: 0 -20px 24px -20px;
+  padding: 0 20px;
 }
 
 @media (min-width: @tablet-width) {
   .form__fieldset--comment {
-    margin: 0 0 64px 0;
+    margin: 0 0 61px 0;
+    padding: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__fieldset--comment {
-    margin: 0 0 66px 0;
+    margin: 0 0 63px 0;
   }
 }
 
 // Форма дополнительных товаров
 .form__fieldset--other {
-  margin: 0 0 28px 0;
+  margin: 0 -20px 24px -20px;
+  padding: 0 20px;
 }
 
 @media (min-width: @tablet-width) {
   .form__fieldset--other {
     margin: 0 0 22px 0;
+    padding: 0;
   }
 }
 
@@ -671,7 +773,7 @@
 
     width: 45%;
 
-    margin: 0 0 71px 0;
+    margin: 0 0 72px 1px;
     padding: 16px 15px;
   }
 }
@@ -680,7 +782,7 @@
   .form__button {
     width: 46.6%;
 
-    margin: 0 0 82px 0;
+    margin: 0 0 82px 1px;
   }
 }
 
@@ -692,7 +794,7 @@
   text-align: center;
   color: @grey;
 
-  margin: 0 0 37px 0;
+  margin: 0 0 33px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -714,8 +816,8 @@
 
 // Форма выбора варианта изменения веса кота
 .form__fieldset--radio {
-  margin: 0 0 28px 0;
-  padding: 16px 0 11px 0;
+  margin: 0 -20px 28px -20px;
+  padding: 16px 20px 11px 20px;
 
   border-top: @border;
   border-bottom: @border;
@@ -723,7 +825,7 @@
 
 @media (min-width: @tablet-width) {
   .form__fieldset--radio {
-    margin: 0 0 76px 0;
+    margin: 0 0 71px 0;
     padding: 25px 25px 10px 25px;
 
     border: @border;
@@ -732,7 +834,7 @@
 
 @media (min-width: @desktop-width) {
   .form__fieldset--radio {
-    margin: 0 0 68px 0;
+    margin: 0 0 63px 0;
 
     width: 42.5%;
   }

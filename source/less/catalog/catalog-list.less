@@ -28,7 +28,8 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  padding: 0 0 21px;
+  margin: 0 -20px;
+  padding: 0 20px 22px 20px;
 
   border-top: @border;
 }
@@ -47,12 +48,8 @@
 
 @media (min-width: @desktop-width) {
   .catalog-list__item {
-    margin: 0 40px 143px 40px;
-    padding: 38px 37px 38px 39px;
-  }
-
-  .catalog-list__item--all {
-    margin: 0 38px 143px 38px;
+    margin: 0 40px 144px 40px;
+    padding: 38px;
   }
 }
 
@@ -102,7 +99,7 @@
   position: relative;
 
   width: 50%;
-  min-height: 147px;
+  min-height: 146px;
 }
 
 @media (min-width: @tablet-width) {
@@ -117,6 +114,8 @@
 
 @media (min-width: @desktop-width) {
   .catalog-list__container {
+    margin-bottom: 29px;
+
     min-width: 169px;
   }
 }
@@ -129,7 +128,7 @@
 .catalog-list__container--show-all::before {
   position: absolute;
 
-  top: 28.6%;
+  top: 28.2%;
   left: 44.5%;
 
   width: 31px;
@@ -145,7 +144,7 @@
 .catalog-list__container--show-all::after {
   position: absolute;
 
-  top: 28.6%;
+  top: 28.2%;
   left: 44.5%;
 
   width: 31px;
@@ -173,8 +172,8 @@
 @media (min-width: @desktop-width) {
   .catalog-list__container--show-all::before,
   .catalog-list__container--show-all::after {
-    top: 15.5%;
-    left: 34%;
+    top: 15%;
+    left: 32.5%;
   }
 }
 
@@ -245,8 +244,21 @@
   }
 }
 
+.catalog-list__value {
+  position: relative;
+}
+
 .catalog-list__field {
+  position: relative;
+
+  right: -1px;
+
   text-align: right;
+}
+
+.catalog-list__value--price,
+.catalog-list__field--price {
+  top: -4px;
 }
 
 // Кнопка
@@ -299,20 +311,37 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  // margin: 0 39px 144px 40px;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-list__item--all {
+    margin: 0 30px 140px 30px;
+    padding: 40px 37px 40px 37px;
+
     background-color: @white;
     border: @border;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .catalog-list__item--all {
+    margin: 0 40px 140px 40px;
+    padding: 40px 36px 40px 37px;
+  }
+}
+
 .catalog-list__item--all .catalog-list__container {
-  padding-top: 92px;
+  padding-top: 79px;
 
   width: 100%;
-  min-width: 169px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-list__item--all .catalog-list__container {
+    padding-top: 90px;
+  }
 }
 
 .catalog-list__show-all {
@@ -332,7 +361,7 @@
     font-size: 20px;
     line-height: 20px;
 
-    margin: 31px auto 25px auto;
+    margin: 32px auto 25px auto;
     padding: 0;
 
     width: 100%;

@@ -21,9 +21,9 @@
             <img class="page-header__logo--image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип здорового питания для котов «Cat Energy»">
           </picture>
         </a>
-        <button class="page-header__toggle page-header__toggle--opened" type="button" alt="Открыть меню"></button>
+        <button class="page-header__toggle page-header__toggle--opened page-header__toggle--nojs" type="button" alt="Открыть меню"></button>
       </div>
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -50,9 +50,9 @@
           Заполните анкету и мы подберем
           программу питания для вашего кота
         </p>
-        </div>
+        <!-- </div> -->
 
-        <div class="layout-container">
+        <!-- <div class="layout-container"> -->
         <div class="form__container">
           <fieldset class="form__fieldset form__fieldset--id">
             <legend class="form__legend visually-hidden">Идентификация кота</legend>
@@ -90,17 +90,17 @@
             </ul>
           </fieldset>
           </div>
-        </div>
+        <!-- </div> -->
 
         <fieldset class="form__fieldset form__fieldset--communication">
           <legend class="form__legend">
-            <div class="layout-container">
-              <div class="form__legend--value">
+            <!-- <div class="layout-container"> -->
+              <div class="form__legend--value form__legend--value-communication">
                 Контактные данные (владельца кота)
               </div>
-            </div>
+            <!-- </div> -->
           </legend>
-          <div class="layout-container">
+          <!-- <div class="layout-container"> -->
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label form__label--email" for="owner-email">E-mail:*</label>
@@ -117,31 +117,31 @@
               </svg>
             </li>
           </ul>
-          </div>
+          <!-- </div> -->
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--comment">
-          <legend class="form__legend">
-            <div class="layout-container">
+          <legend class="form__legend form__legend--comment">
+            <!-- <div class="layout-container"> -->
               <div class="form__legend--value">
                 Комментарий
               </div>
-            </div>
+            <!-- </div> -->
           </legend>
-          <div class="layout-container">
+          <!-- <div class="layout-container"> -->
           <textarea class="form__comment" name="name" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </div>
+        <!-- </div> -->
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--other">
           <legend class="form__legend form__legend--other">
-            <div class="layout-container">
+            <!-- <div class="layout-container"> -->
               <div class="form__legend--value">
                 Дополнительно
               </div>
-            </div>
+            <!-- </div> -->
           </legend>
-          <div class="layout-container">
+          <!-- <div class="layout-container"> -->
           <ul class="form__list">
             <li class="form__item">
               <input class="form__checkbox visually-hidden" type="checkbox" id="other-sweetener" checked>
@@ -160,12 +160,13 @@
               <label class="form__label" for="other-vitamins">Витамины</label>
             </li>
           </ul>
-        </div>
+        <!-- </div> -->
         </fieldset>
 
-        <div class="layout-container">
+        <!-- <div class="layout-container"> -->
           <button class="form__button" type="submit" name="button">Отправить заявку</button>
           <p class="form__text">* — Обязательные поля</p>
+        <!-- </div> -->
         </div>
       </form>
   </main>

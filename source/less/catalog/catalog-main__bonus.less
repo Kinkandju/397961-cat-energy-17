@@ -1,11 +1,12 @@
 .catalog-main__bonus-plus {
-  margin: 0;
+  margin: 0 0 35px 0;
 
   .size(280px; 289px);
 
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: @green;
+  background-size: contain;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -18,9 +19,9 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 65px 125px 69px 91px;
+    margin: 0 0 77px 0;
+    padding: 62px 125px 72px 91px;
 
-    // .size(708px; 200px);
     .size(492px; 66px);
 
     background-image: url("../img/gift-photo-tablet@1x.jpg");
@@ -33,7 +34,11 @@
 
 @media (min-width: @desktop-width) {
   .catalog-main__bonus-plus {
+    position: relative;
+    top: 39px;
+
     display: block;
+
     padding: 0;
 
     .size(245px; 289px);
@@ -75,7 +80,8 @@
   }
 
   .catalog-main__description {
-    padding-top: 12px;
+    margin: 0 -10px 0 0;
+    padding: 12px 0 0 0;
 
     text-align: left;
 

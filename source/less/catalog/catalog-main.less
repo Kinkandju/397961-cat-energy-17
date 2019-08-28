@@ -9,7 +9,7 @@
   position: relative;
 
   margin: 0;
-  padding: 15px 20px 11px 0;
+  padding: 15px 20px 12px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -20,40 +20,23 @@
   }
 }
 
-// Контейнер для удобства стилизации
-// .catalog-main__title--container {
-//   width: 280px;
-//
-//   margin: 0 auto;
-// }
-//
-// @media (min-width: @tablet-width) {
-//   .catalog-main__title--container {
-//     width: 708px;
-//   }
-// }
-//
-// @media (min-width: @desktop-width) {
-//   .catalog-main__title--container {
-//     width: 1220px;
-//   }
-// }
-
 // Заголовок категории дополнительных продуктов
 .catalog-main__title--aditional-product {
   margin: 0 0 22px 0;
+  padding: 9px 0 12px 0;
 }
 
-@media (min-width: @desktop-width) {
-  .catalog-main__title--aditional-product {
-    margin: 0 0 6px 0;
-  }
-}
+// @media (min-width: @desktop-width) {
+//   .catalog-main__title--aditional-product {
+//     margin: 0;
+//     padding: 0;
+//   }
+// }
 
 .catalog-main__title--aditional-product::before {
   position: absolute;
 
-  top: 60%;
+  top: 27px;
   left: 0;
 
   content: "";
@@ -66,13 +49,13 @@
 
 @media (min-width: @tablet-width) {
   .catalog-main__title--aditional-product::before {
-    top: 25%;
+    top: 27px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-main__title--aditional-product::before {
-    top: 31%;
+    top: 32px;
   }
 }
 
@@ -82,7 +65,7 @@
   display: inline-block;
   vertical-align: middle;
 
-  padding: 0 20px;
+  padding: 0 23px 0 19px;
   margin-left: -20px;
 
   background: @white;
@@ -90,7 +73,7 @@
 
 @media (min-width: @tablet-width) {
   .catalog-main__title--value {
-    padding: 0 40px;
+    padding: 0 35px 0 40px;
     margin-left: -40px;
   }
 }
