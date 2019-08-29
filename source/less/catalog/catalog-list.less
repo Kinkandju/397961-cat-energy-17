@@ -148,41 +148,26 @@
   opacity: 0.2;
 }
 
-// .catalog-list__container--show-all::after {
-//   position: absolute;
-//
-//   top: 28.2%;
-//   left: 50%;
-//
-//   width: 31px;
-//   height: 2px;
-//
-//   content: "";
-//
-//   transform: rotate(90deg);
-//
-//   color: @black;
-//   background-color: @black;
-//   opacity: 0.2;
-// }
-
 @media (min-width: @tablet-width) {
-  .catalog-list__container--show-all::before,
-  .catalog-list__container--show-all::after {
-    top: 15.4%;
-    left: 38%;
+  .catalog-list__container--show-all::before {
+    top: 14px;
 
-    width: 61px;
+    width: 60px;
+    height: 60px;
+
+    margin-left: -30px;
+
+    background-image: url("../img/icon-plus.svg");
   }
 }
 
-@media (min-width: @desktop-width) {
-  .catalog-list__container--show-all::before,
-  .catalog-list__container--show-all::after {
-    top: 15%;
-    left: 32.5%;
-  }
-}
+// @media (min-width: @desktop-width) {
+//   .catalog-list__container--show-all::before,
+//   .catalog-list__container--show-all::after {
+//     top: 15%;
+//     left: 32.5%;
+//   }
+// }
 
 // Название продукта
 .catalog-list__title {

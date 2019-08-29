@@ -7,16 +7,50 @@
 }
 
 // Поля ввода формы
-.form-main__form input[type="text"],
-.form__fieldset input[type="number"],
-.form__fieldset input[type="email"],
-.form__fieldset input[type="tel"] {
+.form__fieldset .form__id,
+.form__fieldset .form__communication {
   margin: 0;
   padding: 13px 16px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  &:active {
+    padding: 12px 15px;
+    border: 2px solid #444444;
+  }
+
+  &:invalid {
+    padding: 12px 15px;
+    border: 2px solid #ff8282;
+  }
+
+  &:invalid:not(:focus) {
+    padding: 13px 16px;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+  }
 }
 
+.form__fieldset .form__communication:valid + .form__communication--email,
+.form__fieldset .form__communication:valid + .form__communication--tel {
+  fill: @green;
+}
+
+.form__fieldset .form__communication:invalid + .form__communication--email,
+.form__fieldset .form__communication:invalid + .form__communication--tel {
+  fill: #ff8282;
+}
+
+.form__fieldset .form__communication:invalid:not(:focus) + .form__communication--email,
+.form__fieldset .form__communication:invalid:not(:focus) + .form__communication--tel {
+  fill: @black;
+}
+
+// Поле ввода комментария
 .form__fieldset--comment .form__comment {
   margin: 0;
   padding: 14px;
@@ -25,92 +59,32 @@
   max-height: 121px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
-}
 
-.form-main__form input[type="text"]:hover,
-.form-main__form input[type="text"]:focus,
-.form__fieldset input[type="number"]:hover,
-.form__fieldset input[type="number"]:focus,
-.form__fieldset input[type="email"]:hover,
-.form__fieldset input[type="email"]:focus,
-.form__fieldset input[type="tel"]:hover,
-.form__fieldset input[type="tel"]:focus,
-.form__fieldset--comment .form__comment:hover,
-.form__fieldset--comment .form__comment:focus {
-  border: 1px solid rgba(205, 205, 205, 1);
-}
-
-.form-main__form input[type="text"]:active,
-.form__fieldset input[type="number"]:active,
-.form__fieldset input[type="email"]:active,
-.form__fieldset input[type="tel"]:active {
-  padding: 12px 15px;
-  border: 2px solid #444444;
-}
-
-.form__fieldset input[type="email"]:valid + .form__communication--email,
-.form__fieldset input[type="tel"]:valid + .form__communication--tel {
-  fill: @green;
-}
-
-.form-main__form input[type="text"]:invalid,
-.form__fieldset input[type="number"]:invalid,
-.form__fieldset input[type="email"]:invalid,
-.form__fieldset input[type="tel"]:invalid {
-  padding: 12px 15px;
-  border: 2px solid #ff8282;
-}
-
-.form-main__form input[type="text"]:invalid:not(:focus),
-.form-main__form input[type="number"]:invalid:not(:focus),
-.form-main__form input[type="email"]:invalid:not(:focus),
-.form-main__form input[type="tel"]:invalid:not(:focus) {
-  padding: 13px 16px;
-
-  border: 1px solid rgba(205, 205, 205, 0.5);
-}
-
-.form__fieldset input[type="email"]:invalid + .form__communication--email,
-.form__fieldset input[type="tel"]:invalid + .form__communication--tel {
-  fill: #ff8282;
-}
-
-.form-main__form input[type="email"]:invalid:not(:focus) + .form__communication--email,
-.form-main__form input[type="tel"]:invalid:not(:focus) + .form__communication--tel {
-  fill: @black;
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(205, 205, 205, 1);
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .form-main__form input[type="text"],
-  .form__fieldset input[type="number"],
-  .form__fieldset input[type="email"],
-  .form__fieldset input[type="tel"] {
+  .form__fieldset .form__id,
+  .form__fieldset .form__communication {
     padding: 16px 20px;
-  }
 
-  .form-main__form input[type="text"]:active,
-  .form__fieldset input[type="number"]:active,
-  .form__fieldset input[type="email"]:active,
-  .form__fieldset input[type="tel"]:active {
-    padding: 15px 19px;
-    border: 2px solid #444444;
-  }
+    &:active {
+      padding: 15px 19px;
+      border: 2px solid #444444;
+    }
 
-  .form-main__form input[type="text"]:invalid,
-  .form__fieldset input[type="number"]:invalid,
-  .form__fieldset input[type="email"]:invalid,
-  .form__fieldset input[type="tel"]:invalid {
-    padding: 15px 19px;
-    border: 2px solid #ff8282;
-  }
+    &:invalid {
+      padding: 15px 19px;
+      border: 2px solid #ff8282;
+    }
 
-  .form-main__form input[type="text"]:invalid:not(:focus),
-  .form-main__form input[type="number"]:invalid:not(:focus),
-  .form-main__form input[type="email"]:invalid:not(:focus),
-  .form-main__form input[type="tel"]:invalid:not(:focus) {
-    padding: 16px 16px;
-
-    border: 1px solid rgba(205, 205, 205, 0.5);
+    &:invalid:not(:focus) {
+      padding: 16px 16px;
+      border: 1px solid rgba(205, 205, 205, 0.5);
+    }
   }
 }
 
