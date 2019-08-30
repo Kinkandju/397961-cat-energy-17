@@ -42,6 +42,7 @@
 
   <main class="form-main">
     <div class="layout-container">
+      <div class="layout-container--center">
       <h1 class="form-main__title">Подбор программы</h1>
 
       <form class="form-main__form form" action="https://echo.htmlacademy.ru" method="post">
@@ -50,9 +51,6 @@
           Заполните анкету и мы подберем
           программу питания для вашего кота
         </p>
-        <!-- </div> -->
-
-        <!-- <div class="layout-container"> -->
         <div class="form__container">
           <fieldset class="form__fieldset form__fieldset--id">
             <legend class="form__legend visually-hidden">Идентификация кота</legend>
@@ -90,17 +88,13 @@
             </ul>
           </fieldset>
           </div>
-        <!-- </div> -->
 
         <fieldset class="form__fieldset form__fieldset--communication">
           <legend class="form__legend">
-            <!-- <div class="layout-container"> -->
               <div class="form__legend--value form__legend--value-communication">
                 Контактные данные (владельца кота)
               </div>
-            <!-- </div> -->
           </legend>
-          <!-- <div class="layout-container"> -->
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label form__label--email" for="owner-email">E-mail:*</label>
@@ -117,31 +111,23 @@
               </svg>
             </li>
           </ul>
-          <!-- </div> -->
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--comment">
           <legend class="form__legend form__legend--comment">
-            <!-- <div class="layout-container"> -->
               <div class="form__legend--value">
                 Комментарий
               </div>
-            <!-- </div> -->
           </legend>
-          <!-- <div class="layout-container"> -->
           <textarea class="form__comment" name="name" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
-        <!-- </div> -->
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--other">
           <legend class="form__legend form__legend--other">
-            <!-- <div class="layout-container"> -->
               <div class="form__legend--value">
                 Дополнительно
               </div>
-            <!-- </div> -->
           </legend>
-          <!-- <div class="layout-container"> -->
           <ul class="form__list">
             <li class="form__item">
               <input class="form__checkbox visually-hidden" type="checkbox" id="other-sweetener" checked>
@@ -160,13 +146,10 @@
               <label class="form__label" for="other-vitamins">Витамины</label>
             </li>
           </ul>
-        <!-- </div> -->
         </fieldset>
 
-        <!-- <div class="layout-container"> -->
           <button class="form__button" type="submit" name="button">Отправить заявку</button>
           <p class="form__text">* — Обязательные поля</p>
-        <!-- </div> -->
         </div>
       </form>
   </main>
@@ -186,6 +169,7 @@
             <span>Санкт-Петербург</span>
           </address>
         </div>
+      </div>
       </div>
     </section>
 
