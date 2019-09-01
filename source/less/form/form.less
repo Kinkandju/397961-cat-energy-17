@@ -7,34 +7,97 @@
 }
 
 // Поля ввода формы
-.form__fieldset .form__id,
-.form__fieldset .form__communication {
+.form__id,
+.form__communication {
   margin: 0;
   padding: 13px 16px;
 
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
   border: 1px solid rgba(205, 205, 205, 0.5);
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid rgba(205, 205, 205, 1);
   }
 
+  &:focus,
   &:active {
-    padding: 12px 15px;
-    border: 2px solid #444444;
-  }
-
-  &:invalid {
-    padding: 12px 15px;
-    border: 2px solid #ff8282;
-  }
-
-  &:invalid:not(:focus) {
     padding: 13px 16px;
-    border: 1px solid rgba(205, 205, 205, 0.5);
+    border: 1px solid #444444;
+    outline: 1px solid #444444;
   }
 }
 
+.error .form__id,
+.error .form__id:focus,
+.error .form__communication,
+.error .form__communication:focus {
+  border: 1px solid #ff8282;
+  outline: 1px solid #ff8282;
+}
+
+.form__communication {
+  padding-right: 45px;
+
+  &:active {
+    padding-right: 45px;
+  }
+}
+
+.form__id::-webkit-input-placeholder,
+.form__communication::-webkit-input-placeholder {
+  font-family: @font--oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @grey;
+}
+
+@media (min-width: @tablet-width) {
+  .form__id,
+  .form__communication {
+    padding: 10px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &:focus,
+    &:active {
+      padding: 10px 20px;
+
+      border: 1px solid #444444;
+      outline: 1px solid #444444;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__communication {
+    padding-right: 45px;
+
+    &:active {
+      padding-right: 45px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__id::-webkit-input-placeholder,
+  .form__communication::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+// Декоративные картинки формы контактных данных
 .form__communication:valid + .form__communication--email,
 .form__communication:valid + .form__communication--tel {
   fill: @green;
@@ -50,47 +113,86 @@
   fill: @black;
 }
 
+.form__communication--email,
+.form__communication--tel {
+  position: absolute;
+
+  top: 25%;
+  right: 13px;
+
+  fill: #222222;
+}
+
+@media (min-width: @tablet-width) {
+  .form__communication--email,
+  .form__communication--tel {
+    top: 30%;
+    right: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__communication--email,
+  .form__communication--tel {
+    top: 31%;
+    right: 20px;
+  }
+}
+
 // Поле ввода комментария
-.form__fieldset--comment .form__comment {
+.form__comment {
   margin: 0;
   padding: 14px;
+
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
 
   width: 90%;
   max-height: 121px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid rgba(205, 205, 205, 1);
   }
+
+  &:focus,
+  &:active {
+    border: 1px solid #444444;
+    outline: 1px solid #444444;
+  }
+}
+
+.form__comment::-webkit-input-placeholder {
+  font-family: @font--oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @grey;
 }
 
 @media (min-width: @tablet-width) {
-  .form__fieldset .form__id,
-  .form__fieldset .form__communication {
-    padding: 16px 20px;
+  .form__comment {
+    padding: 14px 19px;
 
-    &:active {
-      padding: 15px 19px;
-      border: 2px solid #444444;
-    }
+    width: 94%;
+    min-height: 144px;
+  }
 
-    &:invalid {
-      padding: 15px 19px;
-      border: 2px solid #ff8282;
-    }
-
-    &:invalid:not(:focus) {
-      padding: 16px 16px;
-      border: 1px solid rgba(205, 205, 205, 0.5);
-    }
+  .form__comment::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
-.form__fieldset input[type="email"],
-.form__fieldset input[type="tel"] {
-  padding-right: 45px;
+@media (min-width: @desktop-width) {
+  .form__comment {
+    width: 100%;
+    max-width: 1180px;
+  }
 }
 
 // Описание формы
@@ -534,111 +636,6 @@
   }
 }
 
-.form__id {
-  padding: 13px 16px;
-
-  border: 1px solid rgba(205, 205, 205, 0.5);
-
-  width: 100%;
-}
-
-@media (min-width: @tablet-width) {
-  .form__id {
-    padding: 16px 20px;
-  }
-}
-
-.form__id::-webkit-input-placeholder {
-  font-family: @font--oswald;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  text-transform: uppercase;
-  color: @grey;
-}
-
-@media (min-width: @tablet-width) {
-  .form__id::-webkit-input-placeholder {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
-.form__communication {
-  margin: 0;
-
-  width: 100%;
-}
-
-.form__communication::-webkit-input-placeholder {
-  font-family: @font--oswald;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  text-transform: uppercase;
-  color: @grey;
-}
-
-@media (min-width: @tablet-width) {
-  .form__communication::-webkit-input-placeholder {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
-.form__communication--email,
-.form__communication--tel {
-  position: absolute;
-
-  top: 25%;
-  right: 13px;
-
-  fill: #222222;
-}
-
-@media (min-width: @tablet-width) {
-  .form__communication--email,
-  .form__communication--tel {
-    top: 30%;
-    right: 15px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--comment .form__comment {
-    padding: 14px 19px;
-
-    width: 94%;
-    min-height: 144px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--comment .form__comment {
-    width: 100%;
-    max-width: 1180px;
-  }
-}
-
-.form__comment::-webkit-input-placeholder {
-  font-family: @font--oswald;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  text-transform: uppercase;
-  color: @grey;
-}
-
-@media (min-width: @tablet-width) {
-  .form__comment::-webkit-input-placeholder {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
 // Форма обратной связи
 .form__fieldset--communication {
   margin: 0 -20px 8px -20px;
@@ -669,20 +666,20 @@
 
 // Форма заполнения комментария
 .form__fieldset--comment {
-  margin: 0 -20px 24px -20px;
+  margin: 0 -20px 10px -20px;
   padding: 0 20px;
 }
 
 @media (min-width: @tablet-width) {
   .form__fieldset--comment {
-    margin: 0 0 61px 0;
+    margin: 0 0 47px 0;
     padding: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__fieldset--comment {
-    margin: 0 0 63px 0;
+    margin: 0 0 49px 0;
   }
 }
 
