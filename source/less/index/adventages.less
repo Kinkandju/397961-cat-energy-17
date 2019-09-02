@@ -1,3 +1,4 @@
+// Список преимуществ
 .advantages__list {
   margin: 0;
   padding: 0;
@@ -19,24 +20,37 @@
   }
 }
 
+// Блок преимуществ
 .advantages__item {
   margin: 0 0 20px 0;
-  padding: 40px 20px 20px 20px;
+  padding: 30px 20px 21px 20px;
 
   background-color: @lightgrey;
+}
+
+.advantages__item--slim {
+  margin: 0 0 21px 0;
+}
+
+.advantages__item--pro {
+  margin: 0 0 19px 0;
 }
 
 @media (min-width: @tablet-width) {
   .advantages__item {
     margin-bottom: 30px;
-    padding: 80px 315px 60px 50px;
+    padding: 76px 315px 61px 51px;
+  }
+
+  .advantages__item--slim {
+    padding-right: 285px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages__item {
     margin-right: 80px;
-    padding: 80px 50px 60px 50px;
+    padding: 75px 50px 62px 50px;
 
     width: 470px;
   }
@@ -48,6 +62,7 @@
   }
 }
 
+// Заголовок преимуществ
 .advantages__title {
   font-size: 24px;
   font-weight: 400;
@@ -58,8 +73,8 @@
 
   position: relative;
 
-  margin: 0 0 35px 0;
-  padding: 0 0 0 70px;
+  margin: 0 0 29px 0;
+  padding: 0 0 0 71px;
 }
 
 @media (min-width: @tablet-width) {
@@ -68,24 +83,25 @@
     line-height: 37px;
 
     margin-bottom: 25px;
-    padding: 0;
+    padding: 0 0 0 1px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages__title {
     margin-bottom: 75px;
-    padding-left: 160px;
+    padding-left: 164px;
   }
 }
 
+// Зеленые кружочки
 .advantages__title::before {
   position: absolute;
 
   content: "";
 
   top: -6px;
-  left: 0;
+  left: 2px;
 
   .size(50px; 50px);
 
@@ -95,8 +111,8 @@
 
 @media (min-width: @tablet-width) {
   .advantages__title::before {
-    top: 25px;
-    left: 390px;
+    top: 16px;
+    left: 395px;
 
     .size(200px; 200px);
   }
@@ -104,19 +120,20 @@
 
 @media (min-width: @desktop-width) {
   .advantages__title::before {
-    top: -30px;
-    left: 0;
+    top: -28px;
+    left: 2px;
 
     .size(100px; 100px);
   }
 }
 
+// Кот стройный
 .advantages__item--slim .advantages__title::after {
   position: absolute;
 
   content: "";
 
-  top: -6px;
+  top: -7px;
   left: 10px;
 
   .size(35px; 49px);
@@ -127,8 +144,8 @@
 
 @media (min-width: @tablet-width) {
   .advantages__item--slim .advantages__title::after {
-    top: 15px;
-    left: 420px;
+    top: 4px;
+    left: 425px;
 
     .size(141px; 194px);
   }
@@ -136,20 +153,21 @@
 
 @media (min-width: @desktop-width) {
   .advantages__item--slim .advantages__title::after {
-    top: -30px;
-    left: 20px;
+    top: -34px;
+    left: 16px;
 
     .size(71px; 97px);
   }
 }
 
+// Кот мускулистый
 .advantages__item--pro .advantages__title::after {
   position: absolute;
 
   content: "";
 
-  top: 6px;
-  left: -8px;
+  top: 5px;
+  left: -7px;
 
   .size(67px; 28px);
 
@@ -159,8 +177,8 @@
 
 @media (min-width: @tablet-width) {
   .advantages__item--pro .advantages__title::after {
-    top: 65px;
-    left: 350px;
+    top: 59px;
+    left: 361px;
 
     .size(268px; 113px);
   }
@@ -168,13 +186,14 @@
 
 @media (min-width: @desktop-width) {
   .advantages__item--pro .advantages__title::after {
-    top: -10px;
-    left: -20px;
+    top: -6px;
+    left: -16px;
 
     .size(134px; 57px);
   }
 }
 
+// Описание преимуществ
 .advantages__description {
   font-family: @font--arial;
   font-size: 14px;
@@ -183,8 +202,8 @@
   text-align: left;
   color: @grey;
 
-  margin: 0 0 20px 0;
-  padding: 0 0 20px 0;
+  margin: 0 0 16px 0;
+  padding: 0 0 22px 0;
 
   border-bottom: @border;
 }
@@ -194,7 +213,7 @@
     font-size: 16px;
     line-height: 24px;
 
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     padding-bottom: 30px;
 
     border-bottom: none;
@@ -208,6 +227,7 @@
   }
 }
 
+// Кнопка перехода в каталог
 .advantages__button {
   font-size: 16px;
   font-weight: 400;
@@ -225,12 +245,18 @@
   padding: 0 40px 0 0;
 
   background-color: @lightgrey;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .advantages__button {
     font-size: 20px;
     line-height: 20px;
+
+    padding: 0 49px 0 1px;
   }
 }
 
@@ -239,8 +265,8 @@
 
   content: "";
 
-  top: 3px;
-  right: 0;
+  top: 2px;
+  right: 3px;
 
   .size(25px; 12px);
 

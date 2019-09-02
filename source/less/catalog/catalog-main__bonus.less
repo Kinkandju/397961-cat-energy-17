@@ -1,11 +1,65 @@
 .catalog-main__bonus-plus {
-  margin: 0;
+  margin: 0 auto 35px auto;
 
-  .size(280px; 289px);
+  min-height: 289px;
 
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: @green;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-main__bonus-plus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 0 77px 0;
+    padding: 60px 125px 68px 91px;
+
+    // .size(492px; 66px);
+    min-height: 66px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-tablet@2x.jpg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-main__bonus-plus {
+    position: relative;
+    top: 39px;
+
+    display: block;
+
+    padding: 0;
+
+    .size(245px; 289px);
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-desktop@2x.jpg");
+  }
+}
+
+.catalog-main__image {
+  display: block;
+
+  margin: 0 auto;
+  padding: 65px 0 61px 0;
+
+  fill: @white;
 }
 
 .catalog-main__description {
@@ -17,5 +71,42 @@
   color: @white;
 
   margin: 0;
-  padding: 0;
+  padding: 0 55px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-main__image,
+  .catalog-main__description {
+    margin: 0;
+    padding: 0;
+  }
+
+  .catalog-main__description {
+    margin: 0 -10px 0 0;
+    padding: 12px 0 0 0;
+
+    text-align: left;
+
+    width: 170px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-main__image {
+    margin: 0 auto;
+    padding: 64px 0;
+  }
+
+  .catalog-main__description {
+    text-align: center;
+
+    margin: 0;
+    padding: 0 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .layout-container--bonus-plus {
+    width: auto;
+  }
 }

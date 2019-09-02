@@ -7,6 +7,7 @@
 
 .page-header__layout-container {
   padding: 0 20px;
+  border-bottom: 1px solid @bordergrey;
 }
 
 @media (min-width: @tablet-width) {
@@ -15,7 +16,11 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 30px 60px 30px;
+    padding: 20px 30px 56px 30px;
+
+    min-width: 708px;
+
+    border-bottom: none;
   }
 }
 
@@ -26,11 +31,16 @@
     z-index: 1;
 
     margin: 0 auto;
-    padding: 50px 40px 60px 40px;
+    padding: 45px 40px 92px 40px;
 
     width: 1220px;
 
     background-color: transparent;
+  }
+
+  .page-header__layout-container--catalog,
+  .page-header__layout-container--footer {
+    padding: 45px 40px 73px 40px;
   }
 }
 
@@ -53,87 +63,93 @@
   }
 }
 
+// Логотип
 .page-header__logo {
   height: 39px;
 
   text-align: left;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-.page-header__logo img {
+.page-header__logo--image {
   width: 191px;
   height: 39px;
 }
 
 
 @media (min-width: @tablet-width) {
-  .page-header__logo img {
+  .page-header__logo--image {
     width: 174px;
     height: auto;
-
-    background-image: url("../img/logo-tablet.svg");
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__logo img {
+  .page-header__logo--image {
     width: 202px;
-
-    background-image: url("../img/logo-desktop.svg");
   }
 }
 
+// Переключатель состояний
 .page-header__toggle {
   position: relative;
+
+  top: 5px;
   right: 0;
 
   display: block;
-  .size(25px; 19px);
+  .size(25px; 25px);
 
   background-color: @white;
   border: none;
 
   cursor: pointer;
+
+  &--opened::before {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    content: "";
+
+    .size(25px; 2px);
+
+    background-color: @black;
+    box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  }
+
+  &--closed::before,
+  &--closed::after {
+    position: absolute;
+
+    top: 9px;
+    left: 0;
+
+    content: "";
+
+    width: 25px;
+    height: 2px;
+
+    background-color: @black;
+  }
+
+  &--closed::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &--closed::after {
+    transform: rotate(-45deg);
+  }
 }
-
-.page-header__toggle::before {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  content: "";
-
-  .size(25px; 2px);
-
-  background-color: @black;
-  box-shadow: 0 9px 0 0 @black, 0 17px 0 0 @black;
-}
-
-// .page-header__toggle {
-//   &::before,
-//   &::after {
-//     position: absolute;
-//
-//     top: 9px;
-//     left: 0;
-//
-//     content: "";
-//
-//     width: 25px;
-//     height: 2px;
-//
-//     background-color: @black;
-//   }
-//
-//   &::before {
-//     transform: rotate(45deg);
-//     box-shadow: none;
-//   }
-//
-//   &::after {
-//     transform: rotate(-45deg);
-//   }
-// }
 
 @media (min-width: @tablet-width) {
   .page-header__toggle {

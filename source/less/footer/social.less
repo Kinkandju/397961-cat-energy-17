@@ -1,3 +1,4 @@
+// Раздел "Социальные сети"
 .social {
   display: flex;
   flex-wrap: wrap;
@@ -7,6 +8,13 @@
   border-bottom: @border;
 }
 
+@media (min-width: @tablet-width) {
+  .social {
+    border: none;
+  }
+}
+
+// Список социальных сетей
 .social__list {
   margin: 0;
   padding: 0;
@@ -17,14 +25,60 @@
   list-style: none;
 }
 
+@media (min-width: @tablet-width) {
+  .social__list {
+    align-items: center;
+
+    margin: 0 0 0 30px;
+  }
+}
+
+// Пункт списка
 .social__item {
-  padding: 25px 0 20px 0;
+  padding: 23px 0 17px 0;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social__item a {
-  padding: 25px 20px 20px;
+  padding: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .social__item a {
+    padding: 20px 14px;
+  }
 }
 
 .social__item:nth-child(1) a {
   margin: 0 0 0 -10px;
+}
+
+.social__item--vk,
+.social__item--inst,
+.social__item--fb {
+  fill: #666666;
+
+  &:hover,
+  &:focus {
+    fill: @green;
+
+    transition: 0.3s;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__item--vk {
+    .size(31px; 19px);
+  }
+
+  .social__item--inst {
+    .size(23px; 23px);
+  }
+
+  .social__item--fb {
+    .size(14px; 28px);
+  }
 }
