@@ -236,19 +236,53 @@
   text-align: left;
   color: @lightblack;
 
-  display: inline-block;
   vertical-align: middle;
 
   position: relative;
 
+  z-index: 1;
+
   margin: 0;
-  padding: 0 40px 0 0;
+  padding: 0 10px 0 0;
 
   background-color: @lightgrey;
+
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.advantages__button::after {
+  position: absolute;
+
+  top: 50%;
+  right: -27px;
+
+  content: "";
+
+  z-index: -1;
+
+  transform: translateY(-50%);
+
+  .size(35px; 12px);
+
+  background-image: url("../img/icon-right-arrow-verylong.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px 12px;
+
+  transition: 0.3s;
+}
+
+.advantages__button:hover::after {
+  right: -34px;
+
+  transition: 0.3s;
 }
 
 @media (min-width: @tablet-width) {
@@ -256,26 +290,6 @@
     font-size: 20px;
     line-height: 20px;
 
-    padding: 0 49px 0 1px;
-  }
-}
-
-.advantages__button::after {
-  position: absolute;
-
-  content: "";
-
-  top: 2px;
-  right: 3px;
-
-  .size(25px; 12px);
-
-  background-image: url("../img/icon-right-arrow-long.svg");
-}
-
-@media (min-width: @tablet-width) {
-  .advantages__button::after {
-    top: 4px;
-    right: 0;
+    padding: 0 21px 0 1px;
   }
 }
