@@ -1,14 +1,16 @@
 @media (max-width: @mobile-width-only) {
-  .main-nav--closed {
-    display: none;
-  }
+  .main-nav {
+    &--closed {
+      display: none;
+    }
 
-  &--opened {
-    display: block;
-  }
+    &--opened {
+      display: block;
+    }
 
-  &--nojs {
-    display: block;
+    &--nojs {
+      display: block;
+    }
   }
 }
 
@@ -20,15 +22,6 @@
 @media (min-width: @tablet-width) {
   .main-nav__wrapper {
     flex-direction: row;
-    // justify-content: flex-end;
-
-    // width: 500px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav__wrapper {
-    // width: 500px;
   }
 }
 
@@ -56,16 +49,12 @@
     flex-wrap: wrap;
 
     margin: 0 -19px 0 0;
-
-    // width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav__list {
     font-size: 20px;
-
-    // width: 100%;
 
     margin: 0 -16px 0 0;
 
