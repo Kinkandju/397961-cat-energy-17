@@ -16,46 +16,7 @@
   overflow: hidden;
 }
 
-@media (min-width: @tablet-width) {
-  .page-footer .layout-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0;
-  }
-
-  .page-footer .layout-container__map {
-    margin: 0 auto;
-    padding: 0;
-
-    min-width: 768px;
-  }
-
-  .page-footer .layout-container--footer {
-    padding: 36px 0;
-  }
-
-  .page-footer .layout-container--catalog-footer {
-    padding: 26px 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-footer .layout-container__map {
-    margin: 0;
-
-    width: 1440px;
-    max-width: none;
-
-    height: 400px;
-
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
+// Стилизация блока с приглашением к сотрудничеству и адресом
 .page-footer__container {
   display: flex;
   justify-content: space-between;
@@ -97,6 +58,98 @@
   }
 }
 
+// Стилизация центровщика
+@media (min-width: @tablet-width) {
+  .page-footer .layout-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0;
+  }
+
+  .page-footer .layout-container--footer {
+    padding: 36px 0;
+  }
+
+  .page-footer .layout-container--catalog-footer {
+    padding: 26px 0;
+  }
+}
+
+// Территориальное обозначение на карте
+.page-footer .layout-container__map {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  margin: 0 auto;
+  padding: 0;
+
+  width: 100%;
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer .layout-container__map {
+    min-width: 1440px;
+    max-width: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.layout-container__map::after {
+  position: absolute;
+
+  top: 38.5%;
+  left: 49%;
+  transform: translateX(-49%);
+
+  content: "";
+
+  width: 55px;
+  height: 53px;
+
+  background-image: url("../img/map-pin.png");
+  background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .layout-container__map::after {
+    top: 37.5%;
+    left: 49%;
+    transform: translateX(-49%);
+
+    content: "";
+
+    width: 113px;
+    height: 106px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .layout-container__map::after {
+    top: 37.3%;
+    left: 75.2%;
+    transform: translateX(-75.2%);
+  }
+}
+
+// Интерактивная карта
+.iframe__map {
+  position: absolute;
+
+  top: 0;
+  margin: 0;
+
+  z-index: 5;
+}
+
+// Логотип
 .page-footer__logo {
   display: flex;
   justify-content: center;

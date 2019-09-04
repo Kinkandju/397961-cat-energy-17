@@ -15,51 +15,6 @@
   background-color: @lightgrey;
 }
 
-// Территориальное обозначение на карте
-.layout-container__map {
-  position: relative;
-
-  display: block;
-
-  padding: 0;
-
-  width: 320px;
-}
-
-.layout-container__map::after {
-  position: absolute;
-
-  top: 38%;
-  left: 40%;
-
-  content: "";
-
-  width: 55px;
-  height: 53px;
-
-  background-image: url("../img/map-pin.png");
-  background-size: cover;
-}
-
-@media (min-width: @tablet-width) {
-  .layout-container__map::after {
-    top: 37.1%;
-    left: 41.9%;
-
-    content: "";
-
-    width: 113px;
-    height: 106px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .layout-container__map::after {
-    top: 37.3%;
-    left: 69.3%;
-  }
-}
-
 // Адрес на главной странице
 .address--index {
   background-color: @white;
@@ -153,7 +108,9 @@
 
 // Изображение карты
 .address__map {
-  margin: -38px 0 0 0;
+  display: block;
+
+  margin: -38px auto 0 auto;
   height: 400px;
 
   background-color: @lightgrey;
@@ -166,25 +123,28 @@
 
 @media (min-width: @tablet-width) {
   .address__map {
-    margin: 0 auto;
+    margin-top: 0;
 
     width: 768px;
   }
 
   .address__map img {
     width: 768px;
-    height: auto;
-
-    background-image: url("../img/bg-map-tablet@1x.png");
+    height: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .address__map {
     width: 1440px;
+  }
 
-    background-image: url("../img/bg-map-desktop@1x.png");
+  .address__map img {
+    width: 1440px;
+    height: 400px;
+
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-origin: padding-box;
   }
 }
