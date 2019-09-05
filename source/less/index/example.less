@@ -9,7 +9,7 @@
 
     border-top: @border;
 
-    background-image: linear-gradient(to top, #f2f2f2 42.7%, #ffffff 42.7%);
+    background-image: linear-gradient(to top, rgba(242, 242, 242, 1) 42.7%, rgba(255, 255, 255, 1) 42.7%);
   }
 
   .example::before {
@@ -17,14 +17,12 @@
 
     content: "";
 
-    width: 50%;
-
-    height: 42.7%;
-
     top: 57.3%;
     left: 50%;
 
-    background-color: #eaeaea;
+    .size(50%; 42.7%);
+
+    background-color: rgba(234, 234, 234, 1);
   }
 }
 
@@ -37,18 +35,14 @@
 
     border: none;
 
-    background-image: linear-gradient(to top, #f2f2f2 76.2%, #ffffff 76.2%);
+    background-image: linear-gradient(to top, rgba(242, 242, 242, 1) 76.2%, rgba(255, 255, 255, 1) 76.2%);
   }
 
   .example::before {
-
-
-    width: 50%;
-
-    height: 76%;
-
     top: 24%;
     left: 50%;
+
+    .size(50%; 76%);
   }
 }
 
@@ -319,23 +313,28 @@
   .example__image {
     margin: 0 auto;
 
-    width: 690px;
+    .size(690px; 517px);
     max-width: none;
-    height: 517px;
   }
 
   .example__compare--before .example__image img {
-    width: 690px;
-    height: auto;
+    .size(690px; auto);
 
     background-image: url("../img/before-tablet@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+    }
   }
 
   .example__compare--after .example__image img {
-    width: 690px;
-    height: auto;
+    .size(690px; auto);
 
     background-image: url("../img/after-tablet@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/after-tablet@2x.png");
+    }
   }
 }
 
@@ -351,12 +350,11 @@
   .example__compare {
     position: relative;
 
-    margin: 0;
-
     left: 16px;
 
-    width: 690px;
-    height: 631px;
+    margin: 0;
+
+    .size(690px; 631px);
   }
 
   .example__compare--before,
@@ -366,12 +364,11 @@
     top: 0;
     right: 0;
 
-    width: 100%;
-    height: 100%;
+    .size(100%; 100%);
 
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, #ffffff 26.8%, #f2f2f2 26.8%);
-    background-color: #f2f2f2;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 26.8%, rgba(242, 242, 242, 1) 26.8%);
+    background-color: rgba(242, 242, 242, 1);
     background-size: cover;
     background-position: center;
 
@@ -384,8 +381,8 @@
 
     width: 352px;
 
-    background-image: linear-gradient(to bottom, #ffffff 26.8%, #eaeaea 26.8%);
-    background-color: #eaeaea;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 26.8%, rgba(234, 234, 234, 1) 26.8%);
+    background-color: rgba(234, 234, 234, 1);
   }
 }
 
@@ -401,7 +398,7 @@
 
   .example__compare--before,
   .example__compare--after {
-    background-image: linear-gradient(to bottom, #ffffff 29.1%, #f2f2f2 29.1%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 29.1%, rgba(242, 242, 242, 1) 29.1%);
   }
 
   .example__compare--after {
@@ -409,7 +406,7 @@
 
     width: 325px;
 
-    background-image: linear-gradient(to bottom, #ffffff 29.1%, #eaeaea 29.1%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 29.1%, rgba(234, 234, 234, 1) 29.1%);
   }
 }
 
@@ -427,13 +424,13 @@
   .example__toggle-line {
     position: absolute;
 
+    bottom: 43px;
+    left: 53px;
+
     align-items: baseline;
 
     margin-left: 0;
     padding: 10px 0 25px 0;
-
-    bottom: 43px;
-    left: 53px;
 
     overflow: hidden;
   }
@@ -470,11 +467,11 @@
 
     padding: 5px 0;
 
-    border-bottom: 1px dotted #d9d9d9;
+    border-bottom: 1px dotted rgba(217, 217, 217, 1);
 
     &:hover,
     &:focus {
-      border-bottom: 1px solid #111111;
+      border-bottom: 1px solid @lightblack;
     }
 
     &:active {
@@ -509,7 +506,7 @@
 
     .size(428px; 6px);
 
-    background-color: #dcdcdc;
+    background-color: rgba(220, 220, 220, 1);
     border: none;
   }
 }
@@ -517,10 +514,10 @@
 .example__switch::after {
   position: absolute;
 
-  content: "";
-
   top: 4px;
   left: 5px;
+
+  content: "";
 
   .size(36px; 6px);
 
@@ -541,10 +538,10 @@
   .example__switch::before {
     position: absolute;
 
-    content: "";
-
     top: -15px;
     left: 198px;
+
+    content: "";
 
     .size(32px; 32px);
 
@@ -564,7 +561,7 @@
     .size(31px; 31px);
 
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
-    border: solid 2px #68b738;
+    border: solid 2px @shininggreen;
 
     transition: 0.3s;
   }

@@ -79,15 +79,13 @@
 }
 
 .page-header__logo--image {
-  width: 191px;
-  height: 39px;
+  .size(191px; 39px);
 }
 
 
 @media (min-width: @tablet-width) {
   .page-header__logo--image {
-    width: 174px;
-    height: auto;
+    .size(174px; auto);
   }
 }
 
@@ -99,12 +97,13 @@
 
 // Переключатель состояний
 .page-header__toggle {
+  display: block;
+
   position: relative;
 
   top: 5px;
   right: 0;
 
-  display: block;
   .size(25px; 25px);
 
   background-color: @white;
@@ -135,8 +134,7 @@
 
     content: "";
 
-    width: 25px;
-    height: 2px;
+    .size(25px; 2px);
 
     background-color: @black;
   }

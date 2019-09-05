@@ -23,14 +23,14 @@
   border: 1px solid rgba(205, 205, 205, 0.5);
 
   &:hover {
-    border: 1px solid rgba(205, 205, 205, 1);
+    border: 1px solid @dimgrey;
   }
 
   &:focus,
   &:active {
     padding: 13px 16px;
-    border: 1px solid #444444;
-    outline: 1px solid #444444;
+    border: 1px solid @grey;
+    outline: 1px solid @grey;
   }
 }
 
@@ -38,8 +38,8 @@
 .error .form__id:focus,
 .error .form__communication,
 .error .form__communication:focus {
-  border: 1px solid #ff8282;
-  outline: 1px solid #ff8282;
+  border: 1px solid @lightred;
+  outline: 1px solid @lightred;
 }
 
 .form__communication {
@@ -73,8 +73,8 @@
     &:active {
       padding: 10px 20px;
 
-      border: 1px solid #444444;
-      outline: 1px solid #444444;
+      border: 1px solid @grey;
+      outline: 1px solid @grey;
     }
   }
 }
@@ -105,7 +105,7 @@
 
 .form__communication:invalid + .form__communication--email,
 .form__communication:invalid + .form__communication--tel {
-  fill: #ff8282;
+  fill: @lightred;
 }
 
 .form__communication:invalid:not(:focus) + .form__communication--email,
@@ -120,7 +120,7 @@
   top: 25%;
   right: 13px;
 
-  fill: #222222;
+  fill: @brightblack;
 }
 
 @media (min-width: @tablet-width) {
@@ -154,13 +154,13 @@
   border: 1px solid rgba(205, 205, 205, 0.5);
 
   &:hover {
-    border: 1px solid rgba(205, 205, 205, 1);
+    border: 1px solid @dimgrey;
   }
 
   &:focus,
   &:active {
-    border: 1px solid #444444;
-    outline: 1px solid #444444;
+    border: 1px solid @grey;
+    outline: 1px solid @grey;
   }
 }
 
@@ -281,8 +281,7 @@
 
   content: "";
 
-  height: 3px;
-  width: 100vw;
+  .size(100vw; 3px);
 
   background: @green;
 }
@@ -295,8 +294,7 @@
 
   content: "";
 
-  height: 3px;
-  width: 100vw;
+  .size(100vw; 3px);
 
   background: @green;
 }
@@ -441,7 +439,7 @@
   line-height: 18px;
   text-align: left;
   text-transform: uppercase;
-  color: #222222;
+  color: @brightblack;
 
   position: relative;
 
@@ -531,16 +529,15 @@
 
   content: "";
 
-  width: 30px;
-  height: 30px;
+  .size(30px; 30px);
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid @dimgrey;
   border-radius: 50%;
 }
 
 .form__radio:hover + label::before,
 .form__radio:focus + label::before {
-  border: 1px solid #bababa;
+  border: 1px solid @shininggrey;
 }
 
 .form__radio:active + label {
@@ -556,12 +553,11 @@
   left: 9px;
   transform: translateY(-50%);
 
-  width: 12px;
-  height: 12px;
+  .size(12px; 12px);
 
   border-radius: 50%;
   border: none;
-  background: #68b738;
+  background: @shininggreen;
   margin-top: 0;
 }
 
@@ -570,16 +566,14 @@
     top: 50%;
     left: 3px;
 
-    width: 38px;
-    height: 38px;
+    .size(38px; 38px);
   }
 
   .form__radio:checked + label::after {
     top: 50%;
     left: 14px;
 
-    width: 18px;
-    height: 18px;
+    .size(18px; 18px);
   }
 }
 
@@ -592,15 +586,14 @@
   top: 50%;
   transform: translateY(-50%);
 
-  width: 28px;
-  height: 28px;
+  .size(28px; 28px);
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid @dimgrey;
 }
 
 .form__checkbox:hover + label::before,
 .form__checkbox:focus + label::before {
-  border: 1px solid #bababa;
+  border: 1px solid @shininggrey;
 }
 
 .form__checkbox:active + label {
@@ -618,17 +611,15 @@
 
   margin-top: -3px;
 
-  width: 12px;
-  height: 21px;
+  .size(12px; 21px);
 
-  border-right: 1px solid #68b738;
-  border-bottom: 1px solid #68b738;
+  border-right: 1px solid @shininggreen;
+  border-bottom: 1px solid @shininggreen;
 }
 
 @media (min-width: @tablet-width) {
   .form__checkbox + label::before {
-    width: 40px;
-    height: 40px;
+    .size(40px; 40px);
   }
 
   .form__checkbox:checked + label::after {
@@ -724,7 +715,7 @@
 
   &:hover,
   &:focus {
-    background-color: #5eaa2f;
+    background-color: @glowinggreen;
     transition: 0.3s;
   }
 

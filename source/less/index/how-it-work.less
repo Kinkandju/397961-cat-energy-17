@@ -107,20 +107,21 @@
 
 @media (min-width: @tablet-width) {
   .how-it-work__item::before {
-    position: absolute;
-    z-index: -1;
-
-    content: "";
-
     font-family: @font--oswald;
     font-size: 281px;
     font-weight: normal;
     line-height: 281px;
     text-align: left;
-    color: #f2f2f2;
+    color: rgba(242, 242, 242, 1);
+
+    position: absolute;
 
     top: -40px;
     right: 0;
+
+    z-index: -1;
+
+    content: "";
 
     background-color: transparent;
   }
@@ -181,10 +182,10 @@
 .how-it-work__icon::after {
   position: absolute;
 
-  content: "";
-
   top: 5px;
   left: 5px;
+
+  content: "";
 
   .size(50px; 50px);
 }

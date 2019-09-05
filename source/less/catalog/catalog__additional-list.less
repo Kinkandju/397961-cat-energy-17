@@ -100,7 +100,7 @@
   line-height: 16px;
   text-align: left;
   text-transform: uppercase;
-  color: #222222;
+  color: @brightblack;
 
   margin: 0 0 10px 0;
   padding: 0;
@@ -128,6 +128,8 @@
 @media (min-width: @desktop-width) {
   .additional-product__title {
     top: 3px;
+
+    width: 33%;
   }
 }
 
@@ -184,21 +186,27 @@
   .additional-product__table {
     top: 8px;
 
-    padding: 0 40px;
+    width: 352px;
+  }
 
-    width: 50%;
+  .additional-product__table tbody {
+    table-layout: fixed;
   }
 
   .additional-product__value {
     text-align: left;
 
     padding: 0 0 0 28px;
+
+    width: 250px;
   }
 
   .additional-product__field {
+    padding: 0;
+
     text-align: left;
 
-    padding: 0 0 0 25px;
+    width: 80px;
   }
 }
 
@@ -218,7 +226,7 @@
 
   &:hover,
   &:focus {
-    background-color: #5eaa2f;
+    background-color: @glowinggreen;
     transition: 0.3s;
   }
 
@@ -239,5 +247,6 @@
     margin: 0;
 
     width: 35.9%;
+    max-width: 215px;
   }
 }

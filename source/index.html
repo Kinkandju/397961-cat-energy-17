@@ -5,14 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Главная страница «Cat Energy»</title>
+  <link rel="preload" href="js/script.min.js" as="script">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div style="display:none">
-  <include src="build/img/sprite.svg"></include>
-</div>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
   <header class="page-header">
     <div class="page-header__layout-container">
@@ -39,7 +42,8 @@
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
-      </div></nav>
+        </div>
+      </nav>
     </div>
   </header>
 
@@ -202,7 +206,6 @@
       </div>
     </section>
 
-
     <div class="page-footer__bottom">
       <div class="layout-container layout-container__map">
         <picture>
@@ -261,9 +264,10 @@
     </div>
   </footer>
 
-<script src="js/script.js"></script>
-<script src="js/picturefill.min.js"></script>
-
+  <script src="js/script.js"></script>
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/svgxuse.min.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
 
 </body>
 

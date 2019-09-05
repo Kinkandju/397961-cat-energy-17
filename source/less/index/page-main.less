@@ -5,16 +5,16 @@
   margin: 0  auto 22px auto;
 
   text-align: center;
-  color: #ffffff;
-  background-color: #5eaa2f;
-  background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
+  color: @white;
+  background-color: @glowinggreen;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom, center bottom 175px;
 }
 
 @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
   .page-main__container {
-    background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@2x.jpg");
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 175px, transparent 175px), url("../img/index-background-mobile@2x.jpg");
     background-size: 320px auto;
   }
 }
@@ -22,12 +22,10 @@
 // Основной блок заголовка главной страницы (планшетная версия)
 @media (min-width: @tablet-width) {
   .page-main__container {
-    margin: 0 auto;
+    margin: 0 auto 5px auto;
     padding: 0;
 
     .size(100%; 805px);
-
-    margin-bottom: 5px;
 
     text-align: left;
 
@@ -55,19 +53,18 @@
   }
 
   .page-main__container::after {
-    position: absolute;
-
     display: block;
 
-    width: 50%;
-    height: 696px;
-
-    content: "";
-
-    z-index: 0;
+    position: absolute;
 
     top: -0.4%;
     right: 0;
+
+    z-index: 0;
+
+    content: "";
+
+    .size(50%; 696px);
 
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-color: @green;
@@ -82,12 +79,11 @@
   }
 
   .page-main__group {
+    top: 220px;
+
     padding-left: 80px;
 
-    width: 930px;
-    height: 465px;
-
-    top: 220px;
+    .size(930px; 465px);
   }
 }
 
@@ -259,7 +255,7 @@
 
   &:hover,
   &:focus {
-    background-color: #5eaa2f;
+    background-color: @glowinggreen;
     transition: 0.3s;
   }
 
