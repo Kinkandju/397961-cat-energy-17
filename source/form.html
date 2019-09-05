@@ -24,10 +24,10 @@
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-header__logo--image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип здорового питания для котов «Cat Energy»">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип здорового питания для котов «Cat Energy»">
           </picture>
         </a>
-        <button class="page-header__toggle page-header__toggle--opened" type="button" alt="Открыть меню"></button>
+        <button class="page-header__toggle page-header__toggle--opened" type="button" name="Открыть меню"></button>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
@@ -49,7 +49,7 @@
 
   <main class="form-main">
     <div class="layout-container">
-      <div class="layout-container--center">
+      <div class="layout-container-center">
         <h1 class="form-main__title">Подбор программы</h1>
 
         <form class="form-main__form form" action="https://echo.htmlacademy.ru" method="post">
@@ -98,15 +98,15 @@
 
           <fieldset class="form__fieldset form__fieldset--communication">
             <legend class="form__legend">
-              <div class="form__legend--value form__legend--value-communication">
+              <span class="form__legend-value form__legend-value--communication">
                 Контактные данные (владельца кота)
-              </div>
+              </span>
             </legend>
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__label form__label--email" for="owner-email">E-mail:*</label>
                 <input class="form__communication" type="email" id="owner-email" placeholder="kuklachev@gmail.com" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required="">
-                <svg class="form__communication--email" viewBox="0 0 17 13" width="18" height="20">
+                <svg class="form__communication-email" viewBox="0 0 17 13" width="18" height="20">
                   <path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z">
                   </path>
                 </svg>
@@ -114,7 +114,7 @@
               <li class="form__item">
                 <label class="form__label" for="owner-tel">Телефон:*</label>
                 <input class="form__communication" type="tel" id="owner-tel" placeholder="8 (960) 900-60-90" pattern="[0-9]{11}" required="">
-                <svg class="form__communication--tel" viewBox="0 0 20 20" width="20" height="20">
+                <svg class="form__communication-tel" viewBox="0 0 20 20" width="20" height="20">
                   <path
                     d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zm-9.8 10v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8h3.9v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9v13.9c-.1 1.7 1.2 3.1 2.9 3.1h4.6c.3.1.6-.2.6-.5z">
                   </path>
@@ -125,18 +125,18 @@
 
           <fieldset class="form__fieldset form__fieldset--comment">
             <legend class="form__legend form__legend--comment">
-              <div class="form__legend--value">
+              <span class="form__legend-value">
                 Комментарий
-              </div>
+              </span>
             </legend>
             <textarea class="form__comment" name="name" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--other">
             <legend class="form__legend form__legend--other">
-              <div class="form__legend--value">
+              <span class="form__legend-value">
                 Дополнительно
-              </div>
+              </span>
             </legend>
             <ul class="form__list">
               <li class="form__item">
@@ -194,10 +194,10 @@
 
           <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="address__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+          <img class="page-footer__bottom-map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
         </picture>
 
-        <iframe class="iframe__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A11246d304984eb5434a190bcde2cbf2f683fdaba4573f40240b07473db9c107c&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        <iframe class="page-footer__bottom-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A11246d304984eb5434a190bcde2cbf2f683fdaba4573f40240b07473db9c107c&amp;source=constructor" allowfullscreen="allowfullscreen"></iframe>
       </div>
 
       <div class="layout-container layout-container--footer">
@@ -205,40 +205,44 @@
           <img class="page-footer__image-logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Cat Energy»">
         </a>
 
-        <section class="social">
+        <div class="social">
           <ul class="social__list">
             <li class="social__item">
               <a href="#">
-                <svg class="social__item--vk" width="22" height="12" alt="Вконтакте">
+                <svg class="social__item-vk" width="22" height="12">
+                  <title>Вконтакте</title>
                   <use xlink:href="#m-vk(22x12)"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#">
-                <svg class="social__item--inst" width="17" height="17" alt="Instagram">
+                <svg class="social__item-inst" width="17" height="17">
+                  <title>Instagram</title>
                   <use xlink:href="#m-insta(17x17)"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#">
-                <svg class="social__item--fb" width="10" height="19" alt="Facebook">
+                <svg class="social__item-fb" width="10" height="19">
+                  <title>Facebook</title>
                   <use xlink:href="#m-fb(10x19)"></use>
                 </svg>
               </a>
             </li>
           </ul>
-        </section>
+        </div>
 
-        <section class="copyright">
+        <div class="copyright">
           <a class="copyright__htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="copyright__htmlacademy--name">HTML Academy</span>
-            <svg class="copyright__htmlacademy--icon" width="40" height="40" alt="Логотип HTML Academy">
+            <span class="copyright__htmlacademy-name">HTML Academy</span>
+            <svg class="copyright__htmlacademy-icon" width="40" height="40">
+              <title>Логотип HTML Academy</title>
               <use xlink:href="#m-htmlacademy(27x34)"></use>
             </svg>
           </a>
-        </section>
+        </div>
       </div>
     </div>
   </footer>

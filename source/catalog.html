@@ -24,10 +24,10 @@
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-header__logo--image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип здорового питания для котов «Cat Energy»">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип здорового питания для котов «Cat Energy»">
           </picture>
         </a>
-        <button class="page-header__toggle page-header__toggle--opened" type="button" alt="Открыть меню"></button>
+        <button class="page-header__toggle page-header__toggle--opened" type="button" name="Открыть меню"></button>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
@@ -393,11 +393,11 @@
 
     <section class="catalog-main__additional-product additional-product">
       <h2 class="catalog-main__title catalog-main__title--aditional-product">
-        <div class="layout-container">
-          <div class="catalog-main__title--value">
+        <span class="layout-container layout-container--aditional-product">
+          <span class="catalog-main__title-value">
             Дополнительные товары
-          </div>
-        </div>
+          </span>
+        </span>
       </h2>
       <div class="additional-product__flex-container">
         <div class="layout-container">
@@ -465,7 +465,7 @@
 
         <div class="layout-container layout-container--bonus-plus">
           <div class="catalog-main__bonus-plus">
-            <svg class="catalog-main__image" x="0px" y="0px" viewBox="0 0 55.5 60" width="56" height="61" alt="Подарок">
+            <svg class="catalog-main__image" x="0px" y="0px" viewBox="0 0 55.5 60" width="56" height="61">
               <path d="M52.3,12.2h-7c0.5-0.7,0.8-1.4,1.1-2.2c0.6-2,0.4-4.1-0.6-5.9c-1-1.8-2.6-3.1-4.6-3.7c-2-0.6-4.1-0.4-5.9,0.6
   c-3.6,2-6.2,6.1-7.6,9c-1.4-2.9-4-7.1-7.6-9c-3.8-2-8.5-0.6-10.5,3.1c-1.4,2.7-1.2,5.8,0.5,8.1h-7c-1.7,0-3.1,1.4-3.1,3.1v9.4
   c0,1.7,1.4,3.1,3.1,3.1H4v26.1c0,3.3,2.7,6,6,6h35.5c3.3,0,6-2.7,6-6V27.8h0.8c1.7,0,3.1-1.4,3.1-3.1v-9.4
@@ -514,10 +514,10 @@
 
           <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="address__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+          <img class="page-footer__bottom-map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
         </picture>
 
-        <iframe class="iframe__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A11246d304984eb5434a190bcde2cbf2f683fdaba4573f40240b07473db9c107c&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        <iframe class="page-footer__bottom-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A11246d304984eb5434a190bcde2cbf2f683fdaba4573f40240b07473db9c107c&amp;source=constructor" allowfullscreen="allowfullscreen"></iframe>
       </div>
 
       <div class="layout-container layout-container--footer layout-container--catalog-footer">
@@ -525,40 +525,44 @@
           <img class="page-footer__image-logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Cat Energy»">
         </a>
 
-        <section class="social">
+        <div class="social">
           <ul class="social__list">
             <li class="social__item">
               <a href="#">
-                <svg class="social__item--vk" width="22" height="12" alt="Вконтакте">
+                <svg class="social__item-vk" width="22" height="12">
+                  <title>Вконтакте</title>
                   <use xlink:href="#m-vk(22x12)"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#">
-                <svg class="social__item--inst" width="17" height="17" alt="Instagram">
+                <svg class="social__item-inst" width="17" height="17">
+                  <title>Instagram</title>
                   <use xlink:href="#m-insta(17x17)"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#">
-                <svg class="social__item--fb" width="10" height="19" alt="Facebook">
+                <svg class="social__item-fb" width="10" height="19">
+                  <title>Facebook</title>
                   <use xlink:href="#m-fb(10x19)"></use>
                 </svg>
               </a>
             </li>
           </ul>
-        </section>
+        </div>
 
-        <section class="copyright">
+        <div class="copyright">
           <a class="copyright__htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="copyright__htmlacademy--name">HTML Academy</span>
-            <svg class="copyright__htmlacademy--icon" width="40" height="40" alt="Логотип HTML Academy">
+            <span class="copyright__htmlacademy-name">HTML Academy</span>
+            <svg class="copyright__htmlacademy-icon" width="40" height="40">
+              <title>Логотип HTML Academy</title>
               <use xlink:href="#m-htmlacademy(27x34)"></use>
             </svg>
           </a>
-        </section>
+        </div>
       </div>
     </div>
   </footer>

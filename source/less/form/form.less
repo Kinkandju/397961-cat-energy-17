@@ -98,23 +98,23 @@
 }
 
 // Декоративные картинки формы контактных данных
-.form__communication:valid + .form__communication--email,
-.form__communication:valid + .form__communication--tel {
+.form__communication:valid + .form__communication-email,
+.form__communication:valid + .form__communication-tel {
   fill: @green;
 }
 
-.form__communication:invalid + .form__communication--email,
-.form__communication:invalid + .form__communication--tel {
+.form__communication:invalid + .form__communication-email,
+.form__communication:invalid + .form__communication-tel {
   fill: @lightred;
 }
 
-.form__communication:invalid:not(:focus) + .form__communication--email,
-.form__communication:invalid:not(:focus) + .form__communication--tel {
+.form__communication:invalid:not(:focus) + .form__communication-email,
+.form__communication:invalid:not(:focus) + .form__communication-tel {
   fill: @black;
 }
 
-.form__communication--email,
-.form__communication--tel {
+.form__communication-email,
+.form__communication-tel {
   position: absolute;
 
   top: 25%;
@@ -124,16 +124,16 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__communication--email,
-  .form__communication--tel {
+  .form__communication-email,
+  .form__communication-tel {
     top: 30%;
     right: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form__communication--email,
-  .form__communication--tel {
+  .form__communication-email,
+  .form__communication-tel {
     top: 31%;
     right: 20px;
   }
@@ -323,7 +323,7 @@
   }
 }
 
-.form__legend--value {
+.form__legend-value {
   position: relative;
 
   display: inline-block;
@@ -335,17 +335,17 @@
   background: @white;
 }
 
-.form__legend--value-communication {
+.form__legend-value--communication {
   max-width: 182px;
 }
 
 @media (min-width: @tablet-width) {
-  .form__legend--value {
+  .form__legend-value {
     padding: 0 40px;
     margin-left: -40px;
   }
 
-  .form__legend--value-communication {
+  .form__legend-value--communication {
     width: 512px;
     max-width: 100%;
   }
