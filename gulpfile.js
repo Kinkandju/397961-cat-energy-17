@@ -15,6 +15,7 @@ var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
+var jsmin = require("gulp-jsmin");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -25,7 +26,14 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("build/css"));
+});
+
+gulp.task("jsmin", function () {
+    gulp.src("source/js/script.js")
+        .pipe(jsmin())
+        .pipe(rename("script.min.js"))
+        .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("images", function () {
