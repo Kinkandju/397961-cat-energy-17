@@ -2,7 +2,7 @@
 .page-main__container {
   position: relative;
 
-  margin: 0  auto 22px auto;
+  margin: 0 auto 22px auto;
 
   text-align: center;
   color: @white;
@@ -57,7 +57,7 @@
 
     position: absolute;
 
-    top: -0.4%;
+    top: 0.2%;
     right: 0;
 
     z-index: 0;
@@ -79,7 +79,7 @@
   }
 
   .page-main__group {
-    top: 220px;
+    top: 224px;
 
     padding-left: 80px;
 
@@ -89,7 +89,7 @@
 
 @media (min-width: @desktop-width) {
   .page-main__container--desktop {
-    margin: -205px 0 77px 0;
+    margin: -210px 0 81px 0;
   }
 }
 
@@ -200,17 +200,6 @@
 
     width: 100%;
   }
-
-  .page-main__image img {
-    .size(709px; auto);
-
-    background-image: url("../img/index-can-tablet@1x.jpg");
-  }
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/index-can-tablet@2x.jpg");
-    background-size: 709px auto;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -223,13 +212,6 @@
     text-align: left;
 
     width: 552px;
-
-    background-image: url("../img/index-can-desktop@1x.png");
-  }
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/index-can-desktop@2x.png");
-    background-size: 552px auto;
   }
 }
 
@@ -243,15 +225,17 @@
   text-transform: uppercase;
   color: @white;
 
+  display: block;
+  vertical-align: middle;
+
   margin: 0;
   padding: 11px 15px;
 
-  width: 100%;
+  min-width: 250px;
+  max-width: 100%;
 
   border: none;
   background-color: @green;
-
-  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -269,17 +253,16 @@
     font-size: 20px;
     line-height: 20px;
 
-    margin: 28px 0 0 0;
+    margin: 47px 0 0 0;
     padding: 16px 25px;
 
-    width: 39.7%;
+    min-width: 191px;
+    max-width: 195px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__button {
-    margin: 33px 0 0 0;
-
-    width: 26.3%;
+    margin: 53px 0 0 0;
   }
 }

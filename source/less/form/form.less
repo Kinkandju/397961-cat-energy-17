@@ -98,11 +98,6 @@
 }
 
 // Декоративные картинки формы контактных данных
-.form__communication:valid + .form__communication-email,
-.form__communication:valid + .form__communication-tel {
-  fill: @green;
-}
-
 .form__communication:invalid + .form__communication-email,
 .form__communication:invalid + .form__communication-tel {
   fill: @lightred;
@@ -111,6 +106,11 @@
 .form__communication:invalid:not(:focus) + .form__communication-email,
 .form__communication:invalid:not(:focus) + .form__communication-tel {
   fill: @black;
+}
+
+.form__communication:active + .form__communication-email,
+.form__communication:active + .form__communication-tel {
+  fill: @green;
 }
 
 .form__communication-email,
