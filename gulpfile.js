@@ -34,7 +34,7 @@ gulp.task("jsmin", function () {
   return gulp.src("source/js/script.js")
         .pipe(jsmin())
         .pipe(rename("script.min.js"))
-        .pipe(gulp.dest("source/js"));
+        .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("images", function () {
