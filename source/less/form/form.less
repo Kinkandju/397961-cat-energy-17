@@ -20,6 +20,7 @@
 
   box-sizing: border-box;
 
+  background-color: @white;
   border: 1px solid rgba(205, 205, 205, 0.5);
 
   &:hover {
@@ -29,6 +30,7 @@
   &:focus,
   &:active {
     padding: 13px 16px;
+
     border: 1px solid @grey;
     outline: 1px solid @grey;
   }
@@ -38,8 +40,8 @@
 .error .form__id:focus,
 .error .form__communication,
 .error .form__communication:focus {
-  border: 1px solid @lightred;
-  outline: 1px solid @lightred;
+  border: 2px solid @lightred;
+  outline: none;
 }
 
 .form__communication {
@@ -59,6 +61,8 @@
   text-align: left;
   text-transform: uppercase;
   color: @grey;
+
+  background-color: @white;
 }
 
 @media (min-width: @tablet-width) {
@@ -98,21 +102,6 @@
 }
 
 // Декоративные картинки формы контактных данных
-.form__communication:invalid + .form__communication-email,
-.form__communication:invalid + .form__communication-tel {
-  fill: @lightred;
-}
-
-.form__communication:invalid:not(:focus) + .form__communication-email,
-.form__communication:invalid:not(:focus) + .form__communication-tel {
-  fill: @black;
-}
-
-.form__communication:active + .form__communication-email,
-.form__communication:active + .form__communication-tel {
-  fill: @green;
-}
-
 .form__communication-email,
 .form__communication-tel {
   position: absolute;
@@ -137,6 +126,18 @@
     top: 31%;
     right: 20px;
   }
+}
+
+.form__communication:focus ~ .form__communication-email,
+.form__communication:focus ~ .form__communication-tel,
+.form__communication:valid ~ .form__communication-email,
+.form__communication:valid ~ .form__communication-tel {
+  fill: @green;
+}
+
+.error .form__communication-email,
+.error .form__communication-tel {
+  fill: @lightred;
 }
 
 // Поле ввода комментария
@@ -183,6 +184,25 @@
   }
 
   .form__comment::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__comment::-moz-placeholder {
+    font-size: 20px;
+    line-height: 20px;
+
+    color: @grey;
+  }
+
+  .form__comment:-moz-placeholder {
+    font-size: 20px;
+    line-height: 20px;
+
+    color: @grey;
+  }
+
+  .form__comment:-ms-input-placeholder {
     font-size: 20px;
     line-height: 20px;
   }
