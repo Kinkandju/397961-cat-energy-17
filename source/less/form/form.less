@@ -9,19 +9,19 @@
 // Поля ввода формы
 .form__id,
 .form__communication {
-  margin: 0;
-  padding: 13px 16px;
-
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-
-  width: 100%;
-
-  box-sizing: border-box;
+  color: @brightblack;
 
   background-color: @white;
   border: 1px solid rgba(205, 205, 205, 0.5);
+
+  margin: 0;
+  padding: 13px 16px;
+
+  width: 100%;
+  box-sizing: border-box;
 
   &:hover {
     border: 1px solid @dimgrey;
@@ -41,7 +41,7 @@
 .error .form__communication,
 .error .form__communication:focus {
   border: 2px solid @lightred;
-  outline: none;
+  outline: 1px solid transparent;
 }
 
 .form__communication {
@@ -54,15 +54,22 @@
 
 .form__id::-webkit-input-placeholder,
 .form__communication::-webkit-input-placeholder {
-  font-family: @font--oswald;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  text-transform: uppercase;
   color: @grey;
+  opacity: 1;
+}
 
-  background-color: @white;
+.form__id:-ms-input-placeholder,
+.form__id::-ms-input-placeholder,
+.form__communication:-ms-input-placeholder,
+.form__communication::-ms-input-placeholder {
+  color: @grey;
+  opacity: 1;
+}
+
+.form__id::placeholder,
+.form__communication::placeholder {
+  color: @grey;
+  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
@@ -72,6 +79,8 @@
 
     font-size: 20px;
     line-height: 20px;
+
+    height: 52px;
 
     &:focus,
     &:active {
@@ -90,14 +99,6 @@
     &:active {
       padding-right: 45px;
     }
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .form__id::-webkit-input-placeholder,
-  .form__communication::-webkit-input-placeholder {
-    font-size: 20px;
-    line-height: 20px;
   }
 }
 
@@ -142,17 +143,19 @@
 
 // Поле ввода комментария
 .form__comment {
-  margin: 0;
-  padding: 14px;
-
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+  color: @brightblack;
+
+  background-color: @white;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  margin: 0;
+  padding: 14px;
 
   width: 90%;
   max-height: 121px;
-
-  border: 1px solid rgba(205, 205, 205, 0.5);
 
   &:hover {
     border: 1px solid @dimgrey;
@@ -166,45 +169,30 @@
 }
 
 .form__comment::-webkit-input-placeholder {
-  font-family: @font--oswald;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  text-transform: uppercase;
   color: @grey;
+  opacity: 1;
+}
+
+.form__comment:-ms-input-placeholder,
+.form__comment::-ms-input-placeholder {
+  color: @grey;
+  opacity: 1;
+}
+
+.form__comment::placeholder {
+  color: @grey;
+  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
   .form__comment {
+    font-size: 20px;
+    line-height: 20px;
+
     padding: 14px 19px;
 
     width: 94%;
     min-height: 144px;
-  }
-
-  .form__comment::-webkit-input-placeholder {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .form__comment::-moz-placeholder {
-    font-size: 20px;
-    line-height: 20px;
-
-    color: @grey;
-  }
-
-  .form__comment:-moz-placeholder {
-    font-size: 20px;
-    line-height: 20px;
-
-    color: @grey;
-  }
-
-  .form__comment:-ms-input-placeholder {
-    font-size: 20px;
-    line-height: 20px;
   }
 }
 
@@ -366,7 +354,7 @@
   }
 
   .form__legend-value--communication {
-    width: 512px;
+    width: 515px;
     max-width: 100%;
   }
 }
