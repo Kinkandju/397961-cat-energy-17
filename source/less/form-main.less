@@ -4,48 +4,29 @@
 
 .form-main__layout-container {
   margin: 0 auto;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+.form-main__layout-container--center {
   padding: 0 20px;
 }
 
 @media (min-width: @tablet-width) {
-  .form-main__layout-container {
-    padding: 0 30px;
-
-    width: 708px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form-main__layout-container {
-    padding: 0 40px;
-
-    width: 1220px;
-  }
-}
-
-.form-main .form-main__layout-container {
-  overflow: hidden;
-}
-
-@media (min-width: @tablet-width) {
-  .form-main .form-main__layout-container {
-    margin: 0 auto;
-    padding: 0;
-
-    width: 100%;
-  }
-
-  .form-main .form-main__layout-container--center {
+  .form-main__layout-container--center {
     margin: 0 auto;
     padding: 0 70px;
 
     width: 100%;
     max-width: 628px;
+
+    overflow: visible;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form-main .form-main__layout-container--center {
+  .form-main__layout-container--center {
     margin: 0 auto;
     padding: 0 40px;
 
