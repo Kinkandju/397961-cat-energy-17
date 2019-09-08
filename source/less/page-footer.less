@@ -5,59 +5,15 @@
   width: 100%;
 
   background-color: @lightgrey;
-}
 
-.page-footer--index {
-  background-color: @white;
+  &--index {
+    background-color: @white;
+  }
 }
 
 .page-footer__bottom {
   background-color: @lightgrey;
   overflow: hidden;
-}
-
-// Стилизация блока с приглашением к сотрудничеству и адресом
-.page-footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 28px 0 26px 0;
-
-  background-color: @lightgrey;
-}
-
-.page-footer__container--catalog {
-  background-color: @lightgrey;
-
-  padding: 28px 0 26px 0;
-}
-
-@media (min-width: @tablet-width) {
-  .page-footer__container {
-    padding: 64px 40px 55px 40px;
-
-    width: 100%;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-footer__container {
-    position: absolute;
-
-    bottom: -100px;
-
-    transform: translateY(97%);
-
-    padding: 65px 90px 60px 75px;
-
-    max-width: 405px;
-  }
-
-  .page-footer__container--catalog,
-  .page-footer__container--form {
-    background-color: @white;
-  }
 }
 
 // Стилизация центровщика
@@ -72,7 +28,7 @@
   }
 
   .page-footer .layout-container--footer {
-    padding: 36px 0;
+    padding: 38px 0 42px 0;
   }
 
   .page-footer .layout-container--catalog-footer {
@@ -144,7 +100,7 @@
   display: flex;
   justify-content: center;
 
-  padding: 38px 0 31px 0;
+  padding: 40px 0 31px 0;
 
   border-bottom: @border;
 }
@@ -169,11 +125,11 @@
 }
 
 .page-footer__logo--catalog {
-  padding: 37px 0 31px 0;
+  padding: 39px 0 31px 0;
 }
 
 // Изображение карты
-.page-footer__bottom-map {
+.page-footer__map {
   display: block;
 
   margin: -38px auto 0 auto;
@@ -182,25 +138,25 @@
   background-color: @lightgrey;
 }
 
-.page-footer__bottom-map img {
+.page-footer__map img {
   width: 320px;
   height: 400px;
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer__bottom-map {
+  .page-footer__map {
     margin-top: 0;
 
     width: 768px;
   }
 
-  .page-footer__bottom-map img {
+  .page-footer__map img {
     .size(768px; 400px);
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer__bottom-map {
+  .page-footer__map {
     width: 1440px;
   }
 
@@ -214,7 +170,7 @@
 }
 
 // Интерактивная карта
-.page-footer__bottom-iframe {
+.page-footer__iframe {
   position: absolute;
 
   top: 0;

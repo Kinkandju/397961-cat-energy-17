@@ -1,0 +1,26 @@
+@media (max-width: @mobile-width-only) {
+  .main-nav {
+    &--opened {
+      display: block;
+    }
+
+    &--closed {
+      display: none;
+    }
+
+    &--nojs {
+      display: block;
+    }
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    flex-direction: row;
+  }
+}

@@ -7,7 +7,7 @@
   background-color: @lightgrey;
 }
 
-.address .layout-container {
+.address .address__layout-container {
   position: relative;
 
   z-index: 1;
@@ -15,24 +15,68 @@
   background-color: @lightgrey;
 }
 
+// Стилизация блока с приглашением к сотрудничеству и адресом
+.address__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 0 26px 0;
+
+  background-color: @white;
+}
+
+.address__container--catalog {
+  background-color: @lightgrey;
+
+  padding: 28px 0 26px 0;
+}
+
+.address__container--form {
+  background-color: @lightgrey;
+}
+
+@media (min-width: @tablet-width) {
+  .address__container {
+    padding: 64px 40px 55px 40px;
+
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .address__container {
+    position: absolute;
+
+    bottom: -100px;
+
+    transform: translateY(97%);
+
+    padding: 65px 90px 60px 75px;
+
+    max-width: 405px;
+  }
+
+  .address__container--catalog,
+  .address__container--form {
+    background-color: @white;
+  }
+}
+
 // Адрес на главной странице
 .address--index {
   background-color: @white;
 }
 
-.address--index .layout-container {
+.address--index .address__layout-container {
   background-color: @white;
 }
 
 @media (min-width: @tablet-width) {
-  .address--index .layout-container {
+  .address--index .address__layout-container {
     width: 0 auto;
     padding: 0;
   }
-}
-
-.address--index .page-footer__container {
-  background-color: @white;
 }
 
 // Приглашение к сотрудничеству
