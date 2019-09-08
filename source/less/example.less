@@ -9,27 +9,18 @@
 
     border-top: @border;
 
-    background-image: linear-gradient(to top, rgba(242, 242, 242, 1) 42.7%, rgba(255, 255, 255, 1) 42.7%);
-  }
+    background-color: @white;
 
-  .example::before {
-    position: absolute;
-
-    content: "";
-
-    top: 57.3%;
-    left: 50%;
-
-    .size(50%; 42.7%);
-
-    background-color: rgba(234, 234, 234, 1);
+    overflow: hidden;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    margin: 0 0 -16px 0;
-    padding-bottom: 6px;
+    // margin: 0 0 -16px 0;
+    // padding-bottom: 6px;
+
+    // margin: 0 0 -61px 0;
 
     top: -16px;
 
@@ -71,7 +62,7 @@
   .example .example__layout-container {
     display: flex;
 
-    height: 600px;
+    min-height: 600px;
   }
 }
 
@@ -375,7 +366,43 @@
 
     margin: 0;
 
-    .size(690px; 631px);
+    // .size(690px; 631px);
+    width: 690px;
+    min-height: 631px;
+  }
+
+  .example__compare::before {
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+    bottom: 0;
+
+    content: "";
+
+    width: 100vw;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 169px, rgba(242, 242, 242, 1) 169px, rgba(242, 242, 242, 1));
+
+    overflow: hidden;
+  }
+
+  .example__compare::after {
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    left: 95%;
+    bottom: 0;
+
+    content: "";
+
+    width: 100vw;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 169px, rgba(234, 234, 234, 1) 169px, rgba(234, 234, 234, 1));
   }
 
   .example__compare-before,
@@ -414,7 +441,20 @@
     top: -45px;
     left: 6px;
 
-    height: 652px;
+    // height: 652px;
+    min-height: 652px;
+  }
+
+  .example__compare::before {
+    width: 50%;
+  }
+
+  .example__compare::after {
+    left: 105%;
+
+    width: 100%;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 189px, rgba(234, 234, 234, 1) 189px, rgba(234, 234, 234, 1));
   }
 
   .example__compare-before,
