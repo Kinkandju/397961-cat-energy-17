@@ -17,23 +17,35 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    // margin: 0 0 -16px 0;
-    // padding-bottom: 6px;
+    position: relative;
 
-    // margin: 0 0 -61px 0;
+    margin: 0 0 -60px 0;
 
     top: -16px;
 
     border: none;
 
-    background-image: linear-gradient(to top, rgba(242, 242, 242, 1) 76.2%, rgba(255, 255, 255, 1) 76.2%);
+    overflow: visible;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 144px, rgba(242, 242, 242, 1) 144px, rgba(242, 242, 242, 1));
   }
 
-  .example::before {
-    top: 24%;
-    left: 50%;
+  .example::after {
+    display: block;
 
-    .size(50%; 76%);
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    content: "";
+
+    width: 20%;
+
+    overflow: visible;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 144px, rgba(234, 234, 234, 1) 144px, rgba(234, 234, 234, 1));
   }
 }
 
@@ -145,7 +157,7 @@
   .example__container {
     flex-wrap: wrap;
 
-    margin-top: 68px;
+    margin: 68px 0 99px 0;
   }
 }
 
@@ -362,11 +374,12 @@
   .example__compare {
     position: relative;
 
+    z-index: 5;
+
     left: 16px;
 
     margin: 0;
 
-    // .size(690px; 631px);
     width: 690px;
     min-height: 631px;
   }
@@ -441,7 +454,6 @@
     top: -45px;
     left: 6px;
 
-    // height: 652px;
     min-height: 652px;
   }
 
@@ -450,16 +462,12 @@
   }
 
   .example__compare::after {
-    left: 105%;
-
-    width: 100%;
-
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 189px, rgba(234, 234, 234, 1) 189px, rgba(234, 234, 234, 1));
+    display: none;
   }
 
   .example__compare-before,
   .example__compare-after {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 29%, rgba(242, 242, 242, 1) 29%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 189px, rgba(242, 242, 242, 1) 189px);
   }
 
   .example__compare-after {
@@ -467,7 +475,7 @@
 
     width: 325px;
 
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 29%, rgba(234, 234, 234, 1) 29%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 189px, rgba(234, 234, 234, 1) 189px);
   }
 }
 
@@ -499,8 +507,11 @@
 
 @media (min-width: @desktop-width) {
   .example__toggle-line {
+
+    top: 541px;
     right: -18px;
-    bottom: 44px;
+
+    max-height: 32px;
   }
 }
 
