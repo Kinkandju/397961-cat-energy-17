@@ -17,8 +17,29 @@
 }
 
 // Стилизация центровщика
+.page-footer__layout-container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 @media (min-width: @tablet-width) {
-  .page-footer .layout-container {
+  .page-footer__layout-container {
+    padding: 0 30px;
+
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__layout-container {
+    padding: 0 40px;
+
+    width: 1220px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer .page-footer__layout-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,17 +48,17 @@
     padding: 0;
   }
 
-  .page-footer .layout-container--footer {
+  .page-footer .page-footer__layout-container--footer {
     padding: 38px 0 42px 0;
   }
 
-  .page-footer .layout-container--catalog-footer {
+  .page-footer .page-footer__layout-container--catalog-footer {
     padding: 26px 0;
   }
 }
 
 // Территориальное обозначение на карте
-.page-footer .layout-container__map {
+.page-footer .page-footer__layout-container--map {
   position: relative;
 
   display: block;
@@ -51,7 +72,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer .layout-container__map {
+  .page-footer .page-footer__layout-container--map {
     min-width: 1440px;
     max-width: 100%;
 
@@ -60,7 +81,7 @@
   }
 }
 
-.layout-container__map::after {
+.page-footer__layout-container--map::after {
   position: absolute;
 
   top: 38.5%;
@@ -76,7 +97,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .layout-container__map::after {
+  .page-footer__layout-container--map::after {
     top: 37.5%;
     left: 49%;
     transform: translateX(-49%);
@@ -88,7 +109,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .layout-container__map::after {
+  .page-footer__layout-container--map::after {
     top: 37.3%;
     left: 75.2%;
     transform: translateX(-75.2%);

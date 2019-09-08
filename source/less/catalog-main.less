@@ -1,3 +1,47 @@
+// Заголовок категории основных продуктов
+.catalog-main__title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: left;
+  color: @lightblack;
+
+  position: relative;
+
+  margin: 0;
+  padding: 15px 20px 12px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-main__title {
+    font-size: 60px;
+
+    padding: 0 0 165px 0;
+  }
+}
+
+// Контейнер-центровщик
+.catalog-main__layout-container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-main__layout-container {
+    padding: 0 30px;
+
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-main__layout-container {
+    padding: 0 40px;
+
+    width: 1220px;
+  }
+}
+
 .catalog-main__bonus-plus {
   margin: 0 auto 35px auto;
 
@@ -109,7 +153,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .layout-container--bonus-plus {
+  .catalog-main__layout-container--bonus-plus {
     width: auto;
   }
 }

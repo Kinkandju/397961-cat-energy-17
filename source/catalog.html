@@ -48,11 +48,11 @@
   </header>
 
   <main class="catalog-main">
-    <div class="catalog-main__layout-container layout-container">
+    <div class="catalog-main__layout-container">
       <h1 class="catalog-main__title">Каталог продукции</h1>
 
       <section class="catalog-main__catalog-list catalog-list">
-        <h2 class="visually-hidden">Основные товары</h2>
+        <h2 class="catalog-list__title visually-hidden">Основные товары</h2>
         <ul class="catalog-list__list">
           <li class="catalog-list__item">
             <a class="catalog-list__image" href="#">
@@ -406,15 +406,15 @@
     </div>
 
     <section class="catalog-main__additional-product additional-product">
-      <h2 class="catalog-main__title catalog-main__title--aditional-product">
-        <span class="layout-container layout-container--aditional-product">
-          <span class="catalog-main__title-value">
+      <h2 class="additional-product__basic-title">
+        <span class="additional-product__layout-container additional-product__layout-container--aditional-product">
+          <span class="additional-product__title-value catalog-main__title-value">
             Дополнительные товары
           </span>
         </span>
       </h2>
       <div class="additional-product__flex-container">
-        <div class="layout-container">
+        <div class="additional-product__layout-container">
           <div class="additional-product__container">
             <ul class="additional-product__list">
               <li class="additional-product__item">
@@ -477,7 +477,7 @@
           </div>
         </div>
 
-        <div class="layout-container layout-container--bonus-plus">
+        <div class="catalog-main__layout-container catalog-main__layout-container--bonus-plus">
           <div class="catalog-main__bonus-plus">
             <img class="catalog-main__image" src="img/icon-gift.svg" width="56" height="61" alt="Подарок">
             <p class="catalog-main__description">
@@ -492,7 +492,7 @@
 
   <footer class="page-footer">
     <section class="page-footer__address address">
-      <div class="address__layout-container layout-container">
+      <div class="address__layout-container">
         <h2 class="address__title visually-hidden">Адрес организации</h2>
         <div class="address__container address__container--catalog">
           <p class="address__invitation">
@@ -509,7 +509,7 @@
     </section>
 
     <div class="page-footer__bottom">
-      <div class="page-footer__layout-container layout-container layout-container__map">
+      <div class="page-footer__layout-container page-footer__layout-container--map">
         <picture>
           <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
@@ -523,7 +523,7 @@
         <iframe class="page-footer__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A11246d304984eb5434a190bcde2cbf2f683fdaba4573f40240b07473db9c107c&amp;source=constructor" allowfullscreen="allowfullscreen"></iframe>
       </div>
 
-      <div class="page-footer__layout-container layout-container layout-container--footer layout-container--catalog-footer">
+      <div class="page-footer__layout-container page-footer__layout-container--footer page-footer__layout-container--catalog-footer">
         <a class="page-footer__logo page-footer__logo--catalog" href="index.html">
           <img class="page-footer__image-logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Cat Energy»">
         </a>
