@@ -35,6 +35,16 @@
   }
 }
 
+// Адрес на главной странице
+.address--index .address__layout-container {
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 0 auto;
+    padding: 0;
+  }
+}
+
 // Стилизация блока с приглашением к сотрудничеству и адресом
 .address__container {
   display: flex;
@@ -77,16 +87,6 @@
   }
 }
 
-// Адрес на главной странице
-.address--index .address__layout-container {
-  background-color: @white;
-
-  @media (min-width: @tablet-width) {
-    width: 0 auto;
-    padding: 0;
-  }
-}
-
 // Приглашение к сотрудничеству
 .address__invitation {
   margin: 0;
@@ -109,6 +109,7 @@
 
   @media (min-width: @desktop-width) {
     line-height: 25px;
+    padding-right: 65px;
   }
 }
 
