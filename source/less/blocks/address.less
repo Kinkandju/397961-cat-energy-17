@@ -5,36 +5,34 @@
   width: 100%;
 
   background-color: @lightgrey;
+
+  &--index {
+    background-color: @white;
+  }
 }
 
 // Контейнер-цифровщик
 .address__layout-container {
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .address__layout-container {
-    padding: 0 30px;
-
-    width: 708px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .address__layout-container {
-    padding: 0 40px;
-
-    width: 1220px;
-  }
-}
-
-.address .address__layout-container {
   position: relative;
 
   z-index: 1;
 
+  margin: 0 auto;
+  padding: 0 20px;
+
   background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+
+    width: 1220px;
+  }
 }
 
 // Стилизация блока с приглашением к сотрудничеству и адресом
@@ -46,26 +44,22 @@
   padding: 28px 0 26px 0;
 
   background-color: @white;
-}
 
-.address__container--catalog {
-  background-color: @lightgrey;
+  &--catalog {
+    padding: 28px 0 26px 0;
 
-  padding: 28px 0 26px 0;
-}
+    background-color: @lightgrey;
+  }
 
-.address__container--form {
-  background-color: @lightgrey;
-}
+  &--form {
+    background-color: @lightgrey;
+  }
 
-@media (min-width: @tablet-width) {
-  .address__container {
+  @media (min-width: @tablet-width) {
     padding: 64px 40px 55px 40px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .address__container {
+  @media (min-width: @desktop-width) {
     position: absolute;
 
     bottom: -100px;
@@ -75,25 +69,19 @@
     padding: 65px 90px 60px 75px;
 
     max-width: 405px;
-  }
 
-  .address__container--catalog,
-  .address__container--form {
-    background-color: @white;
+    &--catalog,
+    &--form {
+      background-color: @white;
+    }
   }
 }
 
 // Адрес на главной странице
-.address--index {
-  background-color: @white;
-}
-
 .address--index .address__layout-container {
   background-color: @white;
-}
 
-@media (min-width: @tablet-width) {
-  .address--index .address__layout-container {
+  @media (min-width: @tablet-width) {
     width: 0 auto;
     padding: 0;
   }
@@ -110,20 +98,16 @@
   text-align: left;
   text-transform: uppercase;
   color: @lightblack;
-}
 
-@media (min-width: @tablet-width) {
-  .address__invitation {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 25px;
 
     width: 100%;
     max-width: 160px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .address__invitation {
+  @media (min-width: @desktop-width) {
     line-height: 25px;
   }
 }
@@ -142,10 +126,8 @@
   right: 2px;
 
   margin: 0 0 0 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .address__address {
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     text-align: right;
 
@@ -153,19 +135,19 @@
     max-width: 160px;
   }
 
-  .address__address span {
-    display: block;
-
-    margin-top: 17px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .address__address {
+  @media (min-width: @desktop-width) {
     position: relative;
 
     left: 5px;
 
     text-align: left;
+  }
+}
+
+.address__address span {
+  @media (min-width: @tablet-width) {
+    display: block;
+
+    margin-top: 17px;
   }
 }

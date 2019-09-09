@@ -1,10 +1,10 @@
-@media (min-width: @desktop-width) {
-  .page-main {
+.page-main {
+  @media (min-width: @desktop-width) {
     margin-bottom: -16px;
   }
 }
 
-// Основной блок заголовка главной страницы (мобильная версия)
+// Основной блок заголовка главной страницы
 .page-main__container {
   position: relative;
 
@@ -16,18 +16,13 @@
   background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom, center bottom 175px;
-}
 
-@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  .page-main__container {
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 175px, transparent 175px), url("../img/index-background-mobile@2x.jpg");
     background-size: 320px auto;
   }
-}
 
-// Основной блок заголовка главной страницы (планшетная версия)
-@media (min-width: @tablet-width) {
-  .page-main__container {
+  @media (min-width: @tablet-width) {
     margin: 0 auto 5px auto;
     padding: 0;
 
@@ -39,26 +34,19 @@
     background-image: none;
   }
 
-  .page-main__group {
-    position: relative;
-
-    display: block;
-
-    padding: 0 0 0 89px;
-
-    .size(618px; 805px);
-  }
-}
-
-// Основной блок заголовка главной страницы (десктопная версия)
-@media (min-width: @desktop-width) {
-  .page-main__container {
+  @media (min-width: @desktop-width) {
     height: 696px;
 
     overflow: hidden;
-  }
 
-  .page-main__container::after {
+    &--desktop {
+      margin: -210px 0 81px 0;
+    }
+  }
+}
+
+.page-main__container::after {
+  @media (min-width: @desktop-width) {
     display: block;
 
     position: absolute;
@@ -83,8 +71,20 @@
       background-size: 720px auto;
     }
   }
+}
 
-  .page-main__group {
+.page-main__group {
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    display: block;
+
+    padding: 0 0 0 89px;
+
+    .size(618px; 805px);
+  }
+
+  @media (min-width: @desktop-width) {
     top: 224px;
 
     padding-left: 80px;
@@ -93,17 +93,15 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .page-main__container--desktop {
-    margin: -210px 0 81px 0;
-  }
-}
-
 // Заголовок блока главной страницы
 .page-main__group-text {
   padding: 27px 0 28px 0;
 
   min-height: 111px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .page-main__title {
@@ -115,16 +113,9 @@
 
   margin: 0 0 25px 0;
   padding: 0;
-}
 
-@media (min-width: @tablet-width) {
-  .page-main__group-text {
-    padding: 0;
-  }
-
-  .page-main__title {
+  @media (min-width: @tablet-width) {
     font-size: 60px;
-    font-weight: 400;
     line-height: 60px;
     text-align: left;
     color: @lightblack;
@@ -132,10 +123,8 @@
     margin: 0 0 0 -2px;
     padding: 0 0 41px 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page-main__title {
+  @media (min-width: @desktop-width) {
     margin: 0 0 40px 0;
     padding: 0;
 
@@ -157,23 +146,17 @@
 
   margin: 0;
   padding: 0;
-}
 
-@media (min-width: @tablet-width) {
-  .page-main__addition {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
-    font-weight: 400;
     line-height: 20px;
     text-align: left;
-    text-transform: uppercase;
     color: @lightblack;
 
     margin: 0 0 20px 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page-main__addition {
+  @media (min-width: @desktop-width) {
     width: 45%;
   }
 }
@@ -187,14 +170,8 @@
   width: 280px;
 
   text-align: left;
-}
 
-.page-main__image img {
-  .size(280px; 271px);
-}
-
-@media (min-width: @tablet-width) {
-  .page-main__image {
+  @media (min-width: @tablet-width) {
     position: absolute;
 
     margin: 0 auto;
@@ -206,10 +183,8 @@
 
     width: 100%;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page-main__image {
+  @media (min-width: @desktop-width) {
     z-index: 1;
 
     bottom: 9.9%;
@@ -219,6 +194,10 @@
 
     width: 552px;
   }
+}
+
+.page-main__image img {
+  .size(280px; 271px);
 }
 
 // Кнопка
@@ -252,10 +231,8 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-}
 
-@media (min-width: @tablet-width) {
-  .page-main__button {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
 
@@ -265,10 +242,8 @@
     min-width: 191px;
     max-width: 195px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page-main__button {
+  @media (min-width: @desktop-width) {
     margin: 53px 0 0 0;
   }
 }

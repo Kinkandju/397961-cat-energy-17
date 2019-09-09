@@ -6,16 +6,16 @@
 
   padding: 20px 0;
   background-color: @lightgrey;
-}
 
-@media (min-width: @tablet-width) {
-  .copyright__htmlacademy {
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
     padding: 17px 0 14px 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .copyright__htmlacademy {
+  @media (min-width: @desktop-width) {
     padding: 19px 0 13px 0;
   }
 }
@@ -41,8 +41,4 @@
   fill: @green;
 
   transition: 0.3s;
-}
-
-.copyright__htmlacademy:active {
-  opacity: 0.3;
 }

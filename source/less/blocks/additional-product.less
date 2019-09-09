@@ -11,11 +11,9 @@
   padding: 9px 0 12px 0;
 
   @media (min-width: @tablet-width) {
-    .additional-product__basic-title {
-      font-size: 60px;
+    font-size: 60px;
 
-      padding: 0 0 165px 0;
-    }
+    padding: 0 0 165px 0;
   }
 }
 
@@ -25,20 +23,16 @@
   line-height: 24px;
   text-align: left;
   color: @lightblack;
-}
 
-@media (min-width: @tablet-width) {
-  .additional-product .additional-product__basic-title {
+  @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
 
     margin-top: -79px;
     padding: 0 0 58px 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .additional-product .additional-product__basic-title {
+  @media (min-width: @desktop-width) {
     padding: 6px 0 18px 0;
   }
 }
@@ -54,45 +48,35 @@
   .size(100%; 3px);
 
   background: @green;
-}
 
-@media (min-width: @tablet-width) {
-  .additional-product__basic-title::before {
-    top: 27px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .additional-product__basic-title::before {
+  @media (min-width: @desktop-width) {
     top: 32px;
   }
 }
 
+// Контейнер-центровщик
 .additional-product__layout-container {
   margin: 0 auto;
   padding: 0 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .additional-product__layout-container {
+  &--aditional-product {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
     padding: 0 30px;
 
     width: 708px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .additional-product__layout-container {
+  @media (min-width: @desktop-width) {
     padding: 0 40px;
 
     width: 1220px;
   }
 }
 
-.additional-product__layout-container--aditional-product {
-  display: block;
-}
-
+// Контейнер для удобства стилизации
 .additional-product__title-value {
   position: relative;
 
@@ -103,23 +87,20 @@
   margin-left: -20px;
 
   background: @white;
-}
 
-@media (min-width: @tablet-width) {
-  .additional-product__title-value {
+  @media (min-width: @tablet-width) {
     padding: 0 35px 0 40px;
     margin-left: -2px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .additional-product__title-value {
+  @media (min-width: @desktop-width) {
     margin-left: -40px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .additional-product__flex-container {
+// Флекс-контейнер для десктопной версии
+.additional-product__flex-container {
+  @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,20 +111,20 @@
   }
 }
 
+// Список товаров
 .additional-product__list {
   padding: 0;
 
   list-style: none;
-}
 
-@media (min-width: @desktop-width) {
-  .additional-product__list {
+  @media (min-width: @desktop-width) {
     align-self: flex-end;
 
     width: 100%;
   }
 }
 
+// Карточка товара
 .additional-product__item {
   display: flex;
   flex-wrap: wrap;
@@ -151,16 +132,8 @@
   padding: 14px 0 17px 0;
 
   border-top: @border;
-}
 
-.additional-product__item:last-child {
-  border-bottom: @border;
-
-  margin: 0 0 39px 0;
-}
-
-@media (min-width: @tablet-width) {
-  .additional-product__item {
+  @media (min-width: @tablet-width) {
     align-items: baseline;
     justify-content: space-between;
 
@@ -170,13 +143,7 @@
     border-bottom: none;
   }
 
-  .additional-product__item:last-child {
-    margin: 0 0 69px 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .additional-product__item {
+  @media (min-width: @desktop-width) {
     flex-wrap: nowrap;
 
     padding: 15px 0 14px 0;
@@ -184,12 +151,23 @@
     border-left: none;
     border-right: none;
   }
+}
 
-  .additional-product__item:last-child {
+.additional-product__item:last-child {
+  border-bottom: @border;
+
+  margin: 0 0 39px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 69px 0;
+  }
+
+  @media (min-width: @desktop-width) {
     margin: 0;
   }
 }
 
+// Заголовок
 .additional-product__title {
   font-size: 16px;
   font-weight: 400;
@@ -202,10 +180,8 @@
   padding: 0;
 
   width: 100%;
-}
 
-@media (min-width: @tablet-width) {
-  .additional-product__title {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
 
@@ -219,16 +195,15 @@
 
     width: 50%;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .additional-product__title {
+  @media (min-width: @desktop-width) {
     top: 3px;
 
     width: 33%;
   }
 }
 
+// Таблица
 .additional-product__table {
   font-family: @font--arial;
   font-size: 14px;
@@ -246,21 +221,8 @@
   margin: 0 0 15px 0;
 
   width: 100%;
-}
 
-.additional-product__value {
-  text-align: left;
-}
-
-.additional-product__field {
-  position: relative;
-  right: -2px;
-
-  text-align: right;
-}
-
-@media (min-width: @tablet-width) {
-  .additional-product__table {
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
 
@@ -269,35 +231,40 @@
     width: 50%;
   }
 
-  .additional-product__value {
-    text-align: right;
-  }
-
-  .additional-product__field {
-    width: 30%;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .additional-product__table {
+  @media (min-width: @desktop-width) {
     top: 8px;
 
     width: 352px;
   }
+}
 
-  .additional-product__table tbody {
-    table-layout: fixed;
+.additional-product__value {
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
   }
 
-  .additional-product__value {
+  @media (min-width: @desktop-width) {
     text-align: left;
 
     padding: 0 0 0 28px;
 
     width: 250px;
   }
+}
 
-  .additional-product__field {
+.additional-product__field {
+  position: relative;
+  right: -2px;
+
+  text-align: right;
+
+  @media (min-width: @tablet-width) {
+    width: 30%;
+  }
+
+  @media (min-width: @desktop-width) {
     padding: 0;
 
     text-align: left;
@@ -306,6 +273,13 @@
   }
 }
 
+.additional-product__table tbody {
+  @media (min-width: @desktop-width) {
+    table-layout: fixed;
+  }
+}
+
+// Кнопка
 .additional-product__button {
   font-size: 16px;
   font-weight: 400;
@@ -329,17 +303,12 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-}
 
-@media (min-width: @tablet-width) {
-  .additional-product__button {
+  @media (min-width: @tablet-width) {
     margin: 4px 0 0 0;
   }
-}
 
-
-@media (min-width: @desktop-width) {
-  .additional-product__button {
+  @media (min-width: @desktop-width) {
     margin: 0;
 
     width: 35.9%;

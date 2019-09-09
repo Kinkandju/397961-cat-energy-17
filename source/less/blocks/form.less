@@ -4,6 +4,89 @@
   padding: 0;
 
   border: none;
+
+  &--id {
+    margin: 0 -20px 7px -20px;
+    padding: 24px 20px 0 20px;
+  }
+
+  &--communication {
+    margin: 0 -20px 8px -20px;
+    padding: 0 20px;
+  }
+
+  &--comment {
+    margin: 0 -20px 10px -20px;
+    padding: 0 20px;
+  }
+
+  &--other {
+    margin: 0 -20px 24px -20px;
+    padding: 0 20px;
+  }
+
+  &--radio {
+    margin: 0 -20px 28px -20px;
+    padding: 16px 20px 11px 20px;
+
+    border-top: @border;
+    border-bottom: @border;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--id {
+      margin: 0 0 50px 0;
+      padding: 0;
+    }
+
+    &--communication {
+      margin: 0 0 39px 0;
+      padding: 0;
+    }
+
+    &--comment {
+      margin: 0 0 47px 0;
+      padding: 0;
+    }
+
+    &--other {
+      margin: 0 0 22px 0;
+      padding: 0;
+    }
+
+    &--radio {
+      margin: 0 0 71px 0;
+      padding: 25px 25px 10px 25px;
+
+      border: @border;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--id {
+      margin: 0 0 48px 0;
+
+      width: 46.8%;
+    }
+
+    &--communication {
+      margin: 0 0 41px 0;
+    }
+
+    &--comment {
+      margin: 0 0 49px 0;
+    }
+
+    &--other {
+      margin: 0 0 21px 0;
+    }
+
+    &--radio {
+      margin: 0 0 63px 0;
+
+      width: 42.5%;
+    }
+  }
 }
 
 // Поля ввода формы
@@ -34,6 +117,23 @@
     border: 1px solid @grey;
     outline: 1px solid @grey;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    height: 52px;
+
+    &:focus,
+    &:active {
+      padding: 10px 20px;
+
+      border: 1px solid @grey;
+      outline: 1px solid @grey;
+    }
+  }
 }
 
 .error .form__id,
@@ -50,6 +150,14 @@
 
   &:active {
     padding-right: 45px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 45px;
+
+    &:active {
+      padding-right: 45px;
+    }
   }
 }
 
@@ -73,36 +181,6 @@
   opacity: 1;
 }
 
-@media (min-width: @tablet-width) {
-  .form__id,
-  .form__communication {
-    padding: 10px 20px;
-
-    font-size: 20px;
-    line-height: 20px;
-
-    height: 52px;
-
-    &:focus,
-    &:active {
-      padding: 10px 20px;
-
-      border: 1px solid @grey;
-      outline: 1px solid @grey;
-    }
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .form__communication {
-    padding-right: 45px;
-
-    &:active {
-      padding-right: 45px;
-    }
-  }
-}
-
 // Декоративные картинки формы контактных данных
 .form__communication-email,
 .form__communication-tel {
@@ -112,19 +190,13 @@
   right: 13px;
 
   fill: @brightblack;
-}
 
-@media (min-width: @tablet-width) {
-  .form__communication-email,
-  .form__communication-tel {
+  @media (min-width: @tablet-width) {
     top: 30%;
     right: 15px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__communication-email,
-  .form__communication-tel {
+  @media (min-width: @desktop-width) {
     top: 31%;
     right: 20px;
   }
@@ -167,6 +239,21 @@
     border: 1px solid @grey;
     outline: 1px solid @grey;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    padding: 14px 19px;
+
+    width: 94%;
+    min-height: 144px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    max-width: 1180px;
+  }
 }
 
 .form__comment::-webkit-input-placeholder {
@@ -185,25 +272,6 @@
   opacity: 1;
 }
 
-@media (min-width: @tablet-width) {
-  .form__comment {
-    font-size: 20px;
-    line-height: 20px;
-
-    padding: 14px 19px;
-
-    width: 94%;
-    min-height: 144px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__comment {
-    width: 100%;
-    max-width: 1180px;
-  }
-}
-
 // Описание формы
 .form__description {
   font-size: 14px;
@@ -214,20 +282,16 @@
   color: @lightblack;
 
   max-width: 270px;
-}
 
-@media (min-width: @tablet-width) {
-  .form__description {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
 
     margin: 0 0 67px 0;
     max-width: 330px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__description {
+  @media (min-width: @desktop-width) {
     margin: 0 0 66px 0;
 
     width: 30%;
@@ -259,25 +323,23 @@
   padding: 0 20px 0 0;
 
   background-color: @white;
-}
 
-@media (min-width: @tablet-width) {
-  .form__legend {
+  @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
 
     margin: 0 0 75px -40px;
     padding: 0 40px 0 40px;
+
+    &--other {
+      margin: 0 0 56px -40px;
+    }
   }
 
-  .form__legend--other {
-    margin: 0 0 56px -40px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__legend--other {
-    margin: 0 0 56px -40px;
+  @media (min-width: @desktop-width) {
+    &--other {
+      margin: 0 0 56px -40px;
+    }
   }
 }
 
@@ -315,19 +377,18 @@
   top: 18px;
 }
 
-@media (min-width: @tablet-width) {
-  .form__legend::before,
-  .form__legend--other::before {
+
+.form__legend::before,
+.form__legend::after,
+.form__legend--other::before {
+  @media (min-width: @tablet-width) {
     top: 27px;
   }
+}
 
-  .form__legend::after,
-  .form__legend--other::before {
-    top: 27px;
-  }
-
-  .form__legend--comment::before,
-  .form__legend--comment::after {
+.form__legend--comment::before,
+.form__legend--comment::after {
+  @media (min-width: @tablet-width) {
     top: 28px;
   }
 }
@@ -342,21 +403,19 @@
   margin-left: -20px;
 
   background: @white;
-}
 
-.form__legend-value--communication {
-  max-width: 182px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__legend-value {
-    padding: 0 40px;
-    margin-left: -40px;
+  &--communication {
+    max-width: 182px;
   }
 
-  .form__legend-value--communication {
-    width: 515px;
-    max-width: 100%;
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+    margin-left: -40px;
+
+    &--communication {
+      width: 515px;
+      max-width: 100%;
+    }
   }
 }
 
@@ -369,24 +428,6 @@
 }
 
 // Форма ввода персональных данных кота
-.form__fieldset--id {
-  margin: 0 -20px 7px -20px;
-  padding: 24px 20px 0 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--id {
-    margin: 0 0 50px 0;
-    padding: 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--id {
-    margin: 0 0 48px 0;
-  }
-}
-
 .form__fieldset--id .form__item,
 .form__fieldset--communication .form__item,
 .form__comment {
@@ -397,44 +438,46 @@
   margin-bottom: 14px;
 }
 
-.form__fieldset--communication .form__item {
-  position: relative;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--id .form__item,
-  .form__fieldset--communication .form__item {
+.form__fieldset--id .form__item {
+  @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .form__fieldset--id .form__item:last-child {
-    margin-bottom: 0;
+.form__fieldset--communication .form__item {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
   }
 
-  .form__fieldset--id {
-    padding: 0;
-    width: 46.8%;
+  @media (min-width: @desktop-width) {
+    width: 46.7%;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .form__fieldset--other .form__list {
+.form__fieldset--id .form__item:last-child {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__fieldset--other .form__list {
+  @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
+}
 
-  .form__fieldset--other .form__item {
+.form__fieldset--other .form__item {
+  @media (min-width: @tablet-width) {
     width: 42.4%;
 
     margin: 0 20px 32px 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__fieldset--other .form__item {
+  @media (min-width: @desktop-width) {
     margin: 0 6px 40px 0;
 
     width: 240px;
@@ -457,45 +500,37 @@
   cursor: pointer;
 
   margin-right: 15px;
-}
 
-.form__label--email {
-  min-width: 50px;
-}
+  &--email {
+    min-width: 50px;
+  }
 
-@media (min-width: @tablet-width) {
-  .form__label {
+  &--id {
+    margin-right: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
 
     margin-right: 21px;
-  }
-}
 
-.form__label--id {
-  margin-right: 13px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__label--id {
-    margin-right: 18px;
+    &--id {
+      margin-right: 18px;
+    }
   }
 }
 
 .form__fieldset--radio .form__label {
   margin: 0 0 5px 0;
   padding: 10px 15px 10px 45px;
-}
 
-@media (min-width: @tablet-width) {
-  .form__fieldset--radio .form__label {
+  @media (min-width: @tablet-width) {
     margin: 0 0 13px 0;
     padding: 10px 15px 10px 63px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__fieldset--radio .form__label {
+  @media (min-width: @desktop-width) {
     margin: 0 0 13px 0;
     padding: 8px 15px 12px 63px;
   }
@@ -504,10 +539,8 @@
 .form__fieldset--other .form__label {
   margin: -5px 0 5px 0;
   padding: 12px 15px 12px 45px;
-}
 
-@media (min-width: @tablet-width) {
-  .form__fieldset--other .form__label {
+  @media (min-width: @tablet-width) {
     margin: 0;
     padding: 10px 15px 10px 60px;
   }
@@ -515,16 +548,14 @@
 
 .form__fieldset--communication .form__label {
   margin-right: 10px;
-}
 
-@media (min-width: @tablet-width) {
-  .form__fieldset--communication .form__label {
+  @media (min-width: @tablet-width) {
     margin-right: 15px;
-  }
 
-  .form__fieldset--communication .form__label--email {
-    width: 100%;
-    max-width: 67px;
+    &--email {
+      width: 100%;
+      max-width: 67px;
+    }
   }
 }
 
@@ -542,6 +573,13 @@
 
   border: 1px solid @dimgrey;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 50%;
+    left: 3px;
+
+    .size(38px; 38px);
+  }
 }
 
 .form__radio:hover + label::before,
@@ -568,17 +606,8 @@
   border: none;
   background: @shininggreen;
   margin-top: 0;
-}
 
-@media (min-width: @tablet-width) {
-  .form__radio + label::before {
-    top: 50%;
-    left: 3px;
-
-    .size(38px; 38px);
-  }
-
-  .form__radio:checked + label::after {
+  @media (min-width: @tablet-width) {
     top: 50%;
     left: 14px;
 
@@ -598,6 +627,10 @@
   .size(28px; 28px);
 
   border: 1px solid @dimgrey;
+
+  @media (min-width: @tablet-width) {
+    .size(40px; 40px);
+  }
 }
 
 .form__checkbox:hover + label::before,
@@ -624,81 +657,17 @@
 
   border-right: 1px solid @shininggreen;
   border-bottom: 1px solid @shininggreen;
-}
 
-@media (min-width: @tablet-width) {
-  .form__checkbox + label::before {
-    .size(40px; 40px);
-  }
-
-  .form__checkbox:checked + label::after {
+  @media (min-width: @tablet-width) {
     left: 16px;
   }
 }
 
 // Форма обратной связи
-.form__fieldset--communication {
-  margin: 0 -20px 8px -20px;
-  padding: 0 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--communication {
-    margin: 0 0 39px 0;
-    padding: 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--communication {
-    margin: 0 0 41px 0;
-  }
-
-  .form__fieldset--communication .form__list {
+.form__fieldset--communication .form__list {
+  @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-  }
-
-  .form__fieldset--communication .form__item {
-    width: 46.7%;
-  }
-}
-
-// Форма заполнения комментария
-.form__fieldset--comment {
-  margin: 0 -20px 10px -20px;
-  padding: 0 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--comment {
-    margin: 0 0 47px 0;
-    padding: 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--comment {
-    margin: 0 0 49px 0;
-  }
-}
-
-// Форма дополнительных товаров
-.form__fieldset--other {
-  margin: 0 -20px 24px -20px;
-  padding: 0 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--other {
-    margin: 0 0 22px 0;
-    padding: 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--other {
-    margin: 0 0 21px 0;
   }
 }
 
@@ -731,10 +700,8 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-}
 
-@media (min-width: @tablet-width) {
-  .form__button {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
 
     width: 45%;
@@ -742,10 +709,8 @@
     margin: 0 0 72px 1px;
     padding: 16px 15px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__button {
+  @media (min-width: @desktop-width) {
     width: 46.6%;
 
     margin: 0 0 82px 1px;
@@ -761,10 +726,8 @@
   color: @grey;
 
   margin: 0 0 33px 0;
-}
 
-@media (min-width: @tablet-width) {
-  .form__text {
+  @media (min-width: @tablet-width) {
     font-size: 16px;
 
     display: inline-block;
@@ -772,42 +735,15 @@
 
     margin: 0 0 13px 59px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__text {
-    margin: 0 0 13px 78px;
+  @media (min-width: @desktop-width) {
+    margin: 0 0 13px 80px;
   }
 }
 
 // Форма выбора варианта изменения веса кота
-.form__fieldset--radio {
-  margin: 0 -20px 28px -20px;
-  padding: 16px 20px 11px 20px;
-
-  border-top: @border;
-  border-bottom: @border;
-}
-
-@media (min-width: @tablet-width) {
-  .form__fieldset--radio {
-    margin: 0 0 71px 0;
-    padding: 25px 25px 10px 25px;
-
-    border: @border;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--radio {
-    margin: 0 0 63px 0;
-
-    width: 42.5%;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form__fieldset--radio .form__item:nth-child(3) {
+.form__fieldset--radio .form__item:nth-child(3) {
+  @media (min-width: @desktop-width) {
     margin-bottom: 0;
   }
 }
