@@ -1,0 +1,249 @@
+.page-main {
+  @media (min-width: @desktop-width) {
+    margin-bottom: -16px;
+  }
+}
+
+// Основной блок заголовка главной страницы
+.page-main__container {
+  position: relative;
+
+  margin: 0 auto 22px auto;
+
+  text-align: center;
+  color: @white;
+  background-color: @glowinggreen;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom, center bottom 175px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 175px, transparent 175px), url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto 5px auto;
+    padding: 0;
+
+    .size(100%; 805px);
+
+    text-align: left;
+
+    background-color: transparent;
+    background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 696px;
+
+    overflow: hidden;
+
+    &--desktop {
+      margin: -210px 0 81px 0;
+    }
+  }
+}
+
+.page-main__container::after {
+  @media (min-width: @desktop-width) {
+    display: block;
+
+    position: absolute;
+
+    top: 0.2%;
+    right: 0;
+
+    z-index: 0;
+
+    content: "";
+
+    .size(50%; 696px);
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
+    }
+  }
+}
+
+.page-main__group {
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    display: block;
+
+    padding: 0 0 0 89px;
+
+    .size(618px; 805px);
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 224px;
+
+    padding-left: 80px;
+
+    .size(930px; 465px);
+  }
+}
+
+// Заголовок блока главной страницы
+.page-main__group-text {
+  padding: 27px 0 28px 0;
+
+  min-height: 111px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.page-main__title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  color: @white;
+
+  margin: 0 0 25px 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: @lightblack;
+
+    margin: 0 0 0 -2px;
+    padding: 0 0 41px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 40px 0;
+    padding: 0;
+
+    width: 45%;
+  }
+}
+
+.page-main__addition {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+
+  position: relative;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: @lightblack;
+
+    margin: 0 0 20px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
+  }
+}
+
+// Изображение товара
+.page-main__image {
+  display: block;
+
+  margin: 0 auto 3px auto;
+
+  width: 280px;
+
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+
+    margin: 0 auto;
+
+    z-index: -1;
+
+    bottom: -4px;
+    right: 0;
+
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    z-index: 1;
+
+    bottom: 9.9%;
+    right: 0.8%;
+
+    text-align: left;
+
+    width: 552px;
+  }
+}
+
+.page-main__image img {
+  .size(280px; 271px);
+}
+
+// Кнопка
+.page-main__button {
+  font-family: @font--oswald;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+
+  display: block;
+  vertical-align: middle;
+
+  margin: 0;
+  padding: 11px 15px;
+
+  min-width: 250px;
+  max-width: 100%;
+
+  border: none;
+  background-color: @green;
+
+  &:hover,
+  &:focus {
+    background-color: @glowinggreen;
+    transition: 0.3s;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin: 48px 0 0 0;
+    padding: 16px 25px;
+
+    min-width: 191px;
+    max-width: 195px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 53px 0 0 0;
+  }
+}

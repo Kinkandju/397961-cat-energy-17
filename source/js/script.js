@@ -2,19 +2,22 @@
 var navToggle = document.querySelector('.page-header__toggle');
 var navMain = document.querySelector('.main-nav');
 
+  navMain.classList.remove('main-nav--nojs');
+  navToggle.classList.remove('page-header__toggle--nojs');
+
   navToggle.addEventListener('click', function() {
-    if (navToggle.classList.contains('page-header__toggle--opened')) {
-      navToggle.classList.remove('page-header__toggle--opened');
-      navToggle.classList.add('page-header__toggle--closed');
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navToggle.classList.remove('page-header__toggle--closed');
-      navToggle.classList.add('page-header__toggle--opened');
-      navMain.classList.remove('main-nav--opened');
-      navMain.classList.add('main-nav--closed');
-    }
-  });
+  if (navMain.classList.contains('main-nav--closed')) {
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
+    navToggle.classList.remove('page-header__toggle--opened');
+    navToggle.classList.add('page-header__toggle--closed');
+  } else {
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+    navToggle.classList.add('page-header__toggle--opened');
+    navToggle.classList.remove('page-header__toggle--closed');
+  }
+});
 
 // Поля ввода формы
   var form = document.querySelector('.form-main__form');

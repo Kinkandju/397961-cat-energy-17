@@ -1,0 +1,154 @@
+// Блок с адресом организации
+.address {
+  margin: 0 auto;
+
+  width: 100%;
+
+  background-color: @lightgrey;
+
+  &--index {
+    background-color: @white;
+  }
+}
+
+// Контейнер-цифровщик
+.address__layout-container {
+  position: relative;
+
+  z-index: 1;
+
+  margin: 0 auto;
+  padding: 0 20px;
+
+  background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+
+    width: 1220px;
+  }
+}
+
+// Адрес на главной странице
+.address--index .address__layout-container {
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 0 auto;
+    padding: 0;
+  }
+}
+
+// Стилизация блока с приглашением к сотрудничеству и адресом
+.address__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 0 26px 0;
+
+  background-color: @white;
+
+  &--catalog {
+    padding: 28px 0 26px 0;
+
+    background-color: @lightgrey;
+  }
+
+  &--form {
+    background-color: @lightgrey;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 40px 55px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+
+    bottom: -100px;
+
+    transform: translateY(97%);
+
+    padding: 65px 90px 60px 75px;
+
+    max-width: 405px;
+
+    &--catalog,
+    &--form {
+      background-color: @white;
+    }
+  }
+}
+
+// Приглашение к сотрудничеству
+.address__invitation {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @lightblack;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+
+    width: 100%;
+    max-width: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 25px;
+    padding-right: 65px;
+  }
+}
+
+// Только адрес
+.address__address {
+  font-family: @font--arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: left;
+  color: @grey;
+
+  position: relative;
+  right: 2px;
+
+  margin: 0 0 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    text-align: right;
+
+    width: 100%;
+    max-width: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    left: 5px;
+
+    text-align: left;
+  }
+}
+
+.address__address span {
+  @media (min-width: @tablet-width) {
+    display: block;
+
+    margin-top: 17px;
+  }
+}

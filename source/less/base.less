@@ -1,28 +1,3 @@
-@font--oswald: "Oswald", "Arial", sans-serif;
-@font--arial: "Arial", sans-serif;
-
-@black: rgba(0, 0, 0, 1);
-@white: rgba(255, 255, 255, 1);
-@green: rgba(104, 183, 56, 1);
-@lightgrey: rgba(242, 242, 242, 1);
-@bordergrey: rgba(230, 230, 230, 1);
-@grey: rgba(68, 68, 68, 1);
-@lightblack: rgba(17, 17, 17, 1);
-
-@border: 1px solid @bordergrey;
-
-.size(@width; @height) {
-  width: @width;
-  height: @height;
-}
-
-@mobile-width-only: 767px;
-@tablet-width: 768px;
-@desktop-width: 1300px;
-
-@retina-dpi: 144dpi;
-@retina-dppx: 1.5dppx;
-
 body {
   margin: 0;
   padding: 0;
@@ -41,44 +16,4 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.layout-container {
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media (min-width: @tablet-width) {
-  .layout-container {
-    padding: 0 30px;
-
-    width: 708px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .layout-container {
-    padding: 0 40px;
-
-    width: 1220px;
-  }
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-
-  .size(1px; 1px);
-
-  margin: -1px;
-  padding: 0;
-
-  border: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }

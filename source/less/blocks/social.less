@@ -1,0 +1,82 @@
+// Раздел "Социальные сети"
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: @lightgrey;
+  border-bottom: @border;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+// Список социальных сетей
+.social__list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+
+    margin: 0 0 0 30px;
+  }
+}
+
+// Пункт списка
+.social__item {
+  padding: 23px 0 17px 0;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__item a {
+  padding: 19px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 14px;
+  }
+}
+
+.social__item:nth-child(1) a {
+  margin: 0 0 0 -10px;
+}
+
+.social__item-vk,
+.social__item-inst,
+.social__item-fb {
+  fill: @darkgrey;
+
+  &:hover,
+  &:focus {
+    fill: @green;
+
+    transition: 0.3s;
+  }
+}
+
+.social__item-vk {
+  @media (min-width: @tablet-width) {
+    .size(31px; 19px);
+  }
+}
+
+.social__item-inst {
+  @media (min-width: @tablet-width) {
+    .size(23px; 23px);
+  }
+}
+
+.social__item-fb {
+  @media (min-width: @tablet-width) {
+    .size(14px; 28px);
+  }
+}

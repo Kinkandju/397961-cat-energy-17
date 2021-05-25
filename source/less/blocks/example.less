@@ -1,0 +1,619 @@
+// Основной блок с примерами
+.example {
+  background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    border-top: @border;
+    background-color: @white;
+
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    margin: 0 0 -60px 0;
+
+    top: -16px;
+
+    border: none;
+
+    overflow: visible;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 144px, rgba(242, 242, 242, 1) 144px, rgba(242, 242, 242, 1));
+  }
+}
+
+.example::after {
+  @media (min-width: @desktop-width) {
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    content: "";
+
+    width: 20%;
+
+    overflow: visible;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 144px, rgba(234, 234, 234, 1) 144px, rgba(234, 234, 234, 1));
+  }
+}
+
+.example__layout-container {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+
+    padding: 0 40px;
+
+    width: 1220px;
+    min-height: 600px;
+  }
+}
+
+.example__group {
+  @media (min-width: @desktop-width) {
+    padding: 0 100px 0 0;
+
+    width: 40%;
+  }
+}
+
+// Заголовок блока
+.example__title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: left;
+  color: @lightblack;
+
+  margin: 0;
+  padding: 17px 0 23px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+
+    padding: 43px 0 64px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 0 65px 0;
+  }
+}
+
+// Описание примера
+.example__description {
+  font-family: @font--arial;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  text-align: left;
+  color: @grey;
+
+  margin: 0 0 21px 0;
+  padding: 0 2px 0 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-bottom: 53px;
+    padding: 0 10px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 80px 0 50px 0;
+    padding: 0 30px 0 0;
+  }
+}
+
+// Блок с информационными данными
+.example__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: wrap;
+
+    margin: 68px 0 99px 0;
+  }
+}
+
+// Таблица
+.example__table {
+  margin: 0 0 35px 0;
+
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    max-width: 365px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 33px 0;
+
+    max-width: 365px;
+  }
+}
+
+.example__table tbody {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__table tr {
+  position: relative;
+
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.example__value {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @lightblack;
+
+  padding: 15px 15px;
+
+  min-width: 90px;
+
+  border: @border;
+  border-radius: 5px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+
+    padding: 13px 35px 18px 34px;
+
+    &--days {
+      padding: 13px 27px 18px 27px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 40px;
+  }
+}
+
+.example__value:nth-child(1) {
+  margin-right: auto;
+}
+
+.example__field {
+  font-family: @font--arial;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 12px;
+  text-align: center;
+  color: @grey;
+
+  position: absolute;
+
+  top: 44px;
+  left: 15px;
+
+  padding: 5px;
+
+  max-width: 80px;
+
+  background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+
+    top: 58px;
+    left: 24px;
+
+    max-width: 140px;
+
+    background-color: @white;
+
+    &--days {
+      top: 58px;
+      left: 12px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @lightgrey;
+  }
+}
+
+// Цена предложения
+.example__price {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @lightblack;
+
+  margin: 0 0 33px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: right;
+
+    align-self: center;
+
+    margin: 0 0 36px 0;
+
+    max-width: 195px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 23px 0 0 0;
+
+    max-width: 100%;
+  }
+}
+
+.example__price span {
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    vertical-align: baseline;
+
+    margin-right: 60px;
+  }
+}
+
+// Изображение до и после
+.example__image {
+  display: block;
+
+  margin: 0 auto 32px auto;
+
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+
+    .size(690px; 517px);
+    max-width: none;
+  }
+}
+
+.example__image img {
+  max-width: 320px;
+  height: 240px;
+}
+
+.example__compare-before .example__image img {
+  @media (min-width: @tablet-width) {
+    .size(690px; auto);
+
+    background-image: url("../img/before-tablet@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+    }
+  }
+}
+
+.example__compare-after .example__image img {
+  .size(690px; auto);
+
+  background-image: url("../img/after-tablet@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/after-tablet@2x.png");
+  }
+}
+
+.example__compare {
+  margin: 0 -20px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    z-index: 5;
+
+    left: 16px;
+
+    margin: 0;
+
+    width: 690px;
+    min-height: 631px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    top: -45px;
+    left: 6px;
+
+    min-height: 652px;
+  }
+}
+
+.example__compare::before {
+  @media (min-width: @tablet-width) {
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+    bottom: 0;
+
+    content: "";
+
+    width: 100vw;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 169px, rgba(242, 242, 242, 1) 169px, rgba(242, 242, 242, 1));
+
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
+}
+
+.example__compare::after {
+  @media (min-width: @tablet-width) {
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    left: 95%;
+    bottom: 0;
+
+    content: "";
+
+    width: 100vw;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 169px, rgba(234, 234, 234, 1) 169px, rgba(234, 234, 234, 1));
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.example__compare-before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    .size(100%; 100%);
+
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 26.8%, rgba(242, 242, 242, 1) 26.8%);
+    background-color: rgba(242, 242, 242, 1);
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 189px, rgba(242, 242, 242, 1) 189px);
+  }
+}
+
+.example__compare-after {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    .size(352px; 100%);
+
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 26.8%, rgba(234, 234, 234, 1) 26.8%);
+    background-color: rgba(234, 234, 234, 1);
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -34px;
+
+    width: 325px;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 189px, rgba(234, 234, 234, 1) 189px);
+  }
+}
+
+// Панель переключения
+.example__toggle-line {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  margin-left: 5px;
+  padding-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+
+    bottom: 43px;
+    left: 53px;
+
+    align-items: baseline;
+
+    margin-left: 0;
+    padding: 10px 0 25px 0;
+
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 541px;
+    right: -18px;
+
+    max-height: 32px;
+  }
+}
+
+// Кнопки переключения
+.example__toggle {
+  font-family: @font--oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @lightblack;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+
+    padding: 5px 0;
+
+    border-bottom: 1px dotted rgba(217, 217, 217, 1);
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid @lightblack;
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+}
+
+// Ползунок состояния
+.example__switch {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: baseline;
+
+  align-self: center;
+
+  margin: 0 15px 0 18px;
+
+  .size(84px; 14px);
+
+  background-color: @white;
+  border: @border;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+
+    margin: 0 21px 0 24px;
+
+    .size(428px; 6px);
+
+    background-color: rgba(220, 220, 220, 1);
+    border: none;
+  }
+}
+
+.example__button {
+  position: absolute;
+
+  display: block;
+
+  top: 4px;
+  left: 5px;
+
+  content: "";
+
+  .size(35px; 6px);
+
+  text-indent: -1000px;
+
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 5px;
+  background-color: @shininggreen;
+
+  @media (min-width: @tablet-width) {
+    top: 36%;
+    left: 50%;
+
+    .size(34px; 34px);
+
+    margin: -16px 0 0 -17px;
+
+    background-color: @white;
+    border: 1px solid @dimgrey;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active,
+    &:focus {
+      border: 2px solid @shininggreen;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 50.5%;
+  }
+}
+
+.example__button::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+
+    display: block;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    content: "";
+
+    .size(8px; 8px);
+
+    background-color: @shininggreen;
+    border-radius: 50%;
+  }
+}

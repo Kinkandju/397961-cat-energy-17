@@ -1,0 +1,749 @@
+// Блок содержания формы
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  &--id {
+    margin: 0 -20px 7px -20px;
+    padding: 24px 20px 0 20px;
+  }
+
+  &--communication {
+    margin: 0 -20px 8px -20px;
+    padding: 0 20px;
+  }
+
+  &--comment {
+    margin: 0 -20px 10px -20px;
+    padding: 0 20px;
+  }
+
+  &--other {
+    margin: 0 -20px 24px -20px;
+    padding: 0 20px;
+  }
+
+  &--radio {
+    margin: 0 -20px 28px -20px;
+    padding: 16px 20px 11px 20px;
+
+    border-top: @border;
+    border-bottom: @border;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--id {
+      margin: 0 0 50px 0;
+      padding: 0;
+    }
+
+    &--communication {
+      margin: 0 0 39px 0;
+      padding: 0;
+    }
+
+    &--comment {
+      margin: 0 0 47px 0;
+      padding: 0;
+    }
+
+    &--other {
+      margin: 0 0 22px 0;
+      padding: 0;
+    }
+
+    &--radio {
+      margin: 0 0 71px 0;
+      padding: 25px 25px 10px 25px;
+
+      border: @border;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--id {
+      margin: 0 0 48px 0;
+
+      width: 46.8%;
+    }
+
+    &--communication {
+      margin: 0 0 41px 0;
+    }
+
+    &--comment {
+      margin: 0 0 49px 0;
+    }
+
+    &--other {
+      margin: 0 0 21px 0;
+    }
+
+    &--radio {
+      margin: 0 0 63px 0;
+
+      width: 42.5%;
+    }
+  }
+}
+
+// Поля ввода формы
+.form__id,
+.form__communication {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  color: @brightblack;
+
+  background-color: @white;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  margin: 0;
+  padding: 13px 16px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid @dimgrey;
+  }
+
+  &:focus,
+  &:active {
+    padding: 13px 16px;
+
+    border: 1px solid @grey;
+    outline: 1px solid @grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    height: 52px;
+
+    &:focus,
+    &:active {
+      padding: 10px 20px;
+
+      border: 1px solid @grey;
+      outline: 1px solid @grey;
+    }
+  }
+}
+
+.error .form__id,
+.error .form__id:focus,
+.error .form__communication,
+.error .form__communication:focus {
+  border: 2px solid @lightred;
+  outline: 1px solid transparent;
+  box-shadow: none;
+}
+
+.form__communication {
+  padding-right: 45px;
+
+  &:active {
+    padding-right: 45px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 45px;
+
+    &:active {
+      padding-right: 45px;
+    }
+  }
+}
+
+.form__id::-webkit-input-placeholder,
+.form__communication::-webkit-input-placeholder {
+  color: @grey;
+  opacity: 1;
+}
+
+.form__id:-ms-input-placeholder,
+.form__id::-ms-input-placeholder,
+.form__communication:-ms-input-placeholder,
+.form__communication::-ms-input-placeholder {
+  color: @grey;
+  opacity: 1;
+}
+
+.form__id::placeholder,
+.form__communication::placeholder {
+  color: @grey;
+  opacity: 1;
+}
+
+// Декоративные картинки формы контактных данных
+.form__communication-email,
+.form__communication-tel {
+  position: absolute;
+
+  top: 25%;
+  right: 13px;
+
+  fill: @brightblack;
+
+  @media (min-width: @tablet-width) {
+    top: 30%;
+    right: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 31%;
+    right: 20px;
+  }
+}
+
+.form__communication:focus ~ .form__communication-email,
+.form__communication:focus ~ .form__communication-tel,
+.form__communication:valid ~ .form__communication-email,
+.form__communication:valid ~ .form__communication-tel {
+  fill: @green;
+}
+
+.error .form__communication-email,
+.error .form__communication-tel {
+  fill: @lightred;
+}
+
+// Поле ввода комментария
+.form__comment {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  color: @brightblack;
+
+  background-color: @white;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  margin: 0;
+  padding: 14px;
+
+  width: 90%;
+  max-height: 121px;
+
+  &:hover {
+    border: 1px solid @dimgrey;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid @grey;
+    outline: 1px solid @grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    padding: 14px 19px;
+
+    width: 94%;
+    min-height: 144px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    max-width: 1180px;
+  }
+}
+
+.form__comment::-webkit-input-placeholder {
+  color: @grey;
+  opacity: 1;
+}
+
+.form__comment:-ms-input-placeholder,
+.form__comment::-ms-input-placeholder {
+  color: @grey;
+  opacity: 1;
+}
+
+.form__comment::placeholder {
+  color: @grey;
+  opacity: 1;
+}
+
+// Описание формы
+.form__description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @lightblack;
+
+  max-width: 270px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    margin: 0 0 67px 0;
+    max-width: 330px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 66px 0;
+
+    width: 30%;
+  }
+}
+
+// Блок для удобства стилизации
+@media (min-width: @desktop-width) {
+  .form__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+// Заголовок элементов формы
+.form__legend {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: @lightblack;
+
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 0 34px 0;
+  padding: 0 20px 0 0;
+
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+
+    margin: 0 0 75px -40px;
+    padding: 0 40px 0 40px;
+
+    &--other {
+      margin: 0 0 56px -40px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--other {
+      margin: 0 0 56px -40px;
+    }
+  }
+}
+
+// Стилизация линии на фоне заголовков
+.form__legend::before {
+  position: absolute;
+
+  top: 14px;
+  right: 0;
+
+  content: "";
+
+  .size(100vw; 3px);
+
+  background: @green;
+}
+
+.form__legend::after {
+  position: absolute;
+
+  top: 14px;
+  left: 95%;
+
+  content: "";
+
+  .size(100vw; 3px);
+
+  background: @green;
+}
+
+.form__legend--comment::before,
+.form__legend--comment::after,
+.form__legend--other::before,
+.form__legend--other::after {
+  top: 18px;
+}
+
+
+.form__legend::before,
+.form__legend::after,
+.form__legend--other::before {
+  @media (min-width: @tablet-width) {
+    top: 27px;
+  }
+}
+
+.form__legend--comment::before,
+.form__legend--comment::after {
+  @media (min-width: @tablet-width) {
+    top: 28px;
+  }
+}
+
+.form__legend-value {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  padding: 0 21px 0 19px;
+  margin-left: -20px;
+
+  background: @white;
+
+  &--communication {
+    max-width: 182px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+    margin-left: -40px;
+
+    &--communication {
+      width: 515px;
+      max-width: 100%;
+    }
+  }
+}
+
+// Список формы
+.form__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+// Форма ввода персональных данных кота
+.form__fieldset--id .form__item,
+.form__fieldset--communication .form__item,
+.form__comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 14px;
+}
+
+.form__fieldset--id .form__item {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__fieldset--communication .form__item {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 46.7%;
+  }
+}
+
+.form__fieldset--id .form__item:last-child {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__fieldset--other .form__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.form__fieldset--other .form__item {
+  @media (min-width: @tablet-width) {
+    width: 42.4%;
+
+    margin: 0 20px 32px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 6px 40px 0;
+
+    width: 240px;
+  }
+}
+
+// Подпись для поля ввода
+.form__label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @brightblack;
+
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+
+  margin-right: 15px;
+
+  &--email {
+    min-width: 50px;
+  }
+
+  &--id {
+    margin-right: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-right: 21px;
+
+    &--id {
+      margin-right: 18px;
+    }
+  }
+}
+
+.form__fieldset--radio .form__label {
+  margin: 0 0 5px 0;
+  padding: 10px 15px 10px 45px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 13px 0;
+    padding: 10px 15px 10px 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 13px 0;
+    padding: 8px 15px 12px 63px;
+  }
+}
+
+.form__fieldset--other .form__label {
+  margin: -5px 0 5px 0;
+  padding: 12px 15px 12px 45px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 10px 15px 10px 60px;
+  }
+}
+
+.form__fieldset--communication .form__label {
+  margin-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 15px;
+
+    &--email {
+      width: 100%;
+      max-width: 67px;
+    }
+  }
+}
+
+// Стилизация радиокнопок и чекбоксов
+.form__radio + label::before {
+  position: absolute;
+
+  top: 50%;
+  left: -1px;
+  transform: translateY(-50%);
+
+  content: "";
+
+  .size(30px; 30px);
+
+  border: 1px solid @dimgrey;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 50%;
+    left: 3px;
+
+    .size(38px; 38px);
+  }
+}
+
+.form__radio:hover + label::before,
+.form__radio:focus + label::before {
+  border: 1px solid @shininggrey;
+}
+
+.form__radio:active + label {
+  opacity: 0.3;
+}
+
+.form__radio:checked + label::after {
+  position: absolute;
+
+  content: "";
+
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+
+  .size(12px; 12px);
+
+  border-radius: 50%;
+  border: none;
+  background: @shininggreen;
+  margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    top: 50%;
+    left: 14px;
+
+    .size(18px; 18px);
+  }
+}
+
+.form__checkbox + label::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .size(28px; 28px);
+
+  border: 1px solid @dimgrey;
+
+  @media (min-width: @tablet-width) {
+    .size(40px; 40px);
+  }
+}
+
+.form__checkbox:hover + label::before,
+.form__checkbox:focus + label::before {
+  border: 1px solid @shininggrey;
+}
+
+.form__checkbox:active + label {
+  opacity: 0.3;
+}
+
+.form__checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+
+  margin-top: -3px;
+
+  .size(12px; 21px);
+
+  border-right: 1px solid @shininggreen;
+  border-bottom: 1px solid @shininggreen;
+
+  @media (min-width: @tablet-width) {
+    left: 16px;
+  }
+}
+
+// Форма обратной связи
+.form__fieldset--communication .form__list {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// Кнопка
+.form__button {
+  font-family: @font--oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+
+  margin: 0 0 20px 0;
+  padding: 10px 15px;
+
+  width: 100%;
+
+  border: none;
+  background-color: @green;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @glowinggreen;
+    transition: 0.3s;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+
+    width: 45%;
+
+    margin: 0 0 72px 1px;
+    padding: 16px 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 46.6%;
+
+    margin: 0 0 82px 1px;
+  }
+}
+
+.form__text {
+  font-family: @font--arial;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  text-align: center;
+  color: @grey;
+
+  margin: 0 0 33px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    margin: 0 0 13px 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 13px 80px;
+  }
+}
+
+// Форма выбора варианта изменения веса кота
+.form__fieldset--radio .form__item:nth-child(3) {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
