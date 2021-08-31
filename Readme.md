@@ -1,4 +1,4 @@
-# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status]][dependency-url]
 
 * Студент: [Евгения Ямщикова](https://up.htmlacademy.ru/adaptive/17/user/397961).
 * Наставник: [Анастасия Шевченко](https://htmlacademy.ru/profile/id125164).
